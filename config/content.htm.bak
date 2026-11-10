@@ -70,6 +70,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>all: <a href="https://cycu.org/all">https://cycu.org/all</a> (包羅萬象)</p>
 <p>health: <a href="https://cycu.org/health">https://cycu.org/health</a> (健康)</p>
 <p>recipes: <a href="https://cycu.org/recipes">https://cycu.org/recipes</a> (食譜)</p>
@@ -81,63 +101,6 @@
 <p>art: <a href="https://cycu.org/art">https://cycu.org/art</a> (藝術)</p>
 <nav><strong>八宮總覽</strong></nav>
 <h2>八宮分類</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -321,83 +284,3500 @@
 </tbody>
 </table>
 <p>八宮是<strong>漢代象數易的操作系統</strong>；《周易》經傳是更早的文本。兩者可以並用：經文講義理，八宮講結構與占法定位。</p>
+<h4>易經八宮完整分類表（京房）</h4>
+<p>說明：每宮 8 卦，順序為 <strong>本宮 → 一世 → 二世 → 三世 → 四世 → 五世 → 游魂 → 歸魂</strong>。<br> 卦名採常見全稱；括號內為文王卦序。</p>
+<hr>
+<h4>一、乾宮（金）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>乾為天</td>
+<td>1</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>天風姤</td>
+<td>44</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>天山遯</td>
+<td>33</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>天地否</td>
+<td>12</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>風地觀</td>
+<td>20</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>山地剝</td>
+<td>23</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>火地晉</td>
+<td>35</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>火天大有</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>二、震宮（木）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>震為雷</td>
+<td>51</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>雷地豫</td>
+<td>16</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>雷水解</td>
+<td>40</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>雷風恆</td>
+<td>32</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>地風升</td>
+<td>46</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>水風井</td>
+<td>48</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>澤風大過</td>
+<td>28</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>澤雷隨</td>
+<td>17</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>三、坎宮（水）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>坎為水</td>
+<td>29</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>水澤節</td>
+<td>60</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>水雷屯</td>
+<td>3</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>水火既濟</td>
+<td>63</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>澤火革</td>
+<td>49</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>雷火豐</td>
+<td>55</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>地火明夷</td>
+<td>36</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>地水師</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>四、艮宮（土）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>艮為山</td>
+<td>52</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>山火賁</td>
+<td>22</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>山天大畜</td>
+<td>26</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>山澤損</td>
+<td>41</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>火澤睽</td>
+<td>38</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>天澤履</td>
+<td>10</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>風澤中孚</td>
+<td>61</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>風山漸</td>
+<td>53</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>五、坤宮（土）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>坤為地</td>
+<td>2</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>地雷復</td>
+<td>24</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>地澤臨</td>
+<td>19</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>地天泰</td>
+<td>11</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>雷天大壯</td>
+<td>34</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>澤天夬</td>
+<td>43</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>水天需</td>
+<td>5</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>水地比</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>六、巽宮（木）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>巽為風</td>
+<td>57</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>風天小畜</td>
+<td>9</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>風火家人</td>
+<td>37</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>風雷益</td>
+<td>42</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>天雷無妄</td>
+<td>25</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>火雷噬嗑</td>
+<td>21</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>山雷頤</td>
+<td>27</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>山風蠱</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>七、離宮（火）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>離為火</td>
+<td>30</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>火山旅</td>
+<td>56</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>火風鼎</td>
+<td>50</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>火水未濟</td>
+<td>64</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>山水蒙</td>
+<td>4</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>風水渙</td>
+<td>59</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>天水訟</td>
+<td>6</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>天火同人</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>八、兌宮（金）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>名稱</th>
+<th>卦名</th>
+<th>文王序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>本宮</td>
+<td>兌為澤</td>
+<td>58</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>一世</td>
+<td>澤水困</td>
+<td>47</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二世</td>
+<td>澤地萃</td>
+<td>45</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三世</td>
+<td>澤山咸</td>
+<td>31</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四世</td>
+<td>水山蹇</td>
+<td>39</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五世</td>
+<td>地山謙</td>
+<td>15</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>游魂</td>
+<td>雷山小過</td>
+<td>62</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>歸魂</td>
+<td>雷澤歸妹</td>
+<td>54</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>總表（橫列八宮）</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>乾宮金</th>
+<th>震宮木</th>
+<th>坎宮水</th>
+<th>艮宮土</th>
+<th>坤宮土</th>
+<th>巽宮木</th>
+<th>離宮火</th>
+<th>兌宮金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>乾為天(1)</td>
+<td>震為雷(51)</td>
+<td>坎為水(29)</td>
+<td>艮為山(52)</td>
+<td>坤為地(2)</td>
+<td>巽為風(57)</td>
+<td>離為火(30)</td>
+<td>兌為澤(58)</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>天風姤(44)</td>
+<td>雷地豫(16)</td>
+<td>水澤節(60)</td>
+<td>山火賁(22)</td>
+<td>地雷復(24)</td>
+<td>風天小畜(9)</td>
+<td>火山旅(56)</td>
+<td>澤水困(47)</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>天山遯(33)</td>
+<td>雷水解(40)</td>
+<td>水雷屯(3)</td>
+<td>山天大畜(26)</td>
+<td>地澤臨(19)</td>
+<td>風火家人(37)</td>
+<td>火風鼎(50)</td>
+<td>澤地萃(45)</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>天地否(12)</td>
+<td>雷風恆(32)</td>
+<td>水火既濟(63)</td>
+<td>山澤損(41)</td>
+<td>地天泰(11)</td>
+<td>風雷益(42)</td>
+<td>火水未濟(64)</td>
+<td>澤山咸(31)</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>風地觀(20)</td>
+<td>地風升(46)</td>
+<td>澤火革(49)</td>
+<td>火澤睽(38)</td>
+<td>雷天大壯(34)</td>
+<td>天雷無妄(25)</td>
+<td>山水蒙(4)</td>
+<td>水山蹇(39)</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>山地剝(23)</td>
+<td>水風井(48)</td>
+<td>雷火豐(55)</td>
+<td>天澤履(10)</td>
+<td>澤天夬(43)</td>
+<td>火雷噬嗑(21)</td>
+<td>風水渙(59)</td>
+<td>地山謙(15)</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>火地晉(35)</td>
+<td>澤風大過(28)</td>
+<td>地火明夷(36)</td>
+<td>風澤中孚(61)</td>
+<td>水天需(5)</td>
+<td>山雷頤(27)</td>
+<td>天水訟(6)</td>
+<td>雷山小過(62)</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>火天大有(14)</td>
+<td>澤雷隨(17)</td>
+<td>地水師(7)</td>
+<td>風山漸(53)</td>
+<td>水地比(8)</td>
+<td>山風蠱(18)</td>
+<td>天火同人(13)</td>
+<td>雷澤歸妹(54)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>三層網站常用的「四組」切法</h4>
+<p>每宮可再收成四組（對應你站的 h2）：</p>
+<table>
+<thead>
+<tr>
+<th>第二層</th>
+<th>包含</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮與一世</td>
+<td>本宮、一世</td>
+</tr>
+<tr>
+<td>二世與三世</td>
+<td>二世、三世</td>
+</tr>
+<tr>
+<td>四世與五世</td>
+<td>四世、五世</td>
+</tr>
+<tr>
+<td>游魂與歸魂</td>
+<td>游魂、歸魂</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>附記</h4>
+<ul>
+<li><strong>陽四宮</strong>：乾、震、坎、艮</li>
+<li><strong>陰四宮</strong>：坤、巽、離、兌</li>
+<li>宮之五行用於納甲六親時「以宮五行作為我」</li>
+<li>本表與常見京房／火珠林八宮表一致；若與某書用字（如「遁／遯」）不同，屬異體，卦序相同即可</li>
+</ul>
+<p><br></p>
+<h4>八宮世應表（京房）</h4>
+<p>規則對<strong>每一宮都相同</strong>：先看該卦在宮裡是「本宮／几世／游魂／歸魂」，再定世爻；應爻與世爻固定相對。</p>
+<p>爻位由下往上數：<strong>初、二、三、四、五、上（六）</strong>。</p>
+<hr>
+<h4>一、世爻位置（八個位次）</h4>
+<table>
+<thead>
+<tr>
+<th>宮內位次</th>
+<th>世爻在第幾爻</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>本宮</strong></td>
+<td><strong>上爻（第六爻）</strong></td>
+<td>純卦，世在最上</td>
+</tr>
+<tr>
+<td><strong>一世</strong></td>
+<td><strong>初爻（第一爻）</strong></td>
+<td>初爻變而來</td>
+</tr>
+<tr>
+<td><strong>二世</strong></td>
+<td><strong>第二爻</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>三世</strong></td>
+<td><strong>第三爻</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>四世</strong></td>
+<td><strong>第四爻</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>五世</strong></td>
+<td><strong>第五爻</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>游魂</strong></td>
+<td><strong>第四爻</strong></td>
+<td>五世後第四爻回變</td>
+</tr>
+<tr>
+<td><strong>歸魂</strong></td>
+<td><strong>第三爻</strong></td>
+<td>下卦回歸</td>
+</tr>
+</tbody>
+</table>
+<p>口訣可記：<strong>本宮世在上；一世初、二世二……五世五；游魂仍在四；歸魂落在三。</strong></p>
+<hr>
+<h4>二、應爻怎麼對（與世相對）</h4>
+<table>
+<thead>
+<tr>
+<th>世爻</th>
+<th>應爻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初爻</td>
+<td>第四爻</td>
+</tr>
+<tr>
+<td>第二爻</td>
+<td>第五爻</td>
+</tr>
+<tr>
+<td>第三爻</td>
+<td>上爻（六）</td>
+</tr>
+<tr>
+<td>第四爻</td>
+<td>初爻</td>
+</tr>
+<tr>
+<td>第五爻</td>
+<td>第二爻</td>
+</tr>
+<tr>
+<td>上爻（六）</td>
+<td>第三爻</td>
+</tr>
+</tbody>
+</table>
+<p>也就是：<strong>世、應在爻位上差三（隔兩爻），形成對應。</strong></p>
+<hr>
+<h4>三、八位次「世／應」一覽</h4>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>世爻</th>
+<th>應爻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>上（六）</td>
+<td>三</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>三</td>
+<td>上（六）</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>三</td>
+<td>上（六）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>四、套到八宮（同一張表，每宮套用）</h4>
+<p>以<strong>乾宮</strong>為例（其餘七宮位次相同，只換卦名）：</p>
+<table>
+<thead>
+<tr>
+<th>位次</th>
+<th>卦名</th>
+<th>世爻</th>
+<th>應爻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>乾為天</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>天風姤</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>天山遯</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>天地否</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>風地觀</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>山地剝</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>游魂</td>
+<td>火地晉</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>火天大有</td>
+<td>三</td>
+<td>上</td>
+</tr>
+</tbody>
+</table>
+<p>震、坎、艮、坤、巽、離、兌各宮：<br> <strong>世、應所在「第幾爻」完全同上表</strong>，只需把卦名換成該宮對應的八個卦。</p>
+<hr>
+<h4>五、使用時注意</h4>
+<ol>
+<li><strong>先查八宮表</strong>確認是本宮或第几世／游歸，再查上表定世應。</li>
+<li>世爻多代表<strong>事主、自己</strong>；應爻多代表<strong>對方、相對的一方</strong>（仍須配合動爻、用神）。</li>
+<li>游魂、歸魂的世都在<strong>四、三</strong>，與四世、三世「同爻位」，但宮內意義不同，不可混為同一卦。</li>
+</ol>
+<p><br></p>
+<h4>易經六十四卦完整表</h4>
+<p>說明：</p>
+<ul>
+<li><strong>序</strong>＝文王卦序</li>
+<li><strong>卦名</strong>＝通行全稱（繁體）</li>
+<li><strong>上／下</strong>＝外卦、內卦</li>
+<li><strong>八宮</strong>＝京房所屬宮與位次</li>
+<li><strong>世／應</strong>＝世爻、應爻所在爻位（初～上）</li>
+</ul>
+<hr>
+<h4>上經（第 1～30 卦）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>上卦</th>
+<th>下卦</th>
+<th>八宮</th>
+<th>位次</th>
+<th>世</th>
+<th>應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>乾為天</td>
+<td>乾</td>
+<td>乾</td>
+<td>乾宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>2</td>
+<td>坤為地</td>
+<td>坤</td>
+<td>坤</td>
+<td>坤宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>3</td>
+<td>水雷屯</td>
+<td>坎</td>
+<td>震</td>
+<td>坎宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>4</td>
+<td>山水蒙</td>
+<td>艮</td>
+<td>坎</td>
+<td>離宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>5</td>
+<td>水天需</td>
+<td>坎</td>
+<td>乾</td>
+<td>坤宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>6</td>
+<td>天水訟</td>
+<td>乾</td>
+<td>坎</td>
+<td>離宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>7</td>
+<td>地水師</td>
+<td>坤</td>
+<td>坎</td>
+<td>坎宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>8</td>
+<td>水地比</td>
+<td>坎</td>
+<td>坤</td>
+<td>坤宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>9</td>
+<td>風天小畜</td>
+<td>巽</td>
+<td>乾</td>
+<td>巽宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>10</td>
+<td>天澤履</td>
+<td>乾</td>
+<td>兌</td>
+<td>艮宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>11</td>
+<td>地天泰</td>
+<td>坤</td>
+<td>乾</td>
+<td>坤宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>12</td>
+<td>天地否</td>
+<td>乾</td>
+<td>坤</td>
+<td>乾宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>13</td>
+<td>天火同人</td>
+<td>乾</td>
+<td>離</td>
+<td>離宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>14</td>
+<td>火天大有</td>
+<td>離</td>
+<td>乾</td>
+<td>乾宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>15</td>
+<td>地山謙</td>
+<td>坤</td>
+<td>艮</td>
+<td>兌宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>16</td>
+<td>雷地豫</td>
+<td>震</td>
+<td>坤</td>
+<td>震宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>17</td>
+<td>澤雷隨</td>
+<td>兌</td>
+<td>震</td>
+<td>震宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>18</td>
+<td>山風蠱</td>
+<td>艮</td>
+<td>巽</td>
+<td>巽宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>19</td>
+<td>地澤臨</td>
+<td>坤</td>
+<td>兌</td>
+<td>坤宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>20</td>
+<td>風地觀</td>
+<td>巽</td>
+<td>坤</td>
+<td>乾宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>21</td>
+<td>火雷噬嗑</td>
+<td>離</td>
+<td>震</td>
+<td>巽宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>22</td>
+<td>山火賁</td>
+<td>艮</td>
+<td>離</td>
+<td>艮宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>23</td>
+<td>山地剝</td>
+<td>艮</td>
+<td>坤</td>
+<td>乾宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>24</td>
+<td>地雷復</td>
+<td>坤</td>
+<td>震</td>
+<td>坤宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>25</td>
+<td>天雷無妄</td>
+<td>乾</td>
+<td>震</td>
+<td>巽宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>26</td>
+<td>山天大畜</td>
+<td>艮</td>
+<td>乾</td>
+<td>艮宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>27</td>
+<td>山雷頤</td>
+<td>艮</td>
+<td>震</td>
+<td>巽宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>28</td>
+<td>澤風大過</td>
+<td>兌</td>
+<td>巽</td>
+<td>震宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>29</td>
+<td>坎為水</td>
+<td>坎</td>
+<td>坎</td>
+<td>坎宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>30</td>
+<td>離為火</td>
+<td>離</td>
+<td>離</td>
+<td>離宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>下經（第 31～64 卦）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>上卦</th>
+<th>下卦</th>
+<th>八宮</th>
+<th>位次</th>
+<th>世</th>
+<th>應</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31</td>
+<td>澤山咸</td>
+<td>兌</td>
+<td>艮</td>
+<td>兌宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>32</td>
+<td>雷風恆</td>
+<td>震</td>
+<td>巽</td>
+<td>震宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>33</td>
+<td>天山遯</td>
+<td>乾</td>
+<td>艮</td>
+<td>乾宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>34</td>
+<td>雷天大壯</td>
+<td>震</td>
+<td>乾</td>
+<td>坤宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>35</td>
+<td>火地晉</td>
+<td>離</td>
+<td>坤</td>
+<td>乾宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>36</td>
+<td>地火明夷</td>
+<td>坤</td>
+<td>離</td>
+<td>坎宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>37</td>
+<td>風火家人</td>
+<td>巽</td>
+<td>離</td>
+<td>巽宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>38</td>
+<td>火澤睽</td>
+<td>離</td>
+<td>兌</td>
+<td>艮宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>39</td>
+<td>水山蹇</td>
+<td>坎</td>
+<td>艮</td>
+<td>兌宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>40</td>
+<td>雷水解</td>
+<td>震</td>
+<td>坎</td>
+<td>震宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>41</td>
+<td>山澤損</td>
+<td>艮</td>
+<td>兌</td>
+<td>艮宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>42</td>
+<td>風雷益</td>
+<td>巽</td>
+<td>震</td>
+<td>巽宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>43</td>
+<td>澤天夬</td>
+<td>兌</td>
+<td>乾</td>
+<td>坤宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>44</td>
+<td>天風姤</td>
+<td>乾</td>
+<td>巽</td>
+<td>乾宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>45</td>
+<td>澤地萃</td>
+<td>兌</td>
+<td>坤</td>
+<td>兌宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>46</td>
+<td>地風升</td>
+<td>坤</td>
+<td>巽</td>
+<td>震宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>47</td>
+<td>澤水困</td>
+<td>兌</td>
+<td>坎</td>
+<td>兌宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>48</td>
+<td>水風井</td>
+<td>坎</td>
+<td>巽</td>
+<td>震宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>49</td>
+<td>澤火革</td>
+<td>兌</td>
+<td>離</td>
+<td>坎宮</td>
+<td>四世</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>50</td>
+<td>火風鼎</td>
+<td>離</td>
+<td>巽</td>
+<td>離宮</td>
+<td>二世</td>
+<td>二</td>
+<td>五</td>
+</tr>
+<tr>
+<td>51</td>
+<td>震為雷</td>
+<td>震</td>
+<td>震</td>
+<td>震宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>52</td>
+<td>艮為山</td>
+<td>艮</td>
+<td>艮</td>
+<td>艮宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>53</td>
+<td>風山漸</td>
+<td>巽</td>
+<td>艮</td>
+<td>艮宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>54</td>
+<td>雷澤歸妹</td>
+<td>震</td>
+<td>兌</td>
+<td>兌宮</td>
+<td>歸魂</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>55</td>
+<td>雷火豐</td>
+<td>震</td>
+<td>離</td>
+<td>坎宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>56</td>
+<td>火山旅</td>
+<td>離</td>
+<td>艮</td>
+<td>離宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>57</td>
+<td>巽為風</td>
+<td>巽</td>
+<td>巽</td>
+<td>巽宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>58</td>
+<td>兌為澤</td>
+<td>兌</td>
+<td>兌</td>
+<td>兌宮</td>
+<td>本宮</td>
+<td>上</td>
+<td>三</td>
+</tr>
+<tr>
+<td>59</td>
+<td>風水渙</td>
+<td>巽</td>
+<td>坎</td>
+<td>離宮</td>
+<td>五世</td>
+<td>五</td>
+<td>二</td>
+</tr>
+<tr>
+<td>60</td>
+<td>水澤節</td>
+<td>坎</td>
+<td>兌</td>
+<td>坎宮</td>
+<td>一世</td>
+<td>初</td>
+<td>四</td>
+</tr>
+<tr>
+<td>61</td>
+<td>風澤中孚</td>
+<td>巽</td>
+<td>兌</td>
+<td>艮宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>62</td>
+<td>雷山小過</td>
+<td>震</td>
+<td>艮</td>
+<td>兌宮</td>
+<td>游魂</td>
+<td>四</td>
+<td>初</td>
+</tr>
+<tr>
+<td>63</td>
+<td>水火既濟</td>
+<td>坎</td>
+<td>離</td>
+<td>坎宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+<tr>
+<td>64</td>
+<td>火水未濟</td>
+<td>離</td>
+<td>坎</td>
+<td>離宮</td>
+<td>三世</td>
+<td>三</td>
+<td>上</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>八純卦（八宮本宮）速查</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>宮</th>
+<th>五行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>乾為天</td>
+<td>乾宮</td>
+<td>金</td>
+</tr>
+<tr>
+<td>2</td>
+<td>坤為地</td>
+<td>坤宮</td>
+<td>土</td>
+</tr>
+<tr>
+<td>29</td>
+<td>坎為水</td>
+<td>坎宮</td>
+<td>水</td>
+</tr>
+<tr>
+<td>30</td>
+<td>離為火</td>
+<td>離宮</td>
+<td>火</td>
+</tr>
+<tr>
+<td>51</td>
+<td>震為雷</td>
+<td>震宮</td>
+<td>木</td>
+</tr>
+<tr>
+<td>52</td>
+<td>艮為山</td>
+<td>艮宮</td>
+<td>土</td>
+</tr>
+<tr>
+<td>57</td>
+<td>巽為風</td>
+<td>巽宮</td>
+<td>木</td>
+</tr>
+<tr>
+<td>58</td>
+<td>兌為澤</td>
+<td>兌宮</td>
+<td>金</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>世應口訣（複習）</h4>
+<ul>
+<li>本宮世在<strong>上</strong>，應在<strong>三</strong></li>
+<li>一世世在<strong>初</strong>，應在<strong>四</strong></li>
+<li>二世世在<strong>二</strong>，應在<strong>五</strong></li>
+<li>三世世在<strong>三</strong>，應在<strong>上</strong></li>
+<li>四世世在<strong>四</strong>，應在<strong>初</strong></li>
+<li>五世世在<strong>五</strong>，應在<strong>二</strong></li>
+<li>游魂世在<strong>四</strong>，應在<strong>初</strong></li>
+<li>歸魂世在<strong>三</strong>，應在<strong>上</strong></li>
+</ul>
+<p>以上為文王序完整 64 卦，並附八宮位次與世應，可直接作查表或網站資料用。</p>
+<p><br></p>
+<h4>六十四卦的卦象</h4>
+<p>每一卦由 <strong>六爻</strong> 組成，由下往上為初、二、三、四、五、上。<br> <strong>陽爻</strong>＝整畫（—），<strong>陰爻</strong>＝斷畫（- -）。</p>
+<p>下面依<strong>文王序</strong>列出：Unicode 卦符、卦名、六爻（<strong>由下到上</strong>）。</p>
+<hr>
+<h4>上經（1～30）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>符</th>
+<th>卦名</th>
+<th>初</th>
+<th>二</th>
+<th>三</th>
+<th>四</th>
+<th>五</th>
+<th>上</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>䷀</td>
+<td>乾為天</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>2</td>
+<td>䷁</td>
+<td>坤為地</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>3</td>
+<td>䷂</td>
+<td>水雷屯</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>4</td>
+<td>䷃</td>
+<td>山水蒙</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>5</td>
+<td>䷄</td>
+<td>水天需</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>6</td>
+<td>䷅</td>
+<td>天水訟</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>7</td>
+<td>䷆</td>
+<td>地水師</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>8</td>
+<td>䷇</td>
+<td>水地比</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>9</td>
+<td>䷈</td>
+<td>風天小畜</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>10</td>
+<td>䷉</td>
+<td>天澤履</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>11</td>
+<td>䷊</td>
+<td>地天泰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>12</td>
+<td>䷋</td>
+<td>天地否</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>13</td>
+<td>䷌</td>
+<td>天火同人</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>14</td>
+<td>䷍</td>
+<td>火天大有</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>15</td>
+<td>䷎</td>
+<td>地山謙</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>16</td>
+<td>䷏</td>
+<td>雷地豫</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>17</td>
+<td>䷐</td>
+<td>澤雷隨</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>18</td>
+<td>䷑</td>
+<td>山風蠱</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>19</td>
+<td>䷒</td>
+<td>地澤臨</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>20</td>
+<td>䷓</td>
+<td>風地觀</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>21</td>
+<td>䷔</td>
+<td>火雷噬嗑</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>22</td>
+<td>䷕</td>
+<td>山火賁</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>23</td>
+<td>䷖</td>
+<td>山地剝</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>24</td>
+<td>䷗</td>
+<td>地雷復</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>25</td>
+<td>䷘</td>
+<td>天雷無妄</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>26</td>
+<td>䷙</td>
+<td>山天大畜</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>27</td>
+<td>䷚</td>
+<td>山雷頤</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>28</td>
+<td>䷛</td>
+<td>澤風大過</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>29</td>
+<td>䷜</td>
+<td>坎為水</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>30</td>
+<td>䷝</td>
+<td>離為火</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>下經（31～64）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>符</th>
+<th>卦名</th>
+<th>初</th>
+<th>二</th>
+<th>三</th>
+<th>四</th>
+<th>五</th>
+<th>上</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31</td>
+<td>䷞</td>
+<td>澤山咸</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>32</td>
+<td>䷟</td>
+<td>雷風恆</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>33</td>
+<td>䷠</td>
+<td>天山遯</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>34</td>
+<td>䷡</td>
+<td>雷天大壯</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>35</td>
+<td>䷢</td>
+<td>火地晉</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>36</td>
+<td>䷣</td>
+<td>地火明夷</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>37</td>
+<td>䷤</td>
+<td>風火家人</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>38</td>
+<td>䷥</td>
+<td>火澤睽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>39</td>
+<td>䷦</td>
+<td>水山蹇</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>40</td>
+<td>䷧</td>
+<td>雷水解</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>41</td>
+<td>䷨</td>
+<td>山澤損</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>42</td>
+<td>䷩</td>
+<td>風雷益</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>43</td>
+<td>䷪</td>
+<td>澤天夬</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>44</td>
+<td>䷫</td>
+<td>天風姤</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>45</td>
+<td>䷬</td>
+<td>澤地萃</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>46</td>
+<td>䷭</td>
+<td>地風升</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>47</td>
+<td>䷮</td>
+<td>澤水困</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>48</td>
+<td>䷯</td>
+<td>水風井</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>49</td>
+<td>䷰</td>
+<td>澤火革</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>50</td>
+<td>䷱</td>
+<td>火風鼎</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>51</td>
+<td>䷲</td>
+<td>震為雷</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>52</td>
+<td>䷳</td>
+<td>艮為山</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>53</td>
+<td>䷴</td>
+<td>風山漸</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>54</td>
+<td>䷵</td>
+<td>雷澤歸妹</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>55</td>
+<td>䷶</td>
+<td>雷火豐</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>56</td>
+<td>䷷</td>
+<td>火山旅</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>57</td>
+<td>䷸</td>
+<td>巽為風</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>58</td>
+<td>䷹</td>
+<td>兌為澤</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>59</td>
+<td>䷺</td>
+<td>風水渙</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>60</td>
+<td>䷻</td>
+<td>水澤節</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>61</td>
+<td>䷼</td>
+<td>風澤中孚</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+</tr>
+<tr>
+<td>62</td>
+<td>䷽</td>
+<td>雷山小過</td>
+<td>陰</td>
+<td>陰</td>
+<td>陽</td>
+<td>陽</td>
+<td>陰</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>63</td>
+<td>䷾</td>
+<td>水火既濟</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+</tr>
+<tr>
+<td>64</td>
+<td>䷿</td>
+<td>火水未濟</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+<td>陰</td>
+<td>陽</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>讀法提示</h4>
+<ol>
+<li><strong>畫卦時</strong>：最下面一橫是<strong>初爻</strong>，最上面是<strong>上爻</strong>。</li>
+<li><strong>上卦／下卦</strong>：上三爻＝外卦（上卦），下三爻＝內卦（下卦）。
+<ul>
+<li>例：水雷屯＝上坎下震。</li>
+</ul>
+</li>
+<li><strong>Unicode</strong>：䷀～䷿ 即上表「符」欄，可直接貼在網頁。</li>
+<li><strong>若用 0/1 字串（由上到下）</strong>：與先前 <code>change.py</code> 約定一致時，乾＝<code>111111</code>、坤＝<code>000000</code>；表中「由下到上」的陰陽反過來寫即可。</li>
+</ol>
+<h2>卦名</h2>
+
+
+
+
+
+
+
+
+
+
+<h4>六十四卦 · 單字卦名＋注音</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>注音</th>
+<th>序</th>
+<th>卦名</th>
+<th>注音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>乾</td>
+<td>ㄑㄧㄢˊ</td>
+<td>33</td>
+<td>遯</td>
+<td>ㄉㄨㄣˋ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>坤</td>
+<td>ㄎㄨㄣ</td>
+<td>34</td>
+<td>大壯</td>
+<td>ㄉㄚˋ　ㄓㄨㄤˋ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>屯</td>
+<td>ㄓㄨㄣ</td>
+<td>35</td>
+<td>晉</td>
+<td>ㄐㄧㄣˋ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>蒙</td>
+<td>ㄇㄥˊ</td>
+<td>36</td>
+<td>明夷</td>
+<td>ㄇㄧㄥˊ　ㄧˊ</td>
+</tr>
+<tr>
+<td>5</td>
+<td>需</td>
+<td>ㄒㄩ</td>
+<td>37</td>
+<td>家人</td>
+<td>ㄐㄧㄚ　ㄖㄣˊ</td>
+</tr>
+<tr>
+<td>6</td>
+<td>訟</td>
+<td>ㄙㄨㄥˋ</td>
+<td>38</td>
+<td>睽</td>
+<td>ㄎㄨㄟˊ</td>
+</tr>
+<tr>
+<td>7</td>
+<td>師</td>
+<td>ㄕ</td>
+<td>39</td>
+<td>蹇</td>
+<td>ㄐㄧㄢˇ</td>
+</tr>
+<tr>
+<td>8</td>
+<td>比</td>
+<td>ㄅㄧˋ</td>
+<td>40</td>
+<td>解</td>
+<td>ㄒㄧㄝˋ</td>
+</tr>
+<tr>
+<td>9</td>
+<td>小畜</td>
+<td>ㄒㄧㄠˇ　ㄒㄩˋ</td>
+<td>41</td>
+<td>損</td>
+<td>ㄙㄨㄣˇ</td>
+</tr>
+<tr>
+<td>10</td>
+<td>履</td>
+<td>ㄌㄩˇ</td>
+<td>42</td>
+<td>益</td>
+<td>ㄧˋ</td>
+</tr>
+<tr>
+<td>11</td>
+<td>泰</td>
+<td>ㄊㄞˋ</td>
+<td>43</td>
+<td>夬</td>
+<td>ㄍㄨㄞˋ</td>
+</tr>
+<tr>
+<td>12</td>
+<td>否</td>
+<td>ㄆㄧˇ</td>
+<td>44</td>
+<td>姤</td>
+<td>ㄍㄡˋ</td>
+</tr>
+<tr>
+<td>13</td>
+<td>同人</td>
+<td>ㄊㄨㄥˊ　ㄖㄣˊ</td>
+<td>45</td>
+<td>萃</td>
+<td>ㄘㄨㄟˋ</td>
+</tr>
+<tr>
+<td>14</td>
+<td>大有</td>
+<td>ㄉㄚˋ　ㄧㄡˇ</td>
+<td>46</td>
+<td>升</td>
+<td>ㄕㄥ</td>
+</tr>
+<tr>
+<td>15</td>
+<td>謙</td>
+<td>ㄑㄧㄢ</td>
+<td>47</td>
+<td>困</td>
+<td>ㄎㄨㄣˋ</td>
+</tr>
+<tr>
+<td>16</td>
+<td>豫</td>
+<td>ㄩˋ</td>
+<td>48</td>
+<td>井</td>
+<td>ㄐㄧㄥˇ</td>
+</tr>
+<tr>
+<td>17</td>
+<td>隨</td>
+<td>ㄙㄨㄟˊ</td>
+<td>49</td>
+<td>革</td>
+<td>ㄍㄜˊ</td>
+</tr>
+<tr>
+<td>18</td>
+<td>蠱</td>
+<td>ㄍㄨˇ</td>
+<td>50</td>
+<td>鼎</td>
+<td>ㄉㄧㄥˇ</td>
+</tr>
+<tr>
+<td>19</td>
+<td>臨</td>
+<td>ㄌㄧㄣˊ</td>
+<td>51</td>
+<td>震</td>
+<td>ㄓㄣˋ</td>
+</tr>
+<tr>
+<td>20</td>
+<td>觀</td>
+<td>ㄍㄨㄢˋ</td>
+<td>52</td>
+<td>艮</td>
+<td>ㄍㄣˋ</td>
+</tr>
+<tr>
+<td>21</td>
+<td>噬嗑</td>
+<td>ㄕˋ　ㄏㄜˊ</td>
+<td>53</td>
+<td>漸</td>
+<td>ㄐㄧㄢˋ</td>
+</tr>
+<tr>
+<td>22</td>
+<td>賁</td>
+<td>ㄅㄧˋ</td>
+<td>54</td>
+<td>歸妹</td>
+<td>ㄍㄨㄟ　ㄇㄟˋ</td>
+</tr>
+<tr>
+<td>23</td>
+<td>剝</td>
+<td>ㄅㄛ</td>
+<td>55</td>
+<td>豐</td>
+<td>ㄈㄥ</td>
+</tr>
+<tr>
+<td>24</td>
+<td>復</td>
+<td>ㄈㄨˋ</td>
+<td>56</td>
+<td>旅</td>
+<td>ㄌㄩˇ</td>
+</tr>
+<tr>
+<td>25</td>
+<td>無妄</td>
+<td>ㄨˊ　ㄨㄤˋ</td>
+<td>57</td>
+<td>巽</td>
+<td>ㄒㄩㄣˋ</td>
+</tr>
+<tr>
+<td>26</td>
+<td>大畜</td>
+<td>ㄉㄚˋ　ㄒㄩˋ</td>
+<td>58</td>
+<td>兌</td>
+<td>ㄉㄨㄟˋ</td>
+</tr>
+<tr>
+<td>27</td>
+<td>頤</td>
+<td>ㄧˊ</td>
+<td>59</td>
+<td>渙</td>
+<td>ㄏㄨㄢˋ</td>
+</tr>
+<tr>
+<td>28</td>
+<td>大過</td>
+<td>ㄉㄚˋ　ㄍㄨㄛˋ</td>
+<td>60</td>
+<td>節</td>
+<td>ㄐㄧㄝˊ</td>
+</tr>
+<tr>
+<td>29</td>
+<td>坎</td>
+<td>ㄎㄢˇ</td>
+<td>61</td>
+<td>中孚</td>
+<td>ㄓㄨㄥ　ㄈㄨˊ</td>
+</tr>
+<tr>
+<td>30</td>
+<td>離</td>
+<td>ㄌㄧˊ</td>
+<td>62</td>
+<td>小過</td>
+<td>ㄒㄧㄠˇ　ㄍㄨㄛˋ</td>
+</tr>
+<tr>
+<td>31</td>
+<td>咸</td>
+<td>ㄒㄧㄢˊ</td>
+<td>63</td>
+<td>既濟</td>
+<td>ㄐㄧˋ　ㄐㄧˋ</td>
+</tr>
+<tr>
+<td>32</td>
+<td>恆</td>
+<td>ㄏㄥˊ</td>
+<td>64</td>
+<td>未濟</td>
+<td>ㄨㄟˋ　ㄐㄧˋ</td>
+</tr>
+</tbody>
+</table>
+<h4>六十四卦卦名注音</h4>
+<p>依文王序。注音採臺灣國語常用讀法；少數卦名有異讀時，以易學界較通行者為準。</p>
+<hr>
+<h4>上經（1～30）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>注音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>乾為天</td>
+<td>ㄑㄧㄢˊ　ㄨㄟˊ　ㄊㄧㄢ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>坤為地</td>
+<td>ㄎㄨㄣ　ㄨㄟˊ　ㄉㄧˋ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>水雷屯</td>
+<td>ㄕㄨㄟˇ　ㄌㄟˊ　ㄓㄨㄣ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>山水蒙</td>
+<td>ㄕㄢ　ㄕㄨㄟˇ　ㄇㄥˊ</td>
+</tr>
+<tr>
+<td>5</td>
+<td>水天需</td>
+<td>ㄕㄨㄟˇ　ㄊㄧㄢ　ㄒㄩ</td>
+</tr>
+<tr>
+<td>6</td>
+<td>天水訟</td>
+<td>ㄊㄧㄢ　ㄕㄨㄟˇ　ㄙㄨㄥˋ</td>
+</tr>
+<tr>
+<td>7</td>
+<td>地水師</td>
+<td>ㄉㄧˋ　ㄕㄨㄟˇ　ㄕ</td>
+</tr>
+<tr>
+<td>8</td>
+<td>水地比</td>
+<td>ㄕㄨㄟˇ　ㄉㄧˋ　ㄅㄧˋ</td>
+</tr>
+<tr>
+<td>9</td>
+<td>風天小畜</td>
+<td>ㄈㄥ　ㄊㄧㄢ　ㄒㄧㄠˇ　ㄒㄩˋ</td>
+</tr>
+<tr>
+<td>10</td>
+<td>天澤履</td>
+<td>ㄊㄧㄢ　ㄗㄜˊ　ㄌㄩˇ</td>
+</tr>
+<tr>
+<td>11</td>
+<td>地天泰</td>
+<td>ㄉㄧˋ　ㄊㄧㄢ　ㄊㄞˋ</td>
+</tr>
+<tr>
+<td>12</td>
+<td>天地否</td>
+<td>ㄊㄧㄢ　ㄉㄧˋ　ㄆㄧˇ</td>
+</tr>
+<tr>
+<td>13</td>
+<td>天火同人</td>
+<td>ㄊㄧㄢ　ㄏㄨㄛˇ　ㄊㄨㄥˊ　ㄖㄣˊ</td>
+</tr>
+<tr>
+<td>14</td>
+<td>火天大有</td>
+<td>ㄏㄨㄛˇ　ㄊㄧㄢ　ㄉㄚˋ　ㄧㄡˇ</td>
+</tr>
+<tr>
+<td>15</td>
+<td>地山謙</td>
+<td>ㄉㄧˋ　ㄕㄢ　ㄑㄧㄢ</td>
+</tr>
+<tr>
+<td>16</td>
+<td>雷地豫</td>
+<td>ㄌㄟˊ　ㄉㄧˋ　ㄩˋ</td>
+</tr>
+<tr>
+<td>17</td>
+<td>澤雷隨</td>
+<td>ㄗㄜˊ　ㄌㄟˊ　ㄙㄨㄟˊ</td>
+</tr>
+<tr>
+<td>18</td>
+<td>山風蠱</td>
+<td>ㄕㄢ　ㄈㄥ　ㄍㄨˇ</td>
+</tr>
+<tr>
+<td>19</td>
+<td>地澤臨</td>
+<td>ㄉㄧˋ　ㄗㄜˊ　ㄌㄧㄣˊ</td>
+</tr>
+<tr>
+<td>20</td>
+<td>風地觀</td>
+<td>ㄈㄥ　ㄉㄧˋ　ㄍㄨㄢˋ</td>
+</tr>
+<tr>
+<td>21</td>
+<td>火雷噬嗑</td>
+<td>ㄏㄨㄛˇ　ㄌㄟˊ　ㄕˋ　ㄏㄜˊ</td>
+</tr>
+<tr>
+<td>22</td>
+<td>山火賁</td>
+<td>ㄕㄢ　ㄏㄨㄛˇ　ㄅㄧˋ</td>
+</tr>
+<tr>
+<td>23</td>
+<td>山地剝</td>
+<td>ㄕㄢ　ㄉㄧˋ　ㄅㄛ</td>
+</tr>
+<tr>
+<td>24</td>
+<td>地雷復</td>
+<td>ㄉㄧˋ　ㄌㄟˊ　ㄈㄨˋ</td>
+</tr>
+<tr>
+<td>25</td>
+<td>天雷無妄</td>
+<td>ㄊㄧㄢ　ㄌㄟˊ　ㄨˊ　ㄨㄤˋ</td>
+</tr>
+<tr>
+<td>26</td>
+<td>山天大畜</td>
+<td>ㄕㄢ　ㄊㄧㄢ　ㄉㄚˋ　ㄒㄩˋ</td>
+</tr>
+<tr>
+<td>27</td>
+<td>山雷頤</td>
+<td>ㄕㄢ　ㄌㄟˊ　ㄧˊ</td>
+</tr>
+<tr>
+<td>28</td>
+<td>澤風大過</td>
+<td>ㄗㄜˊ　ㄈㄥ　ㄉㄚˋ　ㄍㄨㄛˋ</td>
+</tr>
+<tr>
+<td>29</td>
+<td>坎為水</td>
+<td>ㄎㄢˇ　ㄨㄟˊ　ㄕㄨㄟˇ</td>
+</tr>
+<tr>
+<td>30</td>
+<td>離為火</td>
+<td>ㄌㄧˊ　ㄨㄟˊ　ㄏㄨㄛˇ</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>下經（31～64）</h4>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>卦名</th>
+<th>注音</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31</td>
+<td>澤山咸</td>
+<td>ㄗㄜˊ　ㄕㄢ　ㄒㄧㄢˊ</td>
+</tr>
+<tr>
+<td>32</td>
+<td>雷風恆</td>
+<td>ㄌㄟˊ　ㄈㄥ　ㄏㄥˊ</td>
+</tr>
+<tr>
+<td>33</td>
+<td>天山遯</td>
+<td>ㄊㄧㄢ　ㄕㄢ　ㄉㄨㄣˋ</td>
+</tr>
+<tr>
+<td>34</td>
+<td>雷天大壯</td>
+<td>ㄌㄟˊ　ㄊㄧㄢ　ㄉㄚˋ　ㄓㄨㄤˋ</td>
+</tr>
+<tr>
+<td>35</td>
+<td>火地晉</td>
+<td>ㄏㄨㄛˇ　ㄉㄧˋ　ㄐㄧㄣˋ</td>
+</tr>
+<tr>
+<td>36</td>
+<td>地火明夷</td>
+<td>ㄉㄧˋ　ㄏㄨㄛˇ　ㄇㄧㄥˊ　ㄧˊ</td>
+</tr>
+<tr>
+<td>37</td>
+<td>風火家人</td>
+<td>ㄈㄥ　ㄏㄨㄛˇ　ㄐㄧㄚ　ㄖㄣˊ</td>
+</tr>
+<tr>
+<td>38</td>
+<td>火澤睽</td>
+<td>ㄏㄨㄛˇ　ㄗㄜˊ　ㄎㄨㄟˊ</td>
+</tr>
+<tr>
+<td>39</td>
+<td>水山蹇</td>
+<td>ㄕㄨㄟˇ　ㄕㄢ　ㄐㄧㄢˇ</td>
+</tr>
+<tr>
+<td>40</td>
+<td>雷水解</td>
+<td>ㄌㄟˊ　ㄕㄨㄟˇ　ㄒㄧㄝˋ</td>
+</tr>
+<tr>
+<td>41</td>
+<td>山澤損</td>
+<td>ㄕㄢ　ㄗㄜˊ　ㄙㄨㄣˇ</td>
+</tr>
+<tr>
+<td>42</td>
+<td>風雷益</td>
+<td>ㄈㄥ　ㄌㄟˊ　ㄧˋ</td>
+</tr>
+<tr>
+<td>43</td>
+<td>澤天夬</td>
+<td>ㄗㄜˊ　ㄊㄧㄢ　ㄍㄨㄞˋ</td>
+</tr>
+<tr>
+<td>44</td>
+<td>天風姤</td>
+<td>ㄊㄧㄢ　ㄈㄥ　ㄍㄡˋ</td>
+</tr>
+<tr>
+<td>45</td>
+<td>澤地萃</td>
+<td>ㄗㄜˊ　ㄉㄧˋ　ㄘㄨㄟˋ</td>
+</tr>
+<tr>
+<td>46</td>
+<td>地風升</td>
+<td>ㄉㄧˋ　ㄈㄥ　ㄕㄥ</td>
+</tr>
+<tr>
+<td>47</td>
+<td>澤水困</td>
+<td>ㄗㄜˊ　ㄕㄨㄟˇ　ㄎㄨㄣˋ</td>
+</tr>
+<tr>
+<td>48</td>
+<td>水風井</td>
+<td>ㄕㄨㄟˇ　ㄈㄥ　ㄐㄧㄥˇ</td>
+</tr>
+<tr>
+<td>49</td>
+<td>澤火革</td>
+<td>ㄗㄜˊ　ㄏㄨㄛˇ　ㄍㄜˊ</td>
+</tr>
+<tr>
+<td>50</td>
+<td>火風鼎</td>
+<td>ㄏㄨㄛˇ　ㄈㄥ　ㄉㄧㄥˇ</td>
+</tr>
+<tr>
+<td>51</td>
+<td>震為雷</td>
+<td>ㄓㄣˋ　ㄨㄟˊ　ㄌㄟˊ</td>
+</tr>
+<tr>
+<td>52</td>
+<td>艮為山</td>
+<td>ㄍㄣˋ　ㄨㄟˊ　ㄕㄢ</td>
+</tr>
+<tr>
+<td>53</td>
+<td>風山漸</td>
+<td>ㄈㄥ　ㄕㄢ　ㄐㄧㄢˋ</td>
+</tr>
+<tr>
+<td>54</td>
+<td>雷澤歸妹</td>
+<td>ㄌㄟˊ　ㄗㄜˊ　ㄍㄨㄟ　ㄇㄟˋ</td>
+</tr>
+<tr>
+<td>55</td>
+<td>雷火豐</td>
+<td>ㄌㄟˊ　ㄏㄨㄛˇ　ㄈㄥ</td>
+</tr>
+<tr>
+<td>56</td>
+<td>火山旅</td>
+<td>ㄏㄨㄛˇ　ㄕㄢ　ㄌㄩˇ</td>
+</tr>
+<tr>
+<td>57</td>
+<td>巽為風</td>
+<td>ㄒㄩㄣˋ　ㄨㄟˊ　ㄈㄥ</td>
+</tr>
+<tr>
+<td>58</td>
+<td>兌為澤</td>
+<td>ㄉㄨㄟˋ　ㄨㄟˊ　ㄗㄜˊ</td>
+</tr>
+<tr>
+<td>59</td>
+<td>風水渙</td>
+<td>ㄈㄥ　ㄕㄨㄟˇ　ㄏㄨㄢˋ</td>
+</tr>
+<tr>
+<td>60</td>
+<td>水澤節</td>
+<td>ㄕㄨㄟˇ　ㄗㄜˊ　ㄐㄧㄝˊ</td>
+</tr>
+<tr>
+<td>61</td>
+<td>風澤中孚</td>
+<td>ㄈㄥ　ㄗㄜˊ　ㄓㄨㄥ　ㄈㄨˊ</td>
+</tr>
+<tr>
+<td>62</td>
+<td>雷山小過</td>
+<td>ㄌㄟˊ　ㄕㄢ　ㄒㄧㄠˇ　ㄍㄨㄛˋ</td>
+</tr>
+<tr>
+<td>63</td>
+<td>水火既濟</td>
+<td>ㄕㄨㄟˇ　ㄏㄨㄛˇ　ㄐㄧˋ　ㄐㄧˋ</td>
+</tr>
+<tr>
+<td>64</td>
+<td>火水未濟</td>
+<td>ㄏㄨㄛˇ　ㄕㄨㄟˇ　ㄨㄟˋ　ㄐㄧˋ</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4>易讀易混字（補充）</h4>
+<table>
+<thead>
+<tr>
+<th>字</th>
+<th>注音</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>否</td>
+<td>ㄆㄧˇ</td>
+<td>卦名讀此；日常「是否」多讀 ㄈㄡˇ</td>
+</tr>
+<tr>
+<td>賁</td>
+<td>ㄅㄧˋ</td>
+<td>易卦常用此音</td>
+</tr>
+<tr>
+<td>觀</td>
+<td>ㄍㄨㄢˋ</td>
+<td>作「觀覽」義時讀去聲</td>
+</tr>
+<tr>
+<td>解</td>
+<td>ㄒㄧㄝˋ</td>
+<td>卦名多讀此</td>
+</tr>
+<tr>
+<td>蹇</td>
+<td>ㄐㄧㄢˇ</td>
+<td></td>
+</tr>
+<tr>
+<td>夬</td>
+<td>ㄍㄨㄞˋ</td>
+<td></td>
+</tr>
+<tr>
+<td>姤</td>
+<td>ㄍㄡˋ</td>
+<td></td>
+</tr>
+<tr>
+<td>畜</td>
+<td>ㄒㄩˋ</td>
+<td>小畜、大畜</td>
+</tr>
+<tr>
+<td>遯</td>
+<td>ㄉㄨㄣˋ</td>
+<td>同「遁」</td>
+</tr>
+<tr>
+<td>巽</td>
+<td>ㄒㄩㄣˋ</td>
+<td></td>
+</tr>
+<tr>
+<td>兌</td>
+<td>ㄉㄨㄟˋ</td>
+<td></td>
+</tr>
+<tr>
+<td>艮</td>
+<td>ㄍㄣˋ</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>卦辭</h2>
+
+
+
+
+
+<p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
+<hr>
+<h4>上經</h4>
+<p><strong>1 乾</strong><br> 卦辭：元亨利貞。<br> 白話：大通、亨通，利於守正。</p>
+<p><strong>2 坤</strong><br> 卦辭：元亨，利牝馬之貞。君子有攸往，先迷後得主，利西南得朋，東北喪朋。安貞，吉。<br> 白話：大通。宜如母馬般柔順守正。君子有所往：先迷失，後得所主。西南得友，東北失友。安於正道則吉。</p>
+<p><strong>3 屯</strong><br> 卦辭：元亨利貞，勿用有攸往，利建侯。<br> 白話：大通、正固。不宜急於前往，利於建立根基、封侯立業。</p>
+<p><strong>4 蒙</strong><br> 卦辭：亨。匪我求童蒙，童蒙求我。初筮告，再三瀆，瀆則不告。利貞。<br> 白話：可通。不是我求蒙昧者，是蒙昧者來求教。初問可告；再三煩瀆則不再告。利於守正。</p>
+<p><strong>5 需</strong><br> 卦辭：有孚，光亨，貞吉。利涉大川。<br> 白話：有誠信，光明亨通，正固則吉。利於渡過大川險難。</p>
+<p><strong>6 訟</strong><br> 卦辭：有孚，窒。惕中吉。終凶。利見大人，不利涉大川。<br> 白話：雖有誠，卻受阻。戒慎居中則吉，爭到底則凶。利於見有德之人，不利冒險涉大川。</p>
+<p><strong>7 師</strong><br> 卦辭：貞，丈人，吉無咎。<br> 白話：守正；以老成持重者領導，吉而無過咎。</p>
+<p><strong>8 比</strong><br> 卦辭：吉。原筮元永貞，無咎。不寧方來，後夫凶。<br> 白話：吉。再三求問，始終守正，無咎。不安者紛紛來附；遲來、落後者凶。</p>
+<p><strong>9 小畜</strong><br> 卦辭：亨。密雲不雨，自我西郊。<br> 白話：可通。密雲尚未下雨，雲氣來自西郊（蓄而未發）。</p>
+<p><strong>10 履</strong><br> 卦辭：履虎尾，不咥人，亨。<br> 白話：踩到虎尾，虎卻不咬人，可通。</p>
+<p><strong>11 泰</strong><br> 卦辭：小往大來，吉亨。<br> 白話：陰小者往、陽大者來，吉而亨通。</p>
+<p><strong>12 否</strong><br> 卦辭：否之匪人，不利君子貞，大往小來。<br> 白話：閉塞非正人之道，不利君子守正；陽大者往、陰小者來。</p>
+<p><strong>13 同人</strong><br> 卦辭：同人於野，亨。利涉大川，利君子貞。<br> 白話：在曠野與人同心，亨通。利於涉大川，利於君子守正。</p>
+<p><strong>14 大有</strong><br> 卦辭：元亨。<br> 白話：大為亨通。</p>
+<p><strong>15 謙</strong><br> 卦辭：亨，君子有終。<br> 白話：亨通，君子能有好的結局。</p>
+<p><strong>16 豫</strong><br> 卦辭：利建侯行師。<br> 白話：利於封侯立業、出動軍隊。</p>
+<p><strong>17 隨</strong><br> 卦辭：元亨利貞，無咎。<br> 白話：大通、正固，沒有咎害。</p>
+<p><strong>18 蠱</strong><br> 卦辭：元亨，利涉大川。先甲三日，後甲三日。<br> 白話：大通，利於涉大川。在事之始前三日、後三日審慎處置。</p>
+<p><strong>19 臨</strong><br> 卦辭：元亨利貞。至于八月有凶。<br> 白話：大通、正固。到了八月可能有凶（盛極將衰）。</p>
+<p><strong>20 觀</strong><br> 卦辭：盥而不薦，有孚顒若。<br> 白話：已洗手齋戒、尚未獻祭，誠意莊嚴可見。</p>
+<p><strong>21 噬嗑</strong><br> 卦辭：亨。利用獄。<br> 白話：亨通。宜於用刑獄明斷。</p>
+<p><strong>22 賁</strong><br> 卦辭：亨。小利有攸往。<br> 白話：亨通。小有利益於前往。</p>
+<p><strong>23 剝</strong><br> 卦辭：不利有攸往。<br> 白話：不利有所前往。</p>
+<p><strong>24 復</strong><br> 卦辭：亨。出入無疾，朋來無咎。反復其道，七日來復，利有攸往。<br> 白話：亨通。出入無災，友來無咎。反復其道，七日而復，利於有所往。</p>
+<p><strong>25 無妄</strong><br> 卦辭：元亨利貞。其匪正有眚，不利有攸往。<br> 白話：大通、正固。若不正則有災，不利有所往。</p>
+<p><strong>26 大畜</strong><br> 卦辭：利貞，不家食吉，利涉大川。<br> 白話：利於守正；不只在家自養而能用於世則吉，利於涉大川。</p>
+<p><strong>27 頤</strong><br> 卦辭：貞吉。觀頤，自求口實。<br> 白話：守正則吉。觀察養的方式，自己謀求正當的口體之養。</p>
+<p><strong>28 大過</strong><br> 卦辭：棟橈，利有攸往，亨。<br> 白話：棟梁彎曲（負擔過重）。仍利有所往，可通。</p>
+<p><strong>29 坎</strong><br> 卦辭：習坎，有孚，維心亨，行有尚。<br> 白話：重重險陷。有誠信，心中可通，行動會有功。</p>
+<p><strong>30 離</strong><br> 卦辭：利貞，亨。畜牝牛，吉。<br> 白話：利於守正，亨通。畜養柔順的母牛，吉。</p>
+<hr>
+<h4>下經</h4>
+<p><strong>31 咸</strong><br> 卦辭：亨，利貞，取女吉。<br> 白話：亨通，利於守正；娶妻吉。</p>
+<p><strong>32 恆</strong><br> 卦辭：亨，無咎，利貞，利有攸往。<br> 白話：亨通，無咎，利於守正，利於有所往。</p>
+<p><strong>33 遯</strong><br> 卦辭：亨，小利貞。<br> 白話：亨通；小有利於守正。</p>
+<p><strong>34 大壯</strong><br> 卦辭：利貞。<br> 白話：利於守正。</p>
+<p><strong>35 晉</strong><br> 卦辭：康侯用錫馬蕃庶，晝日三接。<br> 白話：尊貴之侯受賜眾馬，一日三次蒙接見（升進之象）。</p>
+<p><strong>36 明夷</strong><br> 卦辭：利艱貞。<br> 白話：在艱難中守正為有利。</p>
+<p><strong>37 家人</strong><br> 卦辭：利女貞。<br> 白話：利於女子守正（治家以正）。</p>
+<p><strong>38 睽</strong><br> 卦辭：小事吉。<br> 白話：做小事吉。</p>
+<p><strong>39 蹇</strong><br> 卦辭：利西南，不利東北；利見大人，貞吉。<br> 白話：利西南，不利東北；利於見有德之人，守正則吉。</p>
+<p><strong>40 解</strong><br> 卦辭：利西南，無所往，其來復吉。有攸往，夙吉。<br> 白話：利西南。無處可往時，回來反而吉；若有所往，早行動吉。</p>
+<p><strong>41 損</strong><br> 卦辭：有孚，元吉，無咎，可貞，利有攸往。曷之用？二簋可用享。<br> 白話：有誠則大吉、無咎，可守正，利有所往。用什麼祭？兩簋薄祭即可。</p>
+<p><strong>42 益</strong><br> 卦辭：利有攸往，利涉大川。<br> 白話：利於有所往，利於涉大川。</p>
+<p><strong>43 夬</strong><br> 卦辭：揚于王庭，孚號，有厲，告自邑，不利即戎，利有攸往。<br> 白話：在朝廷上宣明；誠信呼號，有危；先告誡自邑，不利立即動武，利於有所往。</p>
+<p><strong>44 姤</strong><br> 卦辭：女壯，勿用取女。<br> 白話：女子過強，不宜娶此女。</p>
+<p><strong>45 萃</strong><br> 卦辭：亨。王假有廟，利見大人，亨，利貞。用大牲吉，利有攸往。<br> 白話：亨通。王至宗廟；利見大人，亨，利守正。用大牲祭祀吉，利有所往。</p>
+<p><strong>46 升</strong><br> 卦辭：元亨，用見大人，勿恤，南征吉。<br> 白話：大通。宜見大人，不必憂慮，向南進取吉。</p>
+<p><strong>47 困</strong><br> 卦辭：亨，貞，大人吉，無咎，有言不信。<br> 白話：可通，宜守正；大人吉、無咎。有言而人不信。</p>
+<p><strong>48 井</strong><br> 卦辭：改邑不改井，無喪無得，往來井井。汔至，亦未繘井，羸其瓶，凶。<br> 白話：城邑可改，井不改；無得無失，人來往都靠井。幾乎到達卻未完成汲水，瓶被損壞，凶。</p>
+<p><strong>49 革</strong><br> 卦辭：己日乃孚。元亨利貞，悔亡。<br> 白話：到了適當之日才得信任。大通、正固，悔恨消失。</p>
+<p><strong>50 鼎</strong><br> 卦辭：元吉，亨。<br> 白話：大吉，亨通。</p>
+<p><strong>51 震</strong><br> 卦辭：亨。震來虩虩，笑言啞啞。震驚百里，不喪匕鬯。<br> 白話：亨通。雷來而驚恐，之後笑語自若。震驚百里，卻不失落祭器（主祭不失職）。</p>
+<p><strong>52 艮</strong><br> 卦辭：艮其背，不獲其身，行其庭，不見其人，無咎。<br> 白話：止於其背，不執著於自身；走在庭中不見其人，無咎。</p>
+<p><strong>53 漸</strong><br> 卦辭：女歸吉，利貞。<br> 白話：女子出嫁吉，利於守正。</p>
+<p><strong>54 歸妹</strong><br> 卦辭：征凶，無攸利。<br> 白話：前進有凶，無所利。</p>
+<p><strong>55 豐</strong><br> 卦辭：亨。王假之，勿憂，宜日中。<br> 白話：亨通。王可至此；不必憂，宜如日在中天。</p>
+<p><strong>56 旅</strong><br> 卦辭：小亨，旅貞吉。<br> 白話：小有亨通；行旅能守正則吉。</p>
+<p><strong>57 巽</strong><br> 卦辭：小亨，利有攸往，利見大人。<br> 白話：小亨；利有所往，利見大人。</p>
+<p><strong>58 兌</strong><br> 卦辭：亨，利貞。<br> 白話：亨通，利於守正。</p>
+<p><strong>59 渙</strong><br> 卦辭：亨。王假有廟，利涉大川，利貞。<br> 白話：亨通。王至宗廟；利涉大川，利守正。</p>
+<p><strong>60 節</strong><br> 卦辭：亨。苦節不可貞。<br> 白話：亨通。過於苦澀的節制不可固守。</p>
+<p><strong>61 中孚</strong><br> 卦辭：豚魚吉，利涉大川，利貞。<br> 白話：即使以豚魚薄祭也吉；利涉大川，利守正。</p>
+<p><strong>62 小過</strong><br> 卦辭：亨，利貞，可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。<br> 白話：亨通，利守正；可做小事，不可做大事。飛鳥留下聲音：不宜向上，宜向下，大吉。</p>
+<p><strong>63 既濟</strong><br> 卦辭：亨，小利貞，初吉終亂。<br> 白話：亨通，小有利於守正；開始吉，終了可能亂。</p>
+<p><strong>64 未濟</strong><br> 卦辭：亨，小狐汔濟，濡其尾，無攸利。<br> 白話：可通。小狐狸幾乎渡河，卻湿了尾巴，無所利。</p>
+<hr>
+<p><strong>說明</strong></p>
+<ul>
+<li>卦辭出自《周易》經文，屬公開古籍。</li>
+<li>白話僅供理解大意，深入請對照注疏與上下文。<br></li>
+</ul>
+<h4>六十四卦卦象含意（簡釋）</h4>
+<p>每卦由**上卦（外）<strong>與</strong>下卦（內）**組成。下列依文王序，說明卦象結構與主要含意。</p>
+<hr>
+<h4>上經</h4>
+<p><strong>1 乾為天</strong>（乾上乾下）<br> 純陽。天行剛健，象創造、領導、進取。君子以自強不息應之。</p>
+<p><strong>2 坤為地</strong>（坤上坤下）<br> 純陰。地勢厚載，象順承、包容、承載。君子以厚德載物應之。</p>
+<p><strong>3 水雷屯</strong>（坎上震下）<br> 上險下動。如草木破土，充滿艱難與生機。象始生、屯難、需建立秩序。</p>
+<p><strong>4 山水蒙</strong>（艮上坎下）<br> 山下有險。蒙昧未開，需啟發教育。象童蒙、求學、啟迪。</p>
+<p><strong>5 水天需</strong>（坎上乾下）<br> 剛健而遇險，宜等待。象耐心、蓄勢、待時而進。</p>
+<p><strong>6 天水訟</strong>（乾上坎下）<br> 上健下險，情志相違。象爭訟、分歧，宜戒爭、見大人調解。</p>
+<p><strong>7 地水師</strong>（坤上坎下）<br> 地中有水，眾聚而險。象軍隊、組織、以正用眾。</p>
+<p><strong>8 水地比</strong>（坎上坤下）<br> 地上有水，親密依附。象親比、結盟、親近賢者。</p>
+<p><strong>9 風天小畜</strong>（巽上乾下）<br> 風行天上，所蓄尚小。象小有積蓄、暫時受阻、密雲不雨。</p>
+<p><strong>10 天澤履</strong>（乾上兌下）<br> 上天下澤，分位清晰。如履虎尾，象謹慎踐行、禮與分寸。</p>
+<p><strong>11 地天泰</strong>（坤上乾下）<br> 天地交，陰陽通。象通泰、和諧、小往大來。</p>
+<p><strong>12 天地否</strong>（乾上坤下）<br> 天地不交，閉塞不通。象否塞、小人得勢、宜斂德退避。</p>
+<p><strong>13 天火同人</strong>（乾上離下）<br> 天與火同明。象與人和同、公開聯合、利涉大川。</p>
+<p><strong>14 火天大有</strong>（離上乾下）<br> 火在天上，光明普照。象大有收穫、富有而能照物。</p>
+<p><strong>15 地山謙</strong>（坤上艮下）<br> 地中有山，高而能下。象謙虛、不自滿、有終。</p>
+<p><strong>16 雷地豫</strong>（震上坤下）<br> 雷出地奮，和樂奮發。象喜樂、預備、建侯行師。</p>
+<p><strong>17 澤雷隨</strong>（兌上震下）<br> 澤中有雷，彼此時隨。象隨從、適時、順勢而動。</p>
+<p><strong>18 山風蠱</strong>（艮上巽下）<br> 山下有風，事敗當整。象弊亂、革新、整治積弊。</p>
+<p><strong>19 地澤臨</strong>（坤上兌下）<br> 地上有澤，居高臨下。象監臨、接近、八月有凶之戒。</p>
+<p><strong>20 風地觀</strong>（巽上坤下）<br> 風行地上，遍觀萬物。象觀察、示範、以神道設教。</p>
+<p><strong>21 火雷噬嗑</strong>（離上震下）<br> 顎中有物，當咬合。象刑罰、決斷、除去梗障。</p>
+<p><strong>22 山火賁</strong>（艮上離下）<br> 山下有火，文飾光明。象文飾、美化，亦戒浮華。</p>
+<p><strong>23 山地剝</strong>（艮上坤下）<br> 山附於地，陰剝陽。象剝落、侵蝕，不利有所往。</p>
+<p><strong>24 地雷復</strong>（坤上震下）<br> 雷在地中，一陽來復。象回復、更生、七日來復。</p>
+<p><strong>25 天雷無妄</strong>（乾上震下）<br> 天下雷行，真實無虛。象不妄為；若不正則有災。</p>
+<p><strong>26 山天大畜</strong>（艮上乾下）<br> 天在山中，所蓄者大。象大積蓄、止健、養賢。</p>
+<p><strong>27 山雷頤</strong>（艮上震下）<br> 上止下動，如口嚼食。象頤養、言語與飲食之慎。</p>
+<p><strong>28 澤風大過</strong>（兌上巽下）<br> 澤滅木，棟梁彎曲。象非常、過度、非常之舉。</p>
+<p><strong>29 坎為水</strong>（坎上坎下）<br> 重險。象陷險、習坎，以誠心通、行有尚。</p>
+<p><strong>30 離為火</strong>（離上離下）<br> 重明。象附麗、文明、照察；宜柔順如畜牝牛。</p>
+<hr>
+<h4>下經</h4>
+<p><strong>31 澤山咸</strong>（兌上艮下）<br> 山上有澤，互相感應。象感應、情感、取女吉。</p>
+<p><strong>32 雷風恆</strong>（震上巽下）<br> 雷風相與，恆久不已。象恆常、持久、夫婦之道。</p>
+<p><strong>33 天山遯</strong>（乾上艮下）<br> 天下有山，退避。象隱退、避時、小利貞。</p>
+<p><strong>34 雷天大壯</strong>（震上乾下）<br> 雷在天上，陽氣大壯。象強盛；利於守正，不可用壯。</p>
+<p><strong>35 火地晉</strong>（離上坤下）<br> 明出地上，進而光明。象前進、升進、晝日三接。</p>
+<p><strong>36 地火明夷</strong>（坤上離下）<br> 明入地中，光明受傷。象艱貞、韜光、在難中守正。</p>
+<p><strong>37 風火家人</strong>（巽上離下）<br> 風自火出，家道。象家庭、內治、女正位乎內。</p>
+<p><strong>38 火澤睽</strong>（離上兌下）<br> 上火下澤，相違。象乖離、異中求同，小事吉。</p>
+<p><strong>39 水山蹇</strong>（坎上艮下）<br> 山上有水，行難。象蹇難；利西南，利見大人。</p>
+<p><strong>40 雷水解</strong>（震上坎下）<br> 雷雨作，舒解。象緩解、解難；宜早、宜復。</p>
+<p><strong>41 山澤損</strong>（艮上兌下）<br> 山下有澤，損下益上。象減損、節約；有孚則元吉。</p>
+<p><strong>42 風雷益</strong>（巽上震下）<br> 風雷相益，損上益下。象增益、利人、利涉大川。</p>
+<p><strong>43 澤天夬</strong>（兌上乾下）<br> 澤上於天，決去陰。象決斷、清除；宜宣告，不利即戎。</p>
+<p><strong>44 天風姤</strong>（乾上巽下）<br> 天下有風，陰遇陽。象邂逅；女壯，勿用取女。</p>
+<p><strong>45 澤地萃</strong>（兌上坤下）<br> 澤在地上，萬物萃聚。象聚集、會盟；王假有廟。</p>
+<p><strong>46 地風升</strong>（坤上巽下）<br> 地中生木，上升。象升進、積小成高；南征吉。</p>
+<p><strong>47 澤水困</strong>（兌上坎下）<br> 澤無水，困窮。象困頓；大人吉，有言不信。</p>
+<p><strong>48 水風井</strong>（坎上巽下）<br> 木上有水，井養。象井、養人；邑可改，井不可改。</p>
+<p><strong>49 澤火革</strong>（兌上離下）<br> 澤中有火，變革。象改革、革命；己日乃孚。</p>
+<p><strong>50 火風鼎</strong>（離上巽下）<br> 木上有火，烹飪。象鼎新、養賢、元吉亨。</p>
+<p><strong>51 震為雷</strong>（震上震下）<br> 重雷。象震動、警醒；虩虩而後啞啞，主祭不喪。</p>
+<p><strong>52 艮為山</strong>（艮上艮下）<br> 重山。象止、界限；艮其背，不獲其身，無咎。</p>
+<p><strong>53 風山漸</strong>（巽上艮下）<br> 山上有木，漸長。象漸進、女歸；按序而進。</p>
+<p><strong>54 雷澤歸妹</strong><br> （震上兌下）<br> 澤上有雷，少女歸。象歸嫁失正；征凶，無攸利。</p>
+<p><strong>55 雷火豐</strong>（震上離下）<br> 雷電皆至，豐大。象豐盛；宜日中，勿憂。</p>
+<p><strong>56 火山旅</strong>（離上艮下）<br> 山上有火，羈旅。象行旅、寄寓；小亨，旅貞吉。</p>
+<p><strong>57 巽為風</strong>（巽上巽下）<br> 重風。象順入、申命；小亨，利見大人。</p>
+<p><strong>58 兌為澤</strong>（兌上兌下）<br> 重澤。象喜悅、交談；亨，利貞。</p>
+<p><strong>59 風水渙</strong>（巽上坎下）<br> 風行水上，離散。象渙散、化解；王假有廟，利涉大川。</p>
+<p><strong>60 水澤節</strong>（坎上兌下）<br> 澤上有水，節制。象節度、制度；苦節不可貞。</p>
+<p><strong>61 風澤中孚</strong>（巽上兌下）<br> 澤上有風，中心信。象誠信；豚魚吉，利涉大川。</p>
+<p><strong>62 雷山小過</strong>（震上艮下）<br> 山上有雷，小有過。象小過、宜下不宜上；可小事。</p>
+<p><strong>63 水火既濟</strong>（坎上離下）<br> 水在火上，已成。象事已濟；初吉終亂，宜慎終。</p>
+<p><strong>64 火水未濟</strong>（離上坎下）<br> 火在水上，未成。象未完成；小狐汔濟，濡尾，仍有可為之機。</p>
+<hr>
+<h4>讀象提示</h4>
+<ol>
+<li><strong>先看上下卦</strong>：天、地、雷、風、水、火、山、澤的組合關係（交、不交、相附、相違等）。</li>
+<li><strong>再合卦名</strong>：名往往點出象的核心（如「屯」為難生，「謙」為有而不居）。</li>
+<li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
+</ol>
+<h2>上經爻辭</h2>
+
+<p>以下為六十四卦<strong>六爻爻辭</strong>與簡明白話。爻位由下而上：初、二、三、四、五、上。陽爻稱「九」，陰爻稱「六」。</p>
+<p>依卦分列；白話只疏通大意。</p>
+<hr>
+<h4>1 乾</h4>
+<p><strong>初九</strong>　潛龍勿用。<br> 白話：龍潛在水下，暫不宜有所作為。</p>
+<p><strong>九二</strong>　見龍在田，利見大人。<br> 白話：龍出現在田野，利於見到有德的人。</p>
+<p><strong>九三</strong>　君子終日乾乾，夕惕若，厲無咎。<br> 白話：君子整日奮發，晚上仍警惕，雖危無咎。</p>
+<p><strong>九四</strong>　或躍在淵，無咎。<br> 白話：或躍起、或在深淵，審時則無咎。</p>
+<p><strong>九五</strong>　飛龍在天，利見大人。<br> 白話：龍飛在天，利於見到有德的人。</p>
+<p><strong>上九</strong>　亢龍有悔。<br> 白話：龍飛太高，將有悔恨。</p>
+<p><strong>用九</strong>　見群龍無首，吉。<br> 白話：群龍出現而不以首領自居，吉。</p>
+<hr>
+<h4>2 坤</h4>
+<p><strong>初六</strong>　履霜，堅冰至。<br> 白話：踩到霜，就知道堅冰將至。</p>
+<p><strong>六二</strong>　直方大，不習無不利。<br> 白話：正直、端方、廣大，不必刻意學習也無不利。</p>
+<p><strong>六三</strong>　含章可貞。或從王事，無成有終。<br> 白話：蘊含文采，可守正。或從事王事，不居功而有好結果。</p>
+<p><strong>六四</strong>　括囊；無咎，無譽。<br> 白話：紮緊口袋；無咎也無譽。</p>
+<p><strong>六五</strong>　黃裳，元吉。<br> 白話：黃色下裳（中和謙下），大吉。</p>
+<p><strong>上六</strong>　龍戰於野，其血玄黃。<br> 白話：龍在野外交戰，血流玄黃。</p>
+<p><strong>用六</strong>　利永貞。<br> 白話：利於長久守正。</p>
+<hr>
+<h4>3 屯</h4>
+<p><strong>初九</strong>　磐桓；利居貞，利建侯。<br> 白話：徘徊不進；利於安居守正，利於封侯立業。</p>
+<p><strong>六二</strong>　屯如邅如，乘馬班如。匪寇婚媾，女子貞不字，十年乃字。<br> 白話：艱難徘徊，馬匹旋轉不進。不是強寇，而是求婚；女子守正不急嫁，十年才許嫁。</p>
+<p><strong>六三</strong>　即鹿無虞，惟入于林中，君子几不如舍，往吝。<br> 白話：追鹿沒有虞人帶領，只會陷入林中；君子幾察不如放棄，前往有憾。</p>
+<p><strong>六四</strong>　乘馬班如，求婚媾，往吉，無不利。<br> 白話：乘馬旋轉，為求婚姻；前往吉，無不利。</p>
+<p><strong>九五</strong>　屯其膏，小貞吉，大貞凶。<br> 白話：屯積恩澤不施；小事守正吉，大事守正反而凶。</p>
+<p><strong>上六</strong>　乘馬班如，泣血漣如。<br> 白話：乘馬盤旋，泣血漣漣。</p>
+<hr>
+<h4>4 蒙</h4>
+<p><strong>初六</strong>　發蒙，利用刑人，用說桎梏；以往吝。<br> 白話：啟發蒙昧，宜用規範懲戒，以脫去枷鎖；若一意孤行則有憾。</p>
+<p><strong>九二</strong>　包蒙吉；納婦吉；子克家。<br> 白話：包容蒙昧則吉；娶婦吉；子能治家。</p>
+<p><strong>六三</strong>　勿用取女；見金夫，不有躬，無攸利。<br> 白話：不宜娶此女；她見有金之男就失身，無所利。</p>
+<p><strong>六四</strong>　困蒙，吝。<br> 白話：困於蒙昧，有憾。</p>
+<p><strong>六五</strong>　童蒙，吉。<br> 白話：像孩童般虛心受教，吉。</p>
+<p><strong>上九</strong>　擊蒙；不利為寇，利禦寇。<br> 白話：擊打以去蒙；不宜當侵略者，宜防禦盜寇。</p>
+<hr>
+<h4>5 需</h4>
+<p><strong>初九</strong>　需于郊。利用恆，無咎。<br> 白話：在郊外等待。宜有恆，無咎。</p>
+<p><strong>九二</strong>　需于沙。小有言，終吉。<br> 白話：在沙灘等待。小有口舌，終吉。</p>
+<p><strong>九三</strong>　需于泥，致寇至。<br> 白話：在泥沼等待，招來盜寇。</p>
+<p><strong>六四</strong>　需于血，出自穴。<br> 白話：在血險中等待，終能從洞穴脫出。</p>
+<p><strong>九五</strong>　需于酒食，貞吉。<br> 白話：在酒食中等待（安然待時），守正吉。</p>
+<p><strong>上六</strong>　入于穴，有不速之客三人來，敬之終吉。<br> 白話：進入洞穴，有三位不請自來的客人；恭敬對待，終吉。</p>
+<hr>
+<h4>6 訟</h4>
+<p><strong>初六</strong>　不永所事，小有言，終吉。<br> 白話：不把爭訟拖長，小有口舌，終吉。</p>
+<p><strong>九二</strong>　不克訟，歸而逋，其邑人三百戶，無眚。<br> 白話：爭訟不勝，逃歸躲避；其邑三百戶，無災。</p>
+<p><strong>六三</strong>　食舊德，貞厲，終吉，或從王事，無成。<br> 白話：依靠舊日德業；守正雖危，終吉。或從事王事，不求成名。</p>
+<p><strong>九四</strong>　不克訟，復即命渝，安貞吉。<br> 白話：爭訟不勝，回覆本分、改變態度，安於正則吉。</p>
+<p><strong>九五</strong>　訟元吉。<br> 白話：爭訟得公正裁決，大吉。</p>
+<p><strong>上九</strong>　或錫之鞶帶，終朝三褫之。<br> 白話：或受賜大帶，一天之內被剝奪三次。</p>
+<hr>
+<h4>7 師</h4>
+<p><strong>初六</strong>　師出以律，否臧凶。<br> 白話：出兵要有紀律；紀律不良則凶。</p>
+<p><strong>九二</strong>　在師中，吉無咎，王三錫命。<br> 白話：在軍中任統帥，吉無咎；王三次賜命褒獎。</p>
+<p><strong>六三</strong>　師或輿尸，凶。<br> 白話：或載屍而歸，凶。</p>
+<p><strong>六四</strong>　師左次，無咎。<br> 白話：軍隊退守駐紮，無咎。</p>
+<p><strong>六五</strong>　田有禽，利執言，無咎。長子帥師，弟子輿尸，貞凶。<br> 白話：田中有禽獸，利於執言捕獲，無咎。長子率師可以；弟子載屍，雖正亦凶。</p>
+<p><strong>上六</strong>　大君有命，開國承家，小人勿用。<br> 白話：天子頒命，封國承家；不可重用小人。</p>
+<hr>
+<h4>8 比</h4>
+<p><strong>初六</strong>　有孚比之，無咎。有孚盈缶，終來有他，吉。<br> 白話：以誠親比，無咎。誠信如缶中滿盈，終有意外之吉。</p>
+<p><strong>六二</strong>　比之自內，貞吉。<br> 白話：從內部親比，守正吉。</p>
+<p><strong>六三</strong>　比之匪人。<br> 白話：親比的不是正當的人。</p>
+<p><strong>六四</strong>　外比之，貞吉。<br> 白話：向外親比，守正吉。</p>
+<p><strong>九五</strong>　顯比，王用三驅，失前禽。邑人不誡，吉。<br> 白話：公開親比；王用三驅之禮，放走迎面的禽獸。邑人不必戒備，吉。</p>
+<p><strong>上六</strong>　比之無首，凶。<br> 白話：親比而沒有首領，凶。</p>
+<hr>
+<h4>9 小畜</h4>
+<p><strong>初九</strong>　復自道，何其咎？吉。<br> 白話：回到正道，有什麼咎？吉。</p>
+<p><strong>九二</strong>　牽復，吉。<br> 白話：被牽引而回，吉。</p>
+<p><strong>九三</strong>　輿說輻，夫妻反目。<br> 白話：車輪脫輻；夫妻反目。</p>
+<p><strong>六四</strong>　有孚，血去惕出，無咎。<br> 白話：有誠信，可免傷害與憂懼，無咎。</p>
+<p><strong>九五</strong>　有孚攣如，富以其鄰。<br> 白話：誠信相繫，與鄰居同富。</p>
+<p><strong>上九</strong>　既雨既處，尚德載，婦貞厲。月几望，君子征凶。<br> 白話：已下雨、已安處，德積載滿；婦人守正仍危。月近圓時，君子出征凶。</p>
+<hr>
+<h4>10 履</h4>
+<p><strong>初九</strong>　素履，往無咎。<br> 白話：以質樸態度行走，前往無咎。</p>
+<p><strong>九二</strong>　履道坦坦，幽人貞吉。<br> 白話：行於平坦大道，隱士守正吉。</p>
+<p><strong>六三</strong>　眇能視，跛能履，履虎尾，咥人，凶。武人為于大君。<br> 白話：眼盲硬看、腳跛硬走，踩虎尾被咬，凶。武人為大君效命（勇而欠慎）。</p>
+<p><strong>九四</strong>　履虎尾，愬愬終吉。<br> 白話：踩虎尾，戒慎恐懼，終吉。</p>
+<p><strong>九五</strong>　夬履，貞厲。<br> 白話：剛決地走，守正仍危。</p>
+<p><strong>上九</strong>　視履考祥，其旋元吉。<br> 白話：回顧所行、考察吉凶，轉身圓滿則大吉。</p>
+<hr>
+<h4>11 泰</h4>
+<p><strong>初九</strong>　拔茅茹，以其彙，征吉。<br> 白話：拔茅連根、同類相牽，前進吉。</p>
+<p><strong>九二</strong>　包荒，用馮河，不遐遺，朋亡，得尚于中行。<br> 白話：包容荒穢，可徒步渡河，不遺遠方，不結私黨，得合於中道。</p>
+<p><strong>九三</strong>　無平不陂，無往不復，艱貞無咎。勿恤其孚，于食有福。<br> 白話：沒有只平不斜、只往不回的；艱難守正無咎。不必憂誠信，飲食有福。</p>
+<p><strong>六四</strong>　翩翩不富，以其鄰，不戒以孚。<br> 白話：輕飄下達，不靠財富，連及鄰居，不必戒備而靠誠信。</p>
+<p><strong>六五</strong>　帝乙歸妹，以祉元吉。<br> 白話：帝乙嫁妹，以此得福，大吉。</p>
+<p><strong>上六</strong>　城復于隍，勿用師。自邑告命，貞吝。<br> 白話：城牆塌回壕溝，不可用兵。從封邑傳令，守正仍有憾。</p>
+<hr>
+<h4>12 否</h4>
+<p><strong>初六</strong>　拔茅茹，以其彙，貞吉亨。<br> 白話：拔茅連根、同類相牽，守正吉而通。</p>
+<p><strong>六二</strong>　包承。小人吉，大人否亨。<br> 白話：包容承受。小人吉；大人處否仍能通。</p>
+<p><strong>六三</strong>　包羞。<br> 白話：包藏羞恥。</p>
+<p><strong>九四</strong>　有命無咎，疇離祉。<br> 白話：有天命則無咎，同類共享福澤。</p>
+<p><strong>九五</strong>　休否，大人吉。其亡其亡，繫于苞桑。<br> 白話：否運止息，大人吉。心存「將亡將亡」之戒，才能繫於牢固的桑根。</p>
+<p><strong>上九</strong>　傾否，先否後喜。<br> 白話：傾覆否運，先否後喜。</p>
+<hr>
+<h4>13 同人</h4>
+<p><strong>初九</strong>　同人于門，無咎。<br> 白話：在門外與人同心，無咎。</p>
+<p><strong>六二</strong>　同人于宗，吝。<br> 白話：只在宗族內同人，有憾。</p>
+<p><strong>九三</strong>　伏戎于莽，升其高陵，三歲不興。<br> 白話：在草莽埋伏軍隊，登上高陵，三年不能發動。</p>
+<p><strong>九四</strong>　乘其墉，弗克攻，吉。<br> 白話：登上城牆，卻不進攻，吉。</p>
+<p><strong>九五</strong>　同人，先號咷而後笑。大師克相遇。<br> 白話：與人同心，先哭後笑。大軍能相遇會合。</p>
+<p><strong>上九</strong>　同人于郊，無悔。<br> 白話：在郊外與人同心，無悔。</p>
+<hr>
+<h4>14 大有</h4>
+<p><strong>初九</strong>　無交害，匪咎，艱則無咎。<br> 白話：未牽涉於害，不是咎；能艱苦則無咎。</p>
+<p><strong>九二</strong>　大車以載，有攸往，無咎。<br> 白話：用大車運載，有所往，無咎。</p>
+<p><strong>九三</strong>　公用亨于天子，小人弗克。<br> 白話：公侯向天子進獻；小人做不到。</p>
+<p><strong>九四</strong>　匪其彭，無咎。<br> 白話：不自誇盛大，無咎。</p>
+<p><strong>六五</strong>　厥孚交如，威如；吉。<br> 白話：以誠相交，有威嚴；吉。</p>
+<p><strong>上九</strong>　自天祐之，吉無不利。<br> 白話：得上天保佑，吉，無不利。</p>
+<hr>
+<h4>15 謙</h4>
+<p><strong>初六</strong>　謙謙君子，用涉大川，吉。<br> 白話：謙而又謙的君子，可用以涉大川，吉。</p>
+<p><strong>六二</strong>　鳴謙，貞吉。<br> 白話：謙德聲聞於外，守正吉。</p>
+<p><strong>九三</strong>　勞謙君子，有終吉。<br> 白話：勤勞而謙的君子，有好結果，吉。</p>
+<p><strong>六四</strong>　無不利，撝謙。<br> 白話：無不利，發揮謙德。</p>
+<p><strong>六五</strong>　不富以其鄰，利用侵伐，無不利。<br> 白話：不靠財富而能影響鄰居，利於討伐不服，無不利。</p>
+<p><strong>上六</strong>　鳴謙，利用行師，征邑國。<br> 白話：謙德昭著，利於出兵，征伐邑國。</p>
+<hr>
+<h4>16 豫</h4>
+<p><strong>初六</strong>　鳴豫，凶。<br> 白話：自鳴得意的安樂，凶。</p>
+<p><strong>六二</strong>　介于石，不終日，貞吉。<br> 白話：耿介如石，不待終日（能速斷），守正吉。</p>
+<p><strong>六三</strong>　盱豫，悔。遲有悔。<br> 白話：向上求安樂，有悔；遲疑也有悔。</p>
+<p><strong>九四</strong>　由豫，大有得。勿疑。朋盍簪。<br> 白話：由他而使人安樂，大有所得。不必疑；朋友聚合如簪。</p>
+<p><strong>六五</strong>　貞疾，恆不死。<br> 白話：守正而有疾，但能長久不死。</p>
+<p><strong>上六</strong>　冥豫，成有渝，無咎。<br> 白話：沉溺於安樂；能改變既成之過，無咎。</p>
+<hr>
+<h4>17 隨</h4>
+<p><strong>初九</strong>　官有渝，貞吉。出門交有功。<br> 白話：職分有變，守正吉。出門交際有功。</p>
+<p><strong>六二</strong>　係小子，失丈夫。<br> 白話：牽繫於小人，失去大人。</p>
+<p><strong>六三</strong>　係丈夫，失小子。隨有求得，利居貞。<br> 白話：牽繫於大人，失去小子。隨從而有求可得，利於安居守正。</p>
+<p><strong>九四</strong>　隨有獲，貞凶。有孚在道，以明，何咎。<br> 白話：隨從而有獲，守正仍可能凶。若誠信在道、明正，有何咎。</p>
+<p><strong>九五</strong>　孚于嘉，吉。<br> 白話：誠信於善，吉。</p>
+<p><strong>上六</strong>　拘係之，乃從維之。王用亨于西山。<br> 白話：拘禁繫住，又加以維繫。王用來祭祀西山。</p>
+<hr>
+<h4>18 蠱</h4>
+<p><strong>初六</strong>　幹父之蠱，有子，考無咎，厲終吉。<br> 白話：匡正父輩的弊亂，有子如此，父輩無咎；雖危終吉。</p>
+<p><strong>九二</strong>　幹母之蠱，不可貞。<br> 白話：匡正母輩的弊亂，不可過於固執。</p>
+<p><strong>九三</strong>　幹父之蠱，小有悔，無大咎。<br> 白話：匡正父輩弊亂，小有悔，無大咎。</p>
+<p><strong>六四</strong>　裕父之蠱，往見吝。<br> 白話：寬緩對待父輩弊亂，前往會有憾。</p>
+<p><strong>六五</strong>　幹父之蠱，用譽。<br> 白話：匡正父輩弊亂，受到稱譽。</p>
+<p><strong>上九</strong>　不事王侯，高尚其事。<br> 白話：不事奉王侯，使自己的行事高尚。</p>
+<hr>
+<h4>19 臨</h4>
+<p><strong>初九</strong>　咸臨，貞吉。<br> 白話：以感應臨人，守正吉。</p>
+<p><strong>九二</strong>　咸臨，吉無不利。<br> 白話：以感應臨人，吉，無不利。</p>
+<p><strong>六三</strong>　甘臨，無攸利。既憂之，無咎。<br> 白話：以甜言臨人，無所利。既已憂懼改正，無咎。</p>
+<p><strong>六四</strong>　至臨，無咎。<br> 白話：親自臨近，無咎。</p>
+<p><strong>六五</strong>　知臨，大君之宜，吉。<br> 白話：以智慧臨人，是大君所宜，吉。</p>
+<p><strong>上六</strong>　敦臨，吉無咎。<br> 白話：敦厚地臨人，吉無咎。</p>
+<hr>
+<h4>20 觀</h4>
+<p><strong>初六</strong>　童觀，小人無咎，君子吝。<br> 白話：像孩童一樣淺觀；小人無咎，君子有憾。</p>
+<p><strong>六二</strong>　窺觀，利女貞。<br> 白話：從門縫窺觀，利於女子守正。</p>
+<p><strong>六三</strong>　觀我生，進退。<br> 白話：觀察自己的作為，以決定進退。</p>
+<p><strong>六四</strong>　觀國之光，利用賓于王。<br> 白話：觀瞻國家光華，利於作君王的賓客。</p>
+<p><strong>九五</strong>　觀我生，君子無咎。<br> 白話：觀察自己的作為，君子無咎。</p>
+<p><strong>上九</strong>　觀其生，君子無咎。<br> 白話：觀察其人之作為，君子無咎。</p>
+<hr>
+<h4>21 噬嗑</h4>
+<p><strong>初九</strong>　履校滅趾，無咎。<br> 白話：腳上戴刑具、遮住腳趾，無咎。</p>
+<p><strong>六二</strong>　噬膚滅鼻，無咎。<br> 白話：咬柔嫩的肉，連鼻子都掩沒，無咎。</p>
+<p><strong>六三</strong>　噬腊肉，遇毒；小吝，無咎。<br> 白話：咬乾硬的肉，遇到毒物；小有憾，無咎。</p>
+<p><strong>九四</strong>　噬乾胏，得金矢，利艱貞，吉。<br> 白話：咬帶骨乾肉，得到金屬箭頭；利於艱難中守正，吉。</p>
+<p><strong>六五</strong>　噬乾肉，得黃金，貞厲，無咎。<br> 白話：咬乾肉，得到黃金；守正雖危，無咎。</p>
+<p><strong>上九</strong>　何校滅耳，凶。<br> 白話：荷著刑具、遮住耳朵，凶。</p>
+<hr>
+<h4>22 賁</h4>
+<p><strong>初九</strong>　賁其趾，舍車而徒。<br> 白話：文飾其腳，捨車而步行。</p>
+<p><strong>六二</strong>　賁其須。<br> 白話：文飾其鬚。</p>
+<p><strong>九三</strong>　賁如濡如，永貞吉。<br> 白話：文飾而潤澤，長久守正吉。</p>
+<p><strong>六四</strong>　賁如皤如，白馬翰如，匪寇婚媾。<br> 白話：文飾素白，白馬飛馳；不是強寇，是來求婚。</p>
+<p><strong>六五</strong>　賁于丘園，束帛戔戔，吝，終吉。<br> 白話：文飾於丘園，僅有微薄束帛；雖憾，終吉。</p>
+<p><strong>上九</strong>　白賁，無咎。<br> 白話：以質白為飾，無咎。</p>
+<hr>
+<h4>23 剝</h4>
+<p><strong>初六</strong>　剝床以足，蔑貞凶。<br> 白話：剝蝕床腳，否定正道，凶。</p>
+<p><strong>六二</strong>　剝床以辨，蔑貞凶。<br> 白話：剝蝕到床板，否定正道，凶。</p>
+<p><strong>六三</strong>　剝之，無咎。<br> 白話：參與剝落（而能自處），無咎。</p>
+<p><strong>六四</strong>　剝床以膚，凶。<br> 白話：剝蝕到肌膚，凶。</p>
+<p><strong>六五</strong>　貫魚，以宮人寵，無不利。<br> 白話：如貫魚成串，率宮人受寵，無不利。</p>
+<p><strong>上九</strong>　碩果不食，君子得輿，小人剝廬。<br> 白話：大果不被食盡；君子得車輿，小人剝蝕房屋。</p>
+<hr>
+<h4>24 復</h4>
+<p><strong>初九</strong>　不遠復，無祗悔，元吉。<br> 白話：不遠就回復，沒有大悔，大吉。</p>
+<p><strong>六二</strong>　休復，吉。<br> 白話：美好地回復，吉。</p>
+<p><strong>六三</strong>　頻復，厲無咎。<br> 白話：頻繁地回復，雖危無咎。</p>
+<p><strong>六四</strong>　中行獨復。<br> 白話：在行列中獨自回復。</p>
+<p><strong>六五</strong>　敦復，無悔。<br> 白話：敦厚地回復，無悔。</p>
+<p><strong>上六</strong>　迷復，凶，有災眚。用行師，終有大敗，以其國君，凶；至于十年，不克征。<br> 白話：迷失而不復，凶，有災。若用兵，終將大敗，連及國君，凶；十年不能再征。</p>
+<hr>
+<h4>25 無妄</h4>
+<p><strong>初九</strong>　無妄，往吉。<br> 白話：不妄為，前往吉。</p>
+<p><strong>六二</strong>　不耕獲，不菑畬，則利有攸往。<br> 白話：不先耕就想收穫、不開荒就想成田，不可；若能不妄求，則利有所往。</p>
+<p><strong>六三</strong>　無妄之災，或繫之牛，行人之得，邑人之災。<br> 白話：無妄而仍遇災：有人拴牛，行人牽走，邑人受過。</p>
+<p><strong>九四</strong>　可貞，無咎。<br> 白話：可以守正，無咎。</p>
+<p><strong>九五</strong>　無妄之疾，勿藥有喜。<br> 白話：無妄而得的病，不必用藥也會好轉。</p>
+<p><strong>上九</strong>　無妄，行有眚，無攸利。<br> 白話：雖無妄，若強行仍有災，無所利。</p>
+<hr>
+<h4>26 大畜</h4>
+<p><strong>初九</strong>　有厲利已。<br> 白話：有危，利於停止。</p>
+<p><strong>九二</strong>　輿說輹。<br> 白話：車輪脫離伏兔（暫止不進）。</p>
+<p><strong>九三</strong>　良馬逐，利艱貞。日閑輿衛，利有攸往。<br> 白話：良馬馳逐，利於艱難中守正。每日熟練車衛，利有所往。</p>
+<p><strong>六四</strong>　童牛之牿，元吉。<br> 白話：小牛角上裝橫木，大吉。</p>
+<p><strong>六五</strong>　豶豕之牙，吉。<br> 白話：閹豬的牙（剛突已去），吉。</p>
+<p><strong>上九</strong>　何天之衢，亨。<br> 白話：負荷天的大道，亨通。</p>
+<hr>
+<h4>27 頤</h4>
+<p><strong>初九</strong>　舍爾靈龜，觀我朵頤，凶。<br> 白話：捨棄自己的靈龜，看我鼓頰進食，凶。</p>
+<p><strong>六二</strong>　顛頤，拂經，于丘頤，征凶。<br> 白話：顛倒求養，違背常理，向高丘求養，征進凶。</p>
+<p><strong>六三</strong>　拂頤，貞凶，十年勿用，無攸利。<br> 白話：違背頤養之道，守正仍凶，十年不可用，無所利。</p>
+<p><strong>六四</strong>　顛頤吉，虎視眈眈，其欲逐逐，無咎。<br> 白話：顛倒求養反而吉；如虎視眈眈、所欲緊迫，無咎。</p>
+<p><strong>六五</strong>　拂經，居貞吉，不可涉大川。<br> 白話：違背常理；安居守正吉，不可涉大川。</p>
+<p><strong>上九</strong>　由頤，厲吉，利涉大川。<br> 白話：為人所賴以得養，雖危吉，利涉大川。</p>
+<hr>
+<h4>28 大過</h4>
+<p><strong>初六</strong>　藉用白茅，無咎。<br> 白話：用白茅襯墊，無咎。</p>
+<p><strong>九二</strong>　枯楊生稊，老夫得其女妻，無不利。<br> 白話：枯楊生芽，老夫得少女為妻，無不利。</p>
+<p><strong>九三</strong>　棟橈，凶。<br> 白話：棟梁彎曲，凶。</p>
+<p><strong>九四</strong>　棟隆，吉；有它吝。<br> 白話：棟梁高起，吉；另有他事則有憾。</p>
+<p><strong>九五</strong>　枯楊生華，老婦得其士夫，無咎無譽。<br> 白話：枯楊開花，老婦得壯夫，無咎也無譽。</p>
+<p><strong>上六</strong>　過涉滅頂，凶，無咎。<br> 白話：涉水過深、淹沒頭頂，凶；（於義）無咎。</p>
+<hr>
+<h4>29 坎</h4>
+<p><strong>初六</strong>　習坎，入于坎窞，凶。<br> 白話：重重險陷，落入陷阱深坑，凶。</p>
+<p><strong>九二</strong>　坎有險，求小得。<br> 白話：險中有險，求取小有所得。</p>
+<p><strong>六三</strong>　來之坎坎，險且枕，入于坎窞，勿用。<br> 白話：來去都是險，險而又依靠險，落入深坑，不可有為。</p>
+<p><strong>六四</strong>　樽酒簋貳，用缶，納約自牖，終無咎。<br> 白話：一樽酒、兩簋食，用瓦缶，從窗戶遞入簡約之信，終無咎。</p>
+<p><strong>九五</strong>　坎不盈，祗既平，無咎。<br> 白話：坑尚未滿，只達到平穩，無咎。</p>
+<p><strong>上六</strong>　係用徽纆，寘于叢棘，三歲不得，凶。<br> 白話：用繩索捆綁，放在荊棘叢中，三年不得脫，凶。</p>
+<hr>
+<h4>30 離</h4>
+<p><strong>初九</strong>　履錯然，敬之無咎。<br> 白話：步履交錯，恭敬則無咎。</p>
+<p><strong>六二</strong>　黃離，元吉。<br> 白話：黃色的附麗（中正），大吉。</p>
+<p><strong>九三</strong>　日昃之離，不鼓缶而歌，則大耋之嗟，凶。<br> 白話：日偏西的光明；若不鼓缶而歌，就會有老年的悲嘆，凶。</p>
+<p><strong>九四</strong>　突如其來如，焚如，死如，棄如。<br> 白話：突然而來，如焚、如死、如棄。</p>
+<p><strong>六五</strong>　出涕沱若，戚嗟若，吉。<br> 白話：淚流如雨，憂戚嗟嘆，吉。</p>
+<p><strong>上九</strong>　王用出征，有嘉折首，獲匪其醜，無咎。<br> 白話：王出征，有功斬獲首領，不濫捕從眾，無咎。</p>
+<h2>下經爻辭</h2>
 <h2>new</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>[[乾]]</p>
 <p>[[111011]]</p>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>// <![CDATA[
+<script>
 (function () {
   "use strict";
 
@@ -523,8 +3903,28 @@
     main();
   }
 })();
-// ]]></script>
+</script>
 <h2>Prog</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -922,6 +4322,26 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <p class="meta">[[乾]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
@@ -1124,9 +4544,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 乾為天</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1325,6 +4785,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 天風姤</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1593,9 +5073,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 天山遯</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1792,6 +5312,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 天地否</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2058,9 +5598,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 風地觀</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2255,6 +5835,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 山地剝</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2519,9 +6119,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 火地晉</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2775,6 +6415,26 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>（文王第 14 卦） · <a href="../gua/14_大有.html">詳頁</a> · 標記 [[ 大有 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
@@ -2905,6 +6565,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h1>震木</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3166,9 +6846,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 震為雷</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3358,6 +7078,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 雷地豫</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3617,9 +7357,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 雷水解</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3863,6 +7643,26 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>（文王第 32 卦） · <a href="../gua/32_恆.html">詳頁</a> · 標記 [[ 恆 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
@@ -3993,6 +7793,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h2>四世與五世-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4233,6 +8053,26 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>（文王第 46 卦） · <a href="../gua/46_升.html">詳頁</a> · 標記 [[ 升 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
@@ -4363,6 +8203,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 水風井</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4617,9 +8477,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 澤風大過</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4853,6 +8753,26 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>（文王第 17 卦） · <a href="../gua/17_隨.html">詳頁</a> · 標記 [[ 隨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
@@ -4983,6 +8903,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h1>坎水</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5234,9 +9174,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坎為水</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5416,6 +9396,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 水澤節</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5665,9 +9665,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 水雷屯</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5845,6 +9885,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 水火既濟</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6092,9 +10152,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 澤火革</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6270,6 +10370,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 雷火豐</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6515,9 +10635,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 地火明夷</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6691,6 +10851,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>歸魂 · 地水師</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6934,8 +11114,48 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7010,6 +11230,26 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 艮為山</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7180,6 +11420,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 山火賁</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7420,9 +11680,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 山天大畜</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7591,6 +11891,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 山澤損</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7829,9 +12149,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 火澤睽</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7998,6 +12358,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 天澤履</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8234,9 +12614,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 風澤中孚</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8400,6 +12820,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>歸魂 · 風山漸</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8634,8 +13074,48 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8710,6 +13190,26 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 坤為地</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8872,6 +13372,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 地雷復</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9104,9 +13624,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 地澤臨</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9267,6 +13827,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 地天泰</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9497,9 +14077,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 雷天大壯</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9658,6 +14278,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 澤天夬</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9885,9 +14525,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 水天需</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10043,6 +14723,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>歸魂 · 水地比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10268,8 +14968,48 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10344,6 +15084,26 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 巽為風</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10497,6 +15257,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 風天小畜</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10719,9 +15499,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 風火家人</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10872,6 +15692,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 風雷益</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11092,9 +15932,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 天雷無妄</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11243,6 +16123,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 火雷噬嗑</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11461,9 +16361,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 山雷頤</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11610,6 +16550,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>歸魂 · 山風蠱</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11826,8 +16786,48 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11902,6 +16902,26 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 離為火</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12046,6 +17066,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 火山旅</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12260,9 +17300,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 火風鼎</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12405,6 +17485,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 火水未濟</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12617,9 +17717,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 山水蒙</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12760,6 +17900,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 風水渙</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12970,9 +18130,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 天水訟</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13111,6 +18311,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>歸魂 · 天火同人</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13319,8 +18539,48 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1-1-1</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13395,6 +18655,26 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 兌為澤</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13531,6 +18811,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>一世 · 澤水困</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13737,9 +19037,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 澤地萃</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13874,6 +19214,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>三世 · 澤山咸</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14078,9 +19438,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 水山蹇</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <p>（文王第 39 卦） · <a href="../gua/39_蹇.html">詳頁</a> · 標記 [[ 蹇 ]]</p>
@@ -14213,6 +19613,26 @@ sys.stderr = JsWriter()
 })();
 </script>
 <h3>五世 · 地山謙</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p>（文王第 15 卦） · <a href="../gua/15_謙.html">詳頁</a> · 標記 [[ 謙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
@@ -14415,9 +19835,49 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 雷山小過</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>（文王第 62 卦） · <a href="../gua/62_小過.html">詳頁</a> · 標記 [[ 小過 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
@@ -14567,57 +20027,132 @@ sys.stderr = JsWriter()
 
 
 
+<p>（文王第 54 卦） · <a href="../gua/54_歸妹.html">詳頁</a> · 標記 [[ 歸妹 ]]</p>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script>
+(function () {
+  "use strict";
 
+  var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEXTAREA: 1, CODE: 1, PRE: 1 };
 
+  function status(msg) {
+    var el = document.getElementById("gua_status");
+    if (el) el.textContent = msg || "";
+  }
 
+  function hasMarkup(text) {
+    return text && text.indexOf("[[") !== -1 && text.indexOf("]]") !== -1;
+  }
 
+  /** 找出含 [[...]] 且適合替換的元素（略過 script/style 等） */
+  function findMarkupElements(root) {
+    var result = [];
+    var all = (root || document.body).getElementsByTagName("*");
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (SKIP[el.tagName]) continue;
+      if (el.id === "gua_status") continue;
+      // 只處理「自身有文字、且子元素沒有再包一層含標記的容器」的節點，
+      // 或明確標了 class="gua-markup"
+      var text = el.innerText || el.textContent || "";
+      if (!hasMarkup(text)) continue;
+      if (el.classList && el.classList.contains("gua-markup")) {
+        result.push(el);
+        continue;
+      }
+      // 若子元素也有標記，交給子元素處理，避免重複
+      var childHas = false;
+      for (var j = 0; j < el.children.length; j++) {
+        var ct = el.children[j].innerText || el.children[j].textContent || "";
+        if (hasMarkup(ct)) { childHas = true; break; }
+      }
+      if (!childHas) result.push(el);
+    }
+    return result;
+  }
 
+  async function installLocalModule(pyodide, url, name) {
+    try {
+      var res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return false;
+      var code = await res.text();
+      if (!code || !code.trim()) return false;
+      pyodide.FS.writeFile(name + ".py", code);
+      return true;
+    } catch (e) {
+      console.warn("change.py 載入失敗", url, e);
+      return false;
+    }
+  }
 
+  async function renderElement(pyodide, el) {
+    var text = el.innerText || el.textContent || "";
+    if (!hasMarkup(text)) return;
+    pyodide.globals.set("_gua_src", text);
+    var html = await pyodide.runPythonAsync(
+      "import change\n" +
+      "change.render_markup(_gua_src, target_div=None, default_method='html', lang='zh')\n"
+    );
+    if (html) el.innerHTML = html;
+  }
 
+  async function main() {
+    if (!document.body) {
+      setTimeout(main, 100);
+      return;
+    }
 
+    var targets = findMarkupElements(document.body);
+    if (targets.length === 0) {
+      // 內容可能稍後才出現（ViewPage 動態載入）
+      if (!main._tries) main._tries = 0;
+      if (main._tries++ < 20) {
+        setTimeout(main, 300);
+      }
+      return;
+    }
 
+    if (typeof loadPyodide !== "function") {
+      status("Pyodide 尚未載入…");
+      setTimeout(main, 400);
+      return;
+    }
 
+    status("載入卦象元件…");
+    var pyodide;
+    try {
+      pyodide = await loadPyodide();
+    } catch (e) {
+      status("Pyodide 失敗：" + e);
+      return;
+    }
 
+    var ok =
+      (await installLocalModule(pyodide, "/static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./change.py", "change")) ||
+      (await installLocalModule(pyodide, "change.py", "change"));
+    if (!ok) {
+      status("請將 change.py 放到 /static/change.py");
+      return;
+    }
 
+    try {
+      targets = findMarkupElements(document.body);
+      for (var i = 0; i < targets.length; i++) {
+        await renderElement(pyodide, targets[i]);
+      }
+      status("");
+    } catch (e) {
+      status("渲染失敗：" + e);
+      console.error(e);
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-（文王第 54 卦） · <a href="../gua/54_歸妹.html">詳頁</a> · 標記 [[ 歸妹 ]]</li>
-</ul>
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", main);
+  } else {
+    main();
+  }
+})();
+</script>

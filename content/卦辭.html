@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta property="head" content="H1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>卦辭</title>
+
+<link rel="stylesheet" href="./../static/chimper/fonts/icomoon/style.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/magnific-popup.css">
+<link rel="stylesheet" href="./../static/chimper/css/jquery-ui.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.carousel.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="./../static/chimper/css/aos.css">
+<link rel="stylesheet" href="./../static/chimper/css/style.css">
+<link rel="shortcut icon" href="./../static/favicons.png">
+
+<style type="text/css">
+.site-section { background-color: #FFFF; padding: 40px 40px; }
+body > div > div.dropdown.open { display: block; }
+img.add_border { border: 3px solid blue; }
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    margin: 24px 0;
+    padding: 12px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-navigation .previous {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.page-navigation .next {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.page-navigation a {
+    display: inline-block;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.page-navigation a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script src="./../static/chimper/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch_content.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch.js"></script>
+
+<script>
+function doSearch() {
+    if (window.jQuery && jQuery.fn.tipuesearch) {
+        jQuery('#tipue_search_input').tipuesearch({
+            newWindow: true,
+            minimumLength: 2,
+            wholeWords: false
+        });
+    }
+}
+
+if (window.jQuery) {
+    jQuery(document).ready(doSearch);
+}
+</script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css">
+<style>
+pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line {
+  white-space: pre !important; word-wrap: normal !important; word-break: normal !important;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="site-wrap">
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar py-4 bg-white" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <h1>易經</h1>
+
+      <div class="pl-4">
+        <form action="#" onsubmit="return false;">
+          <input type="text"
+                 placeholder="Search"
+                 name="q"
+                 id="tipue_search_input"
+                 pattern=".{2,}"
+                 title="At least 2 characters">
+        </form>
+      </div>
+
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+<li class="active has-children">
+<a href="index.html">Home</a>
+<ul class="dropdown">
+<li><a href="sitemap.html">SMap</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="About.html">About</a><ul class="dropdown">
+<li><a href="八宮分類.html">八宮分類</a></li>
+<li><a href="卦名.html">卦名</a></li>
+<li><a href="卦辭.html">卦辭</a></li>
+<li><a href="上經爻辭.html">上經爻辭</a></li>
+<li><a href="下經爻辭.html">下經爻辭</a></li>
+<li><a href="new.html">new</a></li>
+<li><a href="Prog.html">Prog</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="乾金.html">乾金</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世.html">本宮與一世</a><ul class="dropdown">
+<li><a href="本宮 · 乾為天.html">本宮 · 乾為天</a></li>
+<li><a href="一世 · 天風姤.html">一世 · 天風姤</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世.html">二世與三世</a><ul class="dropdown">
+<li><a href="二世 · 天山遯.html">二世 · 天山遯</a></li>
+<li><a href="三世 · 天地否.html">三世 · 天地否</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世.html">四世與五世</a><ul class="dropdown">
+<li><a href="四世 · 風地觀.html">四世 · 風地觀</a></li>
+<li><a href="五世 · 山地剝.html">五世 · 山地剝</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂.html">游魂與歸魂</a><ul class="dropdown">
+<li><a href="游魂 · 火地晉.html">游魂 · 火地晉</a></li>
+<li><a href="歸魂 · 火天大有.html">歸魂 · 火天大有</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="震木.html">震木</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1.html">本宮與一世-1</a><ul class="dropdown">
+<li><a href="本宮 · 震為雷.html">本宮 · 震為雷</a></li>
+<li><a href="一世 · 雷地豫.html">一世 · 雷地豫</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1.html">二世與三世-1</a><ul class="dropdown">
+<li><a href="二世 · 雷水解.html">二世 · 雷水解</a></li>
+<li><a href="三世 · 雷風恆.html">三世 · 雷風恆</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1.html">四世與五世-1</a><ul class="dropdown">
+<li><a href="四世 · 地風升.html">四世 · 地風升</a></li>
+<li><a href="五世 · 水風井.html">五世 · 水風井</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1.html">游魂與歸魂-1</a><ul class="dropdown">
+<li><a href="游魂 · 澤風大過.html">游魂 · 澤風大過</a></li>
+<li><a href="歸魂 · 澤雷隨.html">歸魂 · 澤雷隨</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="坎水.html">坎水</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1.html">本宮與一世-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 坎為水.html">本宮 · 坎為水</a></li>
+<li><a href="一世 · 水澤節.html">一世 · 水澤節</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1.html">二世與三世-1-1</a><ul class="dropdown">
+<li><a href="二世 · 水雷屯.html">二世 · 水雷屯</a></li>
+<li><a href="三世 · 水火既濟.html">三世 · 水火既濟</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1.html">四世與五世-1-1</a><ul class="dropdown">
+<li><a href="四世 · 澤火革.html">四世 · 澤火革</a></li>
+<li><a href="五世 · 雷火豐.html">五世 · 雷火豐</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1.html">游魂與歸魂-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 地火明夷.html">游魂 · 地火明夷</a></li>
+<li><a href="歸魂 · 地水師.html">歸魂 · 地水師</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="艮土.html">艮土</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1.html">本宮與一世-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 艮為山.html">本宮 · 艮為山</a></li>
+<li><a href="一世 · 山火賁.html">一世 · 山火賁</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1.html">二世與三世-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 山天大畜.html">二世 · 山天大畜</a></li>
+<li><a href="三世 · 山澤損.html">三世 · 山澤損</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1.html">四世與五世-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 火澤睽.html">四世 · 火澤睽</a></li>
+<li><a href="五世 · 天澤履.html">五世 · 天澤履</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1.html">游魂與歸魂-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 風澤中孚.html">游魂 · 風澤中孚</a></li>
+<li><a href="歸魂 · 風山漸.html">歸魂 · 風山漸</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="坤土.html">坤土</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1.html">本宮與一世-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 坤為地.html">本宮 · 坤為地</a></li>
+<li><a href="一世 · 地雷復.html">一世 · 地雷復</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1.html">二世與三世-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 地澤臨.html">二世 · 地澤臨</a></li>
+<li><a href="三世 · 地天泰.html">三世 · 地天泰</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1.html">四世與五世-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 雷天大壯.html">四世 · 雷天大壯</a></li>
+<li><a href="五世 · 澤天夬.html">五世 · 澤天夬</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1.html">游魂與歸魂-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 水天需.html">游魂 · 水天需</a></li>
+<li><a href="歸魂 · 水地比.html">歸魂 · 水地比</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="巽木.html">巽木</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1.html">本宮與一世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 巽為風.html">本宮 · 巽為風</a></li>
+<li><a href="一世 · 風天小畜.html">一世 · 風天小畜</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1.html">二世與三世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 風火家人.html">二世 · 風火家人</a></li>
+<li><a href="三世 · 風雷益.html">三世 · 風雷益</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1.html">四世與五世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 天雷無妄.html">四世 · 天雷無妄</a></li>
+<li><a href="五世 · 火雷噬嗑.html">五世 · 火雷噬嗑</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 山雷頤.html">游魂 · 山雷頤</a></li>
+<li><a href="歸魂 · 山風蠱.html">歸魂 · 山風蠱</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="離火.html">離火</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1-1.html">本宮與一世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 離為火.html">本宮 · 離為火</a></li>
+<li><a href="一世 · 火山旅.html">一世 · 火山旅</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1-1.html">二世與三世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 火風鼎.html">二世 · 火風鼎</a></li>
+<li><a href="三世 · 火水未濟.html">三世 · 火水未濟</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1-1.html">四世與五世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 山水蒙.html">四世 · 山水蒙</a></li>
+<li><a href="五世 · 風水渙.html">五世 · 風水渙</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 天水訟.html">游魂 · 天水訟</a></li>
+<li><a href="歸魂 · 天火同人.html">歸魂 · 天火同人</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="兌金.html">兌金</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1-1-1.html">本宮與一世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 兌為澤.html">本宮 · 兌為澤</a></li>
+<li><a href="一世 · 澤水困.html">一世 · 澤水困</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1-1-1.html">二世與三世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 澤地萃.html">二世 · 澤地萃</a></li>
+<li><a href="三世 · 澤山咸.html">三世 · 澤山咸</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1-1-1.html">四世與五世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 水山蹇.html">四世 · 水山蹇</a></li>
+<li><a href="五世 · 地山謙.html">五世 · 地山謙</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 雷山小過.html">游魂 · 雷山小過</a></li>
+<li><a href="歸魂 · 雷澤歸妹.html">歸魂 · 雷澤歸妹</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+           style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="tipue_search_content">
+<h1>卦辭</h1>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="卦名.html">Previous: 卦名</a></div>
+<div class="next"><a href="上經爻辭.html">Next: 上經爻辭</a> &gt;&gt;</div>
+</nav>
+
+
+
+
+
+
+
+<p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
+<hr>
+<h4>上經</h4>
+<p><strong>1 乾</strong><br> 卦辭：元亨利貞。<br> 白話：大通、亨通，利於守正。</p>
+<p><strong>2 坤</strong><br> 卦辭：元亨，利牝馬之貞。君子有攸往，先迷後得主，利西南得朋，東北喪朋。安貞，吉。<br> 白話：大通。宜如母馬般柔順守正。君子有所往：先迷失，後得所主。西南得友，東北失友。安於正道則吉。</p>
+<p><strong>3 屯</strong><br> 卦辭：元亨利貞，勿用有攸往，利建侯。<br> 白話：大通、正固。不宜急於前往，利於建立根基、封侯立業。</p>
+<p><strong>4 蒙</strong><br> 卦辭：亨。匪我求童蒙，童蒙求我。初筮告，再三瀆，瀆則不告。利貞。<br> 白話：可通。不是我求蒙昧者，是蒙昧者來求教。初問可告；再三煩瀆則不再告。利於守正。</p>
+<p><strong>5 需</strong><br> 卦辭：有孚，光亨，貞吉。利涉大川。<br> 白話：有誠信，光明亨通，正固則吉。利於渡過大川險難。</p>
+<p><strong>6 訟</strong><br> 卦辭：有孚，窒。惕中吉。終凶。利見大人，不利涉大川。<br> 白話：雖有誠，卻受阻。戒慎居中則吉，爭到底則凶。利於見有德之人，不利冒險涉大川。</p>
+<p><strong>7 師</strong><br> 卦辭：貞，丈人，吉無咎。<br> 白話：守正；以老成持重者領導，吉而無過咎。</p>
+<p><strong>8 比</strong><br> 卦辭：吉。原筮元永貞，無咎。不寧方來，後夫凶。<br> 白話：吉。再三求問，始終守正，無咎。不安者紛紛來附；遲來、落後者凶。</p>
+<p><strong>9 小畜</strong><br> 卦辭：亨。密雲不雨，自我西郊。<br> 白話：可通。密雲尚未下雨，雲氣來自西郊（蓄而未發）。</p>
+<p><strong>10 履</strong><br> 卦辭：履虎尾，不咥人，亨。<br> 白話：踩到虎尾，虎卻不咬人，可通。</p>
+<p><strong>11 泰</strong><br> 卦辭：小往大來，吉亨。<br> 白話：陰小者往、陽大者來，吉而亨通。</p>
+<p><strong>12 否</strong><br> 卦辭：否之匪人，不利君子貞，大往小來。<br> 白話：閉塞非正人之道，不利君子守正；陽大者往、陰小者來。</p>
+<p><strong>13 同人</strong><br> 卦辭：同人於野，亨。利涉大川，利君子貞。<br> 白話：在曠野與人同心，亨通。利於涉大川，利於君子守正。</p>
+<p><strong>14 大有</strong><br> 卦辭：元亨。<br> 白話：大為亨通。</p>
+<p><strong>15 謙</strong><br> 卦辭：亨，君子有終。<br> 白話：亨通，君子能有好的結局。</p>
+<p><strong>16 豫</strong><br> 卦辭：利建侯行師。<br> 白話：利於封侯立業、出動軍隊。</p>
+<p><strong>17 隨</strong><br> 卦辭：元亨利貞，無咎。<br> 白話：大通、正固，沒有咎害。</p>
+<p><strong>18 蠱</strong><br> 卦辭：元亨，利涉大川。先甲三日，後甲三日。<br> 白話：大通，利於涉大川。在事之始前三日、後三日審慎處置。</p>
+<p><strong>19 臨</strong><br> 卦辭：元亨利貞。至于八月有凶。<br> 白話：大通、正固。到了八月可能有凶（盛極將衰）。</p>
+<p><strong>20 觀</strong><br> 卦辭：盥而不薦，有孚顒若。<br> 白話：已洗手齋戒、尚未獻祭，誠意莊嚴可見。</p>
+<p><strong>21 噬嗑</strong><br> 卦辭：亨。利用獄。<br> 白話：亨通。宜於用刑獄明斷。</p>
+<p><strong>22 賁</strong><br> 卦辭：亨。小利有攸往。<br> 白話：亨通。小有利益於前往。</p>
+<p><strong>23 剝</strong><br> 卦辭：不利有攸往。<br> 白話：不利有所前往。</p>
+<p><strong>24 復</strong><br> 卦辭：亨。出入無疾，朋來無咎。反復其道，七日來復，利有攸往。<br> 白話：亨通。出入無災，友來無咎。反復其道，七日而復，利於有所往。</p>
+<p><strong>25 無妄</strong><br> 卦辭：元亨利貞。其匪正有眚，不利有攸往。<br> 白話：大通、正固。若不正則有災，不利有所往。</p>
+<p><strong>26 大畜</strong><br> 卦辭：利貞，不家食吉，利涉大川。<br> 白話：利於守正；不只在家自養而能用於世則吉，利於涉大川。</p>
+<p><strong>27 頤</strong><br> 卦辭：貞吉。觀頤，自求口實。<br> 白話：守正則吉。觀察養的方式，自己謀求正當的口體之養。</p>
+<p><strong>28 大過</strong><br> 卦辭：棟橈，利有攸往，亨。<br> 白話：棟梁彎曲（負擔過重）。仍利有所往，可通。</p>
+<p><strong>29 坎</strong><br> 卦辭：習坎，有孚，維心亨，行有尚。<br> 白話：重重險陷。有誠信，心中可通，行動會有功。</p>
+<p><strong>30 離</strong><br> 卦辭：利貞，亨。畜牝牛，吉。<br> 白話：利於守正，亨通。畜養柔順的母牛，吉。</p>
+<hr>
+<h4>下經</h4>
+<p><strong>31 咸</strong><br> 卦辭：亨，利貞，取女吉。<br> 白話：亨通，利於守正；娶妻吉。</p>
+<p><strong>32 恆</strong><br> 卦辭：亨，無咎，利貞，利有攸往。<br> 白話：亨通，無咎，利於守正，利於有所往。</p>
+<p><strong>33 遯</strong><br> 卦辭：亨，小利貞。<br> 白話：亨通；小有利於守正。</p>
+<p><strong>34 大壯</strong><br> 卦辭：利貞。<br> 白話：利於守正。</p>
+<p><strong>35 晉</strong><br> 卦辭：康侯用錫馬蕃庶，晝日三接。<br> 白話：尊貴之侯受賜眾馬，一日三次蒙接見（升進之象）。</p>
+<p><strong>36 明夷</strong><br> 卦辭：利艱貞。<br> 白話：在艱難中守正為有利。</p>
+<p><strong>37 家人</strong><br> 卦辭：利女貞。<br> 白話：利於女子守正（治家以正）。</p>
+<p><strong>38 睽</strong><br> 卦辭：小事吉。<br> 白話：做小事吉。</p>
+<p><strong>39 蹇</strong><br> 卦辭：利西南，不利東北；利見大人，貞吉。<br> 白話：利西南，不利東北；利於見有德之人，守正則吉。</p>
+<p><strong>40 解</strong><br> 卦辭：利西南，無所往，其來復吉。有攸往，夙吉。<br> 白話：利西南。無處可往時，回來反而吉；若有所往，早行動吉。</p>
+<p><strong>41 損</strong><br> 卦辭：有孚，元吉，無咎，可貞，利有攸往。曷之用？二簋可用享。<br> 白話：有誠則大吉、無咎，可守正，利有所往。用什麼祭？兩簋薄祭即可。</p>
+<p><strong>42 益</strong><br> 卦辭：利有攸往，利涉大川。<br> 白話：利於有所往，利於涉大川。</p>
+<p><strong>43 夬</strong><br> 卦辭：揚于王庭，孚號，有厲，告自邑，不利即戎，利有攸往。<br> 白話：在朝廷上宣明；誠信呼號，有危；先告誡自邑，不利立即動武，利於有所往。</p>
+<p><strong>44 姤</strong><br> 卦辭：女壯，勿用取女。<br> 白話：女子過強，不宜娶此女。</p>
+<p><strong>45 萃</strong><br> 卦辭：亨。王假有廟，利見大人，亨，利貞。用大牲吉，利有攸往。<br> 白話：亨通。王至宗廟；利見大人，亨，利守正。用大牲祭祀吉，利有所往。</p>
+<p><strong>46 升</strong><br> 卦辭：元亨，用見大人，勿恤，南征吉。<br> 白話：大通。宜見大人，不必憂慮，向南進取吉。</p>
+<p><strong>47 困</strong><br> 卦辭：亨，貞，大人吉，無咎，有言不信。<br> 白話：可通，宜守正；大人吉、無咎。有言而人不信。</p>
+<p><strong>48 井</strong><br> 卦辭：改邑不改井，無喪無得，往來井井。汔至，亦未繘井，羸其瓶，凶。<br> 白話：城邑可改，井不改；無得無失，人來往都靠井。幾乎到達卻未完成汲水，瓶被損壞，凶。</p>
+<p><strong>49 革</strong><br> 卦辭：己日乃孚。元亨利貞，悔亡。<br> 白話：到了適當之日才得信任。大通、正固，悔恨消失。</p>
+<p><strong>50 鼎</strong><br> 卦辭：元吉，亨。<br> 白話：大吉，亨通。</p>
+<p><strong>51 震</strong><br> 卦辭：亨。震來虩虩，笑言啞啞。震驚百里，不喪匕鬯。<br> 白話：亨通。雷來而驚恐，之後笑語自若。震驚百里，卻不失落祭器（主祭不失職）。</p>
+<p><strong>52 艮</strong><br> 卦辭：艮其背，不獲其身，行其庭，不見其人，無咎。<br> 白話：止於其背，不執著於自身；走在庭中不見其人，無咎。</p>
+<p><strong>53 漸</strong><br> 卦辭：女歸吉，利貞。<br> 白話：女子出嫁吉，利於守正。</p>
+<p><strong>54 歸妹</strong><br> 卦辭：征凶，無攸利。<br> 白話：前進有凶，無所利。</p>
+<p><strong>55 豐</strong><br> 卦辭：亨。王假之，勿憂，宜日中。<br> 白話：亨通。王可至此；不必憂，宜如日在中天。</p>
+<p><strong>56 旅</strong><br> 卦辭：小亨，旅貞吉。<br> 白話：小有亨通；行旅能守正則吉。</p>
+<p><strong>57 巽</strong><br> 卦辭：小亨，利有攸往，利見大人。<br> 白話：小亨；利有所往，利見大人。</p>
+<p><strong>58 兌</strong><br> 卦辭：亨，利貞。<br> 白話：亨通，利於守正。</p>
+<p><strong>59 渙</strong><br> 卦辭：亨。王假有廟，利涉大川，利貞。<br> 白話：亨通。王至宗廟；利涉大川，利守正。</p>
+<p><strong>60 節</strong><br> 卦辭：亨。苦節不可貞。<br> 白話：亨通。過於苦澀的節制不可固守。</p>
+<p><strong>61 中孚</strong><br> 卦辭：豚魚吉，利涉大川，利貞。<br> 白話：即使以豚魚薄祭也吉；利涉大川，利守正。</p>
+<p><strong>62 小過</strong><br> 卦辭：亨，利貞，可小事，不可大事。飛鳥遺之音，不宜上宜下，大吉。<br> 白話：亨通，利守正；可做小事，不可做大事。飛鳥留下聲音：不宜向上，宜向下，大吉。</p>
+<p><strong>63 既濟</strong><br> 卦辭：亨，小利貞，初吉終亂。<br> 白話：亨通，小有利於守正；開始吉，終了可能亂。</p>
+<p><strong>64 未濟</strong><br> 卦辭：亨，小狐汔濟，濡其尾，無攸利。<br> 白話：可通。小狐狸幾乎渡河，卻湿了尾巴，無所利。</p>
+<hr>
+<p><strong>說明</strong></p>
+<ul>
+<li>卦辭出自《周易》經文，屬公開古籍。</li>
+<li>白話僅供理解大意，深入請對照注疏與上下文。<br></li>
+</ul>
+<h4>六十四卦卦象含意（簡釋）</h4>
+<p>每卦由**上卦（外）<strong>與</strong>下卦（內）**組成。下列依文王序，說明卦象結構與主要含意。</p>
+<hr>
+<h4>上經</h4>
+<p><strong>1 乾為天</strong>（乾上乾下）<br> 純陽。天行剛健，象創造、領導、進取。君子以自強不息應之。</p>
+<p><strong>2 坤為地</strong>（坤上坤下）<br> 純陰。地勢厚載，象順承、包容、承載。君子以厚德載物應之。</p>
+<p><strong>3 水雷屯</strong>（坎上震下）<br> 上險下動。如草木破土，充滿艱難與生機。象始生、屯難、需建立秩序。</p>
+<p><strong>4 山水蒙</strong>（艮上坎下）<br> 山下有險。蒙昧未開，需啟發教育。象童蒙、求學、啟迪。</p>
+<p><strong>5 水天需</strong>（坎上乾下）<br> 剛健而遇險，宜等待。象耐心、蓄勢、待時而進。</p>
+<p><strong>6 天水訟</strong>（乾上坎下）<br> 上健下險，情志相違。象爭訟、分歧，宜戒爭、見大人調解。</p>
+<p><strong>7 地水師</strong>（坤上坎下）<br> 地中有水，眾聚而險。象軍隊、組織、以正用眾。</p>
+<p><strong>8 水地比</strong>（坎上坤下）<br> 地上有水，親密依附。象親比、結盟、親近賢者。</p>
+<p><strong>9 風天小畜</strong>（巽上乾下）<br> 風行天上，所蓄尚小。象小有積蓄、暫時受阻、密雲不雨。</p>
+<p><strong>10 天澤履</strong>（乾上兌下）<br> 上天下澤，分位清晰。如履虎尾，象謹慎踐行、禮與分寸。</p>
+<p><strong>11 地天泰</strong>（坤上乾下）<br> 天地交，陰陽通。象通泰、和諧、小往大來。</p>
+<p><strong>12 天地否</strong>（乾上坤下）<br> 天地不交，閉塞不通。象否塞、小人得勢、宜斂德退避。</p>
+<p><strong>13 天火同人</strong>（乾上離下）<br> 天與火同明。象與人和同、公開聯合、利涉大川。</p>
+<p><strong>14 火天大有</strong>（離上乾下）<br> 火在天上，光明普照。象大有收穫、富有而能照物。</p>
+<p><strong>15 地山謙</strong>（坤上艮下）<br> 地中有山，高而能下。象謙虛、不自滿、有終。</p>
+<p><strong>16 雷地豫</strong>（震上坤下）<br> 雷出地奮，和樂奮發。象喜樂、預備、建侯行師。</p>
+<p><strong>17 澤雷隨</strong>（兌上震下）<br> 澤中有雷，彼此時隨。象隨從、適時、順勢而動。</p>
+<p><strong>18 山風蠱</strong>（艮上巽下）<br> 山下有風，事敗當整。象弊亂、革新、整治積弊。</p>
+<p><strong>19 地澤臨</strong>（坤上兌下）<br> 地上有澤，居高臨下。象監臨、接近、八月有凶之戒。</p>
+<p><strong>20 風地觀</strong>（巽上坤下）<br> 風行地上，遍觀萬物。象觀察、示範、以神道設教。</p>
+<p><strong>21 火雷噬嗑</strong>（離上震下）<br> 顎中有物，當咬合。象刑罰、決斷、除去梗障。</p>
+<p><strong>22 山火賁</strong>（艮上離下）<br> 山下有火，文飾光明。象文飾、美化，亦戒浮華。</p>
+<p><strong>23 山地剝</strong>（艮上坤下）<br> 山附於地，陰剝陽。象剝落、侵蝕，不利有所往。</p>
+<p><strong>24 地雷復</strong>（坤上震下）<br> 雷在地中，一陽來復。象回復、更生、七日來復。</p>
+<p><strong>25 天雷無妄</strong>（乾上震下）<br> 天下雷行，真實無虛。象不妄為；若不正則有災。</p>
+<p><strong>26 山天大畜</strong>（艮上乾下）<br> 天在山中，所蓄者大。象大積蓄、止健、養賢。</p>
+<p><strong>27 山雷頤</strong>（艮上震下）<br> 上止下動，如口嚼食。象頤養、言語與飲食之慎。</p>
+<p><strong>28 澤風大過</strong>（兌上巽下）<br> 澤滅木，棟梁彎曲。象非常、過度、非常之舉。</p>
+<p><strong>29 坎為水</strong>（坎上坎下）<br> 重險。象陷險、習坎，以誠心通、行有尚。</p>
+<p><strong>30 離為火</strong>（離上離下）<br> 重明。象附麗、文明、照察；宜柔順如畜牝牛。</p>
+<hr>
+<h4>下經</h4>
+<p><strong>31 澤山咸</strong>（兌上艮下）<br> 山上有澤，互相感應。象感應、情感、取女吉。</p>
+<p><strong>32 雷風恆</strong>（震上巽下）<br> 雷風相與，恆久不已。象恆常、持久、夫婦之道。</p>
+<p><strong>33 天山遯</strong>（乾上艮下）<br> 天下有山，退避。象隱退、避時、小利貞。</p>
+<p><strong>34 雷天大壯</strong>（震上乾下）<br> 雷在天上，陽氣大壯。象強盛；利於守正，不可用壯。</p>
+<p><strong>35 火地晉</strong>（離上坤下）<br> 明出地上，進而光明。象前進、升進、晝日三接。</p>
+<p><strong>36 地火明夷</strong>（坤上離下）<br> 明入地中，光明受傷。象艱貞、韜光、在難中守正。</p>
+<p><strong>37 風火家人</strong>（巽上離下）<br> 風自火出，家道。象家庭、內治、女正位乎內。</p>
+<p><strong>38 火澤睽</strong>（離上兌下）<br> 上火下澤，相違。象乖離、異中求同，小事吉。</p>
+<p><strong>39 水山蹇</strong>（坎上艮下）<br> 山上有水，行難。象蹇難；利西南，利見大人。</p>
+<p><strong>40 雷水解</strong>（震上坎下）<br> 雷雨作，舒解。象緩解、解難；宜早、宜復。</p>
+<p><strong>41 山澤損</strong>（艮上兌下）<br> 山下有澤，損下益上。象減損、節約；有孚則元吉。</p>
+<p><strong>42 風雷益</strong>（巽上震下）<br> 風雷相益，損上益下。象增益、利人、利涉大川。</p>
+<p><strong>43 澤天夬</strong>（兌上乾下）<br> 澤上於天，決去陰。象決斷、清除；宜宣告，不利即戎。</p>
+<p><strong>44 天風姤</strong>（乾上巽下）<br> 天下有風，陰遇陽。象邂逅；女壯，勿用取女。</p>
+<p><strong>45 澤地萃</strong>（兌上坤下）<br> 澤在地上，萬物萃聚。象聚集、會盟；王假有廟。</p>
+<p><strong>46 地風升</strong>（坤上巽下）<br> 地中生木，上升。象升進、積小成高；南征吉。</p>
+<p><strong>47 澤水困</strong>（兌上坎下）<br> 澤無水，困窮。象困頓；大人吉，有言不信。</p>
+<p><strong>48 水風井</strong>（坎上巽下）<br> 木上有水，井養。象井、養人；邑可改，井不可改。</p>
+<p><strong>49 澤火革</strong>（兌上離下）<br> 澤中有火，變革。象改革、革命；己日乃孚。</p>
+<p><strong>50 火風鼎</strong>（離上巽下）<br> 木上有火，烹飪。象鼎新、養賢、元吉亨。</p>
+<p><strong>51 震為雷</strong>（震上震下）<br> 重雷。象震動、警醒；虩虩而後啞啞，主祭不喪。</p>
+<p><strong>52 艮為山</strong>（艮上艮下）<br> 重山。象止、界限；艮其背，不獲其身，無咎。</p>
+<p><strong>53 風山漸</strong>（巽上艮下）<br> 山上有木，漸長。象漸進、女歸；按序而進。</p>
+<p><strong>54 雷澤歸妹</strong><br> （震上兌下）<br> 澤上有雷，少女歸。象歸嫁失正；征凶，無攸利。</p>
+<p><strong>55 雷火豐</strong>（震上離下）<br> 雷電皆至，豐大。象豐盛；宜日中，勿憂。</p>
+<p><strong>56 火山旅</strong>（離上艮下）<br> 山上有火，羈旅。象行旅、寄寓；小亨，旅貞吉。</p>
+<p><strong>57 巽為風</strong>（巽上巽下）<br> 重風。象順入、申命；小亨，利見大人。</p>
+<p><strong>58 兌為澤</strong>（兌上兌下）<br> 重澤。象喜悅、交談；亨，利貞。</p>
+<p><strong>59 風水渙</strong>（巽上坎下）<br> 風行水上，離散。象渙散、化解；王假有廟，利涉大川。</p>
+<p><strong>60 水澤節</strong>（坎上兌下）<br> 澤上有水，節制。象節度、制度；苦節不可貞。</p>
+<p><strong>61 風澤中孚</strong>（巽上兌下）<br> 澤上有風，中心信。象誠信；豚魚吉，利涉大川。</p>
+<p><strong>62 雷山小過</strong>（震上艮下）<br> 山上有雷，小有過。象小過、宜下不宜上；可小事。</p>
+<p><strong>63 水火既濟</strong>（坎上離下）<br> 水在火上，已成。象事已濟；初吉終亂，宜慎終。</p>
+<p><strong>64 火水未濟</strong>（離上坎下）<br> 火在水上，未成。象未完成；小狐汔濟，濡尾，仍有可為之機。</p>
+<hr>
+<h4>讀象提示</h4>
+<ol>
+<li><strong>先看上下卦</strong>：天、地、雷、風、水、火、山、澤的組合關係（交、不交、相附、相違等）。</li>
+<li><strong>再合卦名</strong>：名往往點出象的核心（如「屯」為難生，「謙」為有而不居）。</li>
+<li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
+</ol>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="卦名.html">Previous: 卦名</a></div>
+<div class="next"><a href="上經爻辭.html">Next: 上經爻辭</a> &gt;&gt;</div>
+</nav>
+<script>
+(function(){
+  function restorePreNewlines(){
+    var nodes=document.querySelectorAll('pre');
+    for(var i=0;i<nodes.length;i++){
+      var pre=nodes[i], html=pre.innerHTML;
+      if(!html) continue;
+      var fixed=html.replace(/<br\s*\/?\s*(?:\s[^>]*)?>/gi,'\n').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+      if(fixed!==html) pre.innerHTML=fixed;
+    }
+  }
+  function run(){
+    restorePreNewlines();
+    if(!window.SyntaxHighlighter) return;
+    try{
+      if(SyntaxHighlighter.config){ SyntaxHighlighter.config.bloggerMode=true; SyntaxHighlighter.config.stripBrs=false; }
+      if(typeof SyntaxHighlighter.all==='function') SyntaxHighlighter.all();
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true});
+  else run();
+})();
+</script>
+</div><!-- /tipue_search_content -->
+
+<div class="container">
+  <div class="row pt-3 mx-auto">
+    <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+      All rights reserved |
+      <i class="icon-heart" aria-hidden="true"></i>
+      by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- /site-wrap -->
+
+<script src="./../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="./../static/chimper/js/jquery-ui.js"></script>
+<script src="./../static/chimper/js/popper.min.js"></script>
+<script src="./../static/chimper/js/bootstrap.min.js"></script>
+<script src="./../static/chimper/js/owl.carousel.min.js"></script>
+<script src="./../static/chimper/js/jquery.stellar.min.js"></script>
+<script src="./../static/chimper/js/jquery.countdown.min.js"></script>
+<script src="./../static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="./../static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="./../static/chimper/js/aos.js"></script>
+<script src="./../static/chimper/js/main.js"></script>
+</body>
+</html>
