@@ -470,8 +470,8 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./static/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./downloas/change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloas/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
