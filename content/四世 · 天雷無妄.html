@@ -367,56 +367,9 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 <div class="next"><a href="五世 · 火雷噬嗑.html">Next: 五世 · 火雷噬嗑</a> &gt;&gt;</div>
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 25 卦） · <a href="../gua/25_無妄.html">詳頁</a> · 標記 [[ 無妄 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -517,8 +470,8 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -542,7 +495,7 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
     main();
   }
 })();
-</script>
+// ]]></script>
 <nav class="page-navigation" aria-label="Page navigation">
 <div class="previous">&lt;&lt; <a href="四世與五世-1-1-1-1-1.html">Previous: 四世與五世-1-1-1-1-1</a></div>
 <div class="next"><a href="五世 · 火雷噬嗑.html">Next: 五世 · 火雷噬嗑</a> &gt;&gt;</div>

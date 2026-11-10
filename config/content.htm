@@ -1,104 +1,4 @@
 <h1>About</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>all: <a href="https://cycu.org/all">https://cycu.org/all</a> (包羅萬象)</p>
 <p>health: <a href="https://cycu.org/health">https://cycu.org/health</a> (健康)</p>
 <p>recipes: <a href="https://cycu.org/recipes">https://cycu.org/recipes</a> (食譜)</p>
@@ -110,8 +10,6 @@
 <p>art: <a href="https://cycu.org/art">https://cycu.org/art</a> (藝術)</p>
 <nav><strong>八宮總覽</strong></nav>
 <h2>卜卦</h2>
-
-
 <!-- 放在 body 內。含：[[標記]]自動渲染 + 亂數卜卦 -->
 <div class="gua-cast-box"><strong>亂數卜卦</strong>
 <p style="margin: 6px 0; font-size: 14px; color: #555;">以三枚銅錢法（六次）起卦。陽＝少陽／老陽，陰＝少陰／老陰；老陰老陽為動爻。</p>
@@ -120,7 +18,7 @@
 </div>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -420,13 +318,8 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>八宮分類</h2>
-
-
-
-
-
 <p class="meta">第一層：八宮。</p>
 <p class="meta">第二層：每宮四組（本宮與一世、二世與三世、四世與五世、游魂與歸魂）。</p>
 <p class="meta">第三層：單卦詳頁（意義與象徵請自行補充）。</p>
@@ -2977,25 +2870,6 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <li><strong>若用 0/1 字串（由上到下）</strong>：與先前 <code>change.py</code> 約定一致時，乾＝<code>111111</code>、坤＝<code>000000</code>；表中「由下到上」的陰陽反過來寫即可。</li>
 </ol>
 <h2>卦名</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h4>六十四卦 · 單字卦名＋注音</h4>
 <table>
 <thead>
@@ -3689,20 +3563,6 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 </tbody>
 </table>
 <h2>卦辭</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
 <hr>
 <h4>上經</h4>
@@ -3856,16 +3716,6 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
 </ol>
 <h2>上經爻辭</h2>
-
-
-
-
-
-
-
-
-
-
 <p>以下為六十四卦<strong>六爻爻辭</strong>與簡明白話。爻位由下而上：初、二、三、四、五、上。陽爻稱「九」，陰爻稱「六」。</p>
 <p>依卦分列；白話只疏通大意。</p>
 <hr>
@@ -4111,14 +3961,6 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p><strong>六五</strong>　出涕沱若，戚嗟若，吉。<br> 白話：淚流如雨，憂戚嗟嘆，吉。</p>
 <p><strong>上九</strong>　王用出征，有嘉折首，獲匪其醜，無咎。<br> 白話：王出征，有功斬獲首領，不濫捕從眾，無咎。</p>
 <h2>下經爻辭</h2>
-
-
-
-
-
-
-
-
 <h4>下經 · 六爻爻辭＋白話（31～64）</h4>
 <hr>
 <h4>31 咸</h4>
@@ -4395,12 +4237,11 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <hr>
 <p>至此，上下經六十四卦爻辭與白話已齊。若要整理成可下載的表格或只保留原文，可以再說。</p>
 <h2>new</h2>
-
 <p>[[乾]]</p>
 <p>[[111011]]</p>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -4526,7 +4367,7 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>Prog</h2>
 <p>此頁面的程式需要 static/robot.py 以及 change.py，robot.py 可用於機器人行走模擬，而 change.py 則用來處理易經卦圖的繪製。</p>
 <p>robot.py 模擬所需的<a href="https://github.com/aroberge/reeborg/tree/master/src/images">圖像</a>取自 reeborg 機器人模擬程式，位於 images/reeborg 目錄中的 images。</p>
@@ -4561,7 +4402,7 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <div id="mpl_output2"><br></div>
 <div id="brython_div2"><br></div>
 <p>
-<script>
+<script>// <![CDATA[
 function getUrlParam(key) {
   return new URLSearchParams(window.location.search).get(key);
 }
@@ -4782,19 +4623,13 @@ sys.stderr = JsWriter()
     }
   });
 }
-</script>
+// ]]></script>
 </p>
 <h1>乾金</h1>
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <p class="meta">[[乾]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -4920,211 +4755,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>本宮與一世</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 乾為天</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 1 卦） · <a href="../gua/01_乾.html">詳頁</a> · 標記 [[ 乾 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -5225,8 +4863,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -5250,107 +4888,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 天風姤</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 44 卦） · <a href="../gua/44_姤.html">詳頁</a> · 標記 [[ 姤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -5451,8 +4993,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -5476,209 +5018,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 天山遯</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 33 卦） · <a href="../gua/33_遯.html">詳頁</a> · 標記 [[ 遯 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -5779,8 +5126,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -5804,105 +5151,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 天地否</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 12 卦） · <a href="../gua/12_否.html">詳頁</a> · 標記 [[ 否 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -6003,8 +5256,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -6028,207 +5281,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 風地觀</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 20 卦） · <a href="../gua/20_觀.html">詳頁</a> · 標記 [[ 觀 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -6329,8 +5389,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -6354,103 +5414,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 山地剝</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 23 卦） · <a href="../gua/23_剝.html">詳頁</a> · 標記 [[ 剝 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -6551,8 +5519,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -6576,205 +5544,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 火地晉</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 35 卦） · <a href="../gua/35_晉.html">詳頁</a> · 標記 [[ 晉 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -6875,8 +5652,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -6900,101 +5677,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 火天大有</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 14 卦） · <a href="../gua/14_大有.html">詳頁</a> · 標記 [[ 大有 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -7095,8 +5782,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -7120,100 +5807,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>震木</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -7314,8 +5912,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -7339,202 +5937,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>本宮與一世-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 震為雷</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 51 卦） · <a href="../gua/51_震.html">詳頁</a> · 標記 [[ 震 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -7635,8 +6045,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -7660,98 +6070,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 雷地豫</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 16 卦） · <a href="../gua/16_豫.html">詳頁</a> · 標記 [[ 豫 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -7852,8 +6175,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -7877,200 +6200,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 雷水解</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 40 卦） · <a href="../gua/40_解.html">詳頁</a> · 標記 [[ 解 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -8171,8 +6308,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -8196,96 +6333,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 雷風恆</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 32 卦） · <a href="../gua/32_恆.html">詳頁</a> · 標記 [[ 恆 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -8386,8 +6438,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -8411,95 +6463,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -8600,8 +6568,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -8625,95 +6593,12 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 </ul>
 <h3>四世 · 地風升</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 46 卦） · <a href="../gua/46_升.html">詳頁</a> · 標記 [[ 升 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -8814,8 +6699,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -8839,93 +6724,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 水風井</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 48 卦） · <a href="../gua/48_井.html">詳頁</a> · 標記 [[ 井 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -9026,8 +6829,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -9051,195 +6854,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 澤風大過</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 28 卦） · <a href="../gua/28_大過.html">詳頁</a> · 標記 [[ 大過 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -9340,8 +6962,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -9365,91 +6987,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 澤雷隨</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 17 卦） · <a href="../gua/17_隨.html">詳頁</a> · 標記 [[ 隨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -9550,8 +7092,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -9575,90 +7117,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>坎水</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -9759,8 +7222,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -9784,192 +7247,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>本宮與一世-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 坎為水</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 29 卦） · <a href="../gua/29_坎.html">詳頁</a> · 標記 [[ 坎 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -10070,8 +7355,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -10095,88 +7380,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 水澤節</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 60 卦） · <a href="../gua/60_節.html">詳頁</a> · 標記 [[ 節 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -10277,8 +7485,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -10302,190 +7510,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 水雷屯</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 3 卦） · <a href="../gua/03_屯.html">詳頁</a> · 標記 [[ 屯 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -10586,8 +7618,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -10611,86 +7643,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 水火既濟</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 63 卦） · <a href="../gua/63_既濟.html">詳頁</a> · 標記 [[ 既濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -10791,8 +7748,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -10816,188 +7773,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 澤火革</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 49 卦） · <a href="../gua/49_革.html">詳頁</a> · 標記 [[ 革 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -11098,8 +7881,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -11123,84 +7906,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 雷火豐</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 55 卦） · <a href="../gua/55_豐.html">詳頁</a> · 標記 [[ 豐 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -11301,8 +8011,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -11326,186 +8036,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 地火明夷</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 36 卦） · <a href="../gua/36_明夷.html">詳頁</a> · 標記 [[ 明夷 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -11606,8 +8144,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -11631,82 +8169,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 地水師</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 7 卦） · <a href="../gua/07_師.html">詳頁</a> · 標記 [[ 師 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -11807,8 +8274,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -11832,285 +8299,16 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>艮土</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 艮為山</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 52 卦） · <a href="../gua/52_艮.html">詳頁</a> · 標記 [[ 艮 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -12211,8 +8409,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -12236,79 +8434,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 山火賁</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 22 卦） · <a href="../gua/22_賁.html">詳頁</a> · 標記 [[ 賁 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -12409,8 +8539,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -12434,181 +8564,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 山天大畜</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 26 卦） · <a href="../gua/26_大畜.html">詳頁</a> · 標記 [[ 大畜 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -12709,8 +8672,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -12734,77 +8697,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 山澤損</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 41 卦） · <a href="../gua/41_損.html">詳頁</a> · 標記 [[ 損 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -12905,8 +8802,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -12930,179 +8827,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 火澤睽</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 38 卦） · <a href="../gua/38_睽.html">詳頁</a> · 標記 [[ 睽 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -13203,8 +8935,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -13228,75 +8960,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 天澤履</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 10 卦） · <a href="../gua/10_履.html">詳頁</a> · 標記 [[ 履 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -13397,8 +9065,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -13422,176 +9090,13 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 風澤中孚</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -13692,8 +9197,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -13717,73 +9222,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 風山漸</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 53 卦） · <a href="../gua/53_漸.html">詳頁</a> · 標記 [[ 漸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -13884,8 +9327,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -13909,277 +9352,16 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>坤土</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 坤為地</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 2 卦） · <a href="../gua/02_坤.html">詳頁</a> · 標記 [[ 坤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -14280,8 +9462,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -14305,71 +9487,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 地雷復</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 24 卦） · <a href="../gua/24_復.html">詳頁</a> · 標記 [[ 復 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -14470,8 +9592,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -14495,173 +9617,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 地澤臨</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 19 卦） · <a href="../gua/19_臨.html">詳頁</a> · 標記 [[ 臨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -14762,8 +9725,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -14787,69 +9750,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 地天泰</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 11 卦） · <a href="../gua/11_泰.html">詳頁</a> · 標記 [[ 泰 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -14950,8 +9855,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -14975,171 +9880,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 雷天大壯</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 34 卦） · <a href="../gua/34_大壯.html">詳頁</a> · 標記 [[ 大壯 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -15240,8 +9988,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -15265,66 +10013,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 澤天夬</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 43 卦） · <a href="../gua/43_夬.html">詳頁</a> · 標記 [[ 夬 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -15425,8 +10118,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -15450,168 +10143,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 水天需</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 5 卦） · <a href="../gua/05_需.html">詳頁</a> · 標記 [[ 需 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -15712,8 +10251,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -15737,64 +10276,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 水地比</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 8 卦） · <a href="../gua/08_比.html">詳頁</a> · 標記 [[ 比 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -15895,8 +10381,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -15920,268 +10406,16 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>巽木</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 巽為風</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 57 卦） · <a href="../gua/57_巽.html">詳頁</a> · 標記 [[ 巽 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -16282,8 +10516,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -16307,61 +10541,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 風天小畜</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 9 卦） · <a href="../gua/09_小畜.html">詳頁</a> · 標記 [[ 小畜 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -16462,8 +10646,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -16487,163 +10671,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 風火家人</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 37 卦） · <a href="../gua/37_家人.html">詳頁</a> · 標記 [[ 家人 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -16744,8 +10779,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -16769,59 +10804,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 風雷益</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 42 卦） · <a href="../gua/42_益.html">詳頁</a> · 標記 [[ 益 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -16922,8 +10909,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -16947,161 +10934,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 天雷無妄</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 25 卦） · <a href="../gua/25_無妄.html">詳頁</a> · 標記 [[ 無妄 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -17202,8 +11042,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -17227,57 +11067,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 火雷噬嗑</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 21 卦） · <a href="../gua/21_噬嗑.html">詳頁</a> · 標記 [[ 噬嗑 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -17378,8 +11172,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -17403,159 +11197,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 山雷頤</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 27 卦） · <a href="../gua/27_頤.html">詳頁</a> · 標記 [[ 頤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -17656,8 +11305,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -17681,55 +11330,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 山風蠱</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 18 卦） · <a href="../gua/18_蠱.html">詳頁</a> · 標記 [[ 蠱 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -17830,8 +11435,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -17855,259 +11460,16 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>離火</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 離為火</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 30 卦） · <a href="../gua/30_離.html">詳頁</a> · 標記 [[ 離 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -18208,8 +11570,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -18233,53 +11595,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 火山旅</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 56 卦） · <a href="../gua/56_旅.html">詳頁</a> · 標記 [[ 旅 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -18380,8 +11700,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -18405,155 +11725,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 火風鼎</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 50 卦） · <a href="../gua/50_鼎.html">詳頁</a> · 標記 [[ 鼎 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -18654,8 +11833,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -18679,51 +11858,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 火水未濟</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 64 卦） · <a href="../gua/64_未濟.html">詳頁</a> · 標記 [[ 未濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -18824,8 +11963,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -18849,153 +11988,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 山水蒙</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 4 卦） · <a href="../gua/04_蒙.html">詳頁</a> · 標記 [[ 蒙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -19096,8 +12096,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -19121,49 +12121,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 風水渙</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 59 卦） · <a href="../gua/59_渙.html">詳頁</a> · 標記 [[ 渙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -19264,8 +12226,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -19289,151 +12251,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 天水訟</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 6 卦） · <a href="../gua/06_訟.html">詳頁</a> · 標記 [[ 訟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -19534,8 +12359,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -19559,47 +12384,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 天火同人</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 13 卦） · <a href="../gua/13_同人.html">詳頁</a> · 標記 [[ 同人 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -19700,8 +12489,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -19725,251 +12514,16 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h1>兌金</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <h2>本宮與一世-1-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>本宮 · 兌為澤</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 58 卦） · <a href="../gua/58_兌.html">詳頁</a> · 標記 [[ 兌 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -20070,8 +12624,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -20095,45 +12649,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>一世 · 澤水困</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 47 卦） · <a href="../gua/47_困.html">詳頁</a> · 標記 [[ 困 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -20234,8 +12754,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -20259,147 +12779,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>二世與三世-1-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>二世 · 澤地萃</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 45 卦） · <a href="../gua/45_萃.html">詳頁</a> · 標記 [[ 萃 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -20500,8 +12887,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -20525,43 +12912,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>三世 · 澤山咸</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 31 卦） · <a href="../gua/31_咸.html">詳頁</a> · 標記 [[ 咸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -20662,8 +13017,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -20687,145 +13042,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>四世與五世-1-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>四世 · 水山蹇</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 39 卦） · <a href="../gua/39_蹇.html">詳頁</a> · 標記 [[ 蹇 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -20926,8 +13150,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -20951,41 +13175,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>五世 · 地山謙</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 15 卦） · <a href="../gua/15_謙.html">詳頁</a> · 標記 [[ 謙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -21086,8 +13280,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -21111,143 +13305,14 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h2>游魂與歸魂-1-1-1-1-1-1-1</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <ul class="plain">
 <li>
 <h3>游魂 · 雷山小過</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 62 卦） · <a href="../gua/62_小過.html">詳頁</a> · 標記 [[ 小過 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -21348,8 +13413,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -21373,39 +13438,11 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
 <h3>歸魂 · 雷澤歸妹</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>（文王第 54 卦） · <a href="../gua/54_歸妹.html">詳頁</a> · 標記 [[ 歸妹 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>
+<script>// <![CDATA[
 (function () {
   "use strict";
 
@@ -21506,8 +13543,8 @@ sys.stderr = JsWriter()
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;
@@ -21531,4 +13568,66 @@ sys.stderr = JsWriter()
     main();
   }
 })();
-</script>
+// ]]></script>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
