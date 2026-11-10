@@ -1,0 +1,7 @@
+import robot
+
+world, bot = await robot.run_patrol(
+    width=10,
+    height=10,
+    target_div_id="brython_div2"
+)

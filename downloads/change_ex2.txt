@@ -1,0 +1,12 @@
+
+change.draw("111111", target_div="brython_div1")
+
+# SVG
+change.draw("000000", target_div="brython_div2", method="svg")
+
+# Unicode
+change.draw("111111", target_div="brython_div1", method="unicode")
+
+# Use name
+change.qian(target_div="brython_div1")
+change.kun(target_div="brython_div2")

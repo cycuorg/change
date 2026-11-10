@@ -1,0 +1,5 @@
+import change
+
+change.print_hexagram("111111")
+change.print_hexagram("000000")
+change.print_hexagram("010001")

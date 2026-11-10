@@ -1,0 +1,9 @@
+import robot
+
+world, bot = await robot.run_patrol(
+    width=12,
+    height=8,
+    start_x=2,
+    start_y=2,
+    target_div_id="robot_area"
+)

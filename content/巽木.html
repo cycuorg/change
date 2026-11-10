@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta property="head" content="H1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>巽木</title>
+
+<link rel="stylesheet" href="./../static/chimper/fonts/icomoon/style.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/magnific-popup.css">
+<link rel="stylesheet" href="./../static/chimper/css/jquery-ui.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.carousel.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="./../static/chimper/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="./../static/chimper/css/aos.css">
+<link rel="stylesheet" href="./../static/chimper/css/style.css">
+<link rel="shortcut icon" href="./../static/favicons.png">
+
+<style type="text/css">
+.site-section { background-color: #FFFF; padding: 40px 40px; }
+body > div > div.dropdown.open { display: block; }
+img.add_border { border: 3px solid blue; }
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    margin: 24px 0;
+    padding: 12px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-navigation .previous {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.page-navigation .next {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.page-navigation a {
+    display: inline-block;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.page-navigation a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script src="./../static/chimper/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
+<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch_content.js"></script>
+<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+<script src="./../static/tipuesearch/tipuesearch.js"></script>
+
+<script>
+function doSearch() {
+    if (window.jQuery && jQuery.fn.tipuesearch) {
+        jQuery('#tipue_search_input').tipuesearch({
+            newWindow: true,
+            minimumLength: 2,
+            wholeWords: false
+        });
+    }
+}
+
+if (window.jQuery) {
+    jQuery(document).ready(doSearch);
+}
+</script>
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css">
+<style>
+pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line {
+  white-space: pre !important; word-wrap: normal !important; word-break: normal !important;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="site-wrap">
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar py-4 bg-white" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <h1>易經</h1>
+
+      <div class="pl-4">
+        <form action="#" onsubmit="return false;">
+          <input type="text"
+                 placeholder="Search"
+                 name="q"
+                 id="tipue_search_input"
+                 pattern=".{2,}"
+                 title="At least 2 characters">
+        </form>
+      </div>
+
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+<li class="active has-children">
+<a href="index.html">Home</a>
+<ul class="dropdown">
+<li><a href="sitemap.html">SMap</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="About.html">About</a><ul class="dropdown">
+<li><a href="八宮分類.html">八宮分類</a></li>
+<li><a href="new.html">new</a></li>
+<li><a href="Prog.html">Prog</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="乾金.html">乾金</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世.html">本宮與一世</a><ul class="dropdown">
+<li><a href="本宮 · 乾為天.html">本宮 · 乾為天</a></li>
+<li><a href="一世 · 天風姤.html">一世 · 天風姤</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世.html">二世與三世</a><ul class="dropdown">
+<li><a href="二世 · 天山遯.html">二世 · 天山遯</a></li>
+<li><a href="三世 · 天地否.html">三世 · 天地否</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世.html">四世與五世</a><ul class="dropdown">
+<li><a href="四世 · 風地觀.html">四世 · 風地觀</a></li>
+<li><a href="五世 · 山地剝.html">五世 · 山地剝</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂.html">游魂與歸魂</a><ul class="dropdown">
+<li><a href="游魂 · 火地晉.html">游魂 · 火地晉</a></li>
+<li><a href="歸魂 · 火天大有.html">歸魂 · 火天大有</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="震木.html">震木</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1.html">本宮與一世-1</a><ul class="dropdown">
+<li><a href="本宮 · 震為雷.html">本宮 · 震為雷</a></li>
+<li><a href="一世 · 雷地豫.html">一世 · 雷地豫</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1.html">二世與三世-1</a><ul class="dropdown">
+<li><a href="二世 · 雷水解.html">二世 · 雷水解</a></li>
+<li><a href="三世 · 雷風恆.html">三世 · 雷風恆</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1.html">四世與五世-1</a><ul class="dropdown">
+<li><a href="四世 · 地風升.html">四世 · 地風升</a></li>
+<li><a href="五世 · 水風井.html">五世 · 水風井</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1.html">游魂與歸魂-1</a><ul class="dropdown">
+<li><a href="游魂 · 澤風大過.html">游魂 · 澤風大過</a></li>
+<li><a href="歸魂 · 澤雷隨.html">歸魂 · 澤雷隨</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="坎水.html">坎水</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1.html">本宮與一世-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 坎為水.html">本宮 · 坎為水</a></li>
+<li><a href="一世 · 水澤節.html">一世 · 水澤節</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1.html">二世與三世-1-1</a><ul class="dropdown">
+<li><a href="二世 · 水雷屯.html">二世 · 水雷屯</a></li>
+<li><a href="三世 · 水火既濟.html">三世 · 水火既濟</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1.html">四世與五世-1-1</a><ul class="dropdown">
+<li><a href="四世 · 澤火革.html">四世 · 澤火革</a></li>
+<li><a href="五世 · 雷火豐.html">五世 · 雷火豐</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1.html">游魂與歸魂-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 地火明夷.html">游魂 · 地火明夷</a></li>
+<li><a href="歸魂 · 地水師.html">歸魂 · 地水師</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="艮土.html">艮土</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1.html">本宮與一世-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 艮為山.html">本宮 · 艮為山</a></li>
+<li><a href="一世 · 山火賁.html">一世 · 山火賁</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1.html">二世與三世-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 山天大畜.html">二世 · 山天大畜</a></li>
+<li><a href="三世 · 山澤損.html">三世 · 山澤損</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1.html">四世與五世-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 火澤睽.html">四世 · 火澤睽</a></li>
+<li><a href="五世 · 天澤履.html">五世 · 天澤履</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1.html">游魂與歸魂-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 風澤中孚.html">游魂 · 風澤中孚</a></li>
+<li><a href="歸魂 · 風山漸.html">歸魂 · 風山漸</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="坤土.html">坤土</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1.html">本宮與一世-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 坤為地.html">本宮 · 坤為地</a></li>
+<li><a href="一世 · 地雷復.html">一世 · 地雷復</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1.html">二世與三世-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 地澤臨.html">二世 · 地澤臨</a></li>
+<li><a href="三世 · 地天泰.html">三世 · 地天泰</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1.html">四世與五世-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 雷天大壯.html">四世 · 雷天大壯</a></li>
+<li><a href="五世 · 澤天夬.html">五世 · 澤天夬</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1.html">游魂與歸魂-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 水天需.html">游魂 · 水天需</a></li>
+<li><a href="歸魂 · 水地比.html">歸魂 · 水地比</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="巽木.html">巽木</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1.html">本宮與一世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 巽為風.html">本宮 · 巽為風</a></li>
+<li><a href="一世 · 風天小畜.html">一世 · 風天小畜</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1.html">二世與三世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 風火家人.html">二世 · 風火家人</a></li>
+<li><a href="三世 · 風雷益.html">三世 · 風雷益</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1.html">四世與五世-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 天雷無妄.html">四世 · 天雷無妄</a></li>
+<li><a href="五世 · 火雷噬嗑.html">五世 · 火雷噬嗑</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 山雷頤.html">游魂 · 山雷頤</a></li>
+<li><a href="歸魂 · 山風蠱.html">歸魂 · 山風蠱</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="離火.html">離火</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1-1.html">本宮與一世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 離為火.html">本宮 · 離為火</a></li>
+<li><a href="一世 · 火山旅.html">一世 · 火山旅</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1-1.html">二世與三世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 火風鼎.html">二世 · 火風鼎</a></li>
+<li><a href="三世 · 火水未濟.html">三世 · 火水未濟</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1-1.html">四世與五世-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 山水蒙.html">四世 · 山水蒙</a></li>
+<li><a href="五世 · 風水渙.html">五世 · 風水渙</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 天水訟.html">游魂 · 天水訟</a></li>
+<li><a href="歸魂 · 天火同人.html">歸魂 · 天火同人</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children"><a href="兌金.html">兌金</a><ul class="dropdown">
+<li class="has-children"><a href="本宮與一世-1-1-1-1-1-1-1.html">本宮與一世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="本宮 · 兌為澤.html">本宮 · 兌為澤</a></li>
+<li><a href="一世 · 澤水困.html">一世 · 澤水困</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="二世與三世-1-1-1-1-1-1-1.html">二世與三世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="二世 · 澤地萃.html">二世 · 澤地萃</a></li>
+<li><a href="三世 · 澤山咸.html">三世 · 澤山咸</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="四世與五世-1-1-1-1-1-1-1.html">四世與五世-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="四世 · 水山蹇.html">四世 · 水山蹇</a></li>
+<li><a href="五世 · 地山謙.html">五世 · 地山謙</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="游魂與歸魂-1-1-1-1-1-1-1.html">游魂與歸魂-1-1-1-1-1-1-1</a><ul class="dropdown">
+<li><a href="游魂 · 雷山小過.html">游魂 · 雷山小過</a></li>
+<li><a href="歸魂 · 雷澤歸妹.html">歸魂 · 雷澤歸妹</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </nav>
+      </div>
+
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+           style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="tipue_search_content">
+<h1>巽木</h1>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="歸魂 · 水地比.html">Previous: 歸魂 · 水地比</a></div>
+<div class="next"><a href="本宮與一世-1-1-1-1-1.html">Next: 本宮與一世-1-1-1-1-1</a> &gt;&gt;</div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
+<nav class="page-navigation" aria-label="Page navigation">
+<div class="previous">&lt;&lt; <a href="歸魂 · 水地比.html">Previous: 歸魂 · 水地比</a></div>
+<div class="next"><a href="本宮與一世-1-1-1-1-1.html">Next: 本宮與一世-1-1-1-1-1</a> &gt;&gt;</div>
+</nav>
+<script>
+(function(){
+  function restorePreNewlines(){
+    var nodes=document.querySelectorAll('pre');
+    for(var i=0;i<nodes.length;i++){
+      var pre=nodes[i], html=pre.innerHTML;
+      if(!html) continue;
+      var fixed=html.replace(/<br\s*\/?\s*(?:\s[^>]*)?>/gi,'\n').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+      if(fixed!==html) pre.innerHTML=fixed;
+    }
+  }
+  function run(){
+    restorePreNewlines();
+    if(!window.SyntaxHighlighter) return;
+    try{
+      if(SyntaxHighlighter.config){ SyntaxHighlighter.config.bloggerMode=true; SyntaxHighlighter.config.stripBrs=false; }
+      if(typeof SyntaxHighlighter.all==='function') SyntaxHighlighter.all();
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true});
+  else run();
+})();
+</script>
+</div><!-- /tipue_search_content -->
+
+<div class="container">
+  <div class="row pt-3 mx-auto">
+    <p>
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+      All rights reserved |
+      <i class="icon-heart" aria-hidden="true"></i>
+      by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    </p>
+  </div>
+</div>
+
+</div><!-- /site-wrap -->
+
+<script src="./../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="./../static/chimper/js/jquery-ui.js"></script>
+<script src="./../static/chimper/js/popper.min.js"></script>
+<script src="./../static/chimper/js/bootstrap.min.js"></script>
+<script src="./../static/chimper/js/owl.carousel.min.js"></script>
+<script src="./../static/chimper/js/jquery.stellar.min.js"></script>
+<script src="./../static/chimper/js/jquery.countdown.min.js"></script>
+<script src="./../static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="./../static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="./../static/chimper/js/aos.js"></script>
+<script src="./../static/chimper/js/main.js"></script>
+</body>
+</html>

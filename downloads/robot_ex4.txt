@@ -1,0 +1,20 @@
+import robot
+
+world = robot.World(
+    width=10,
+    height=10,
+    target_div_id="brython_div1"
+)
+
+ok = await world.setup()
+
+if ok:
+    bot = robot.AnimatedRobot(
+        world, 1, 1
+    )
+
+    await bot.move(3)
+    await bot.turn_left()
+    await bot.move(2)
+
+    robot.bind_controls(bot, world)
