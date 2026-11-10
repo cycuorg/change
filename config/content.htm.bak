@@ -21,6 +21,10 @@
 
 
 
+
+
+
+
 <p>all: <a href="https://cycu.org/all">https://cycu.org/all</a> (包羅萬象)</p>
 <p>health: <a href="https://cycu.org/health">https://cycu.org/health</a> (健康)</p>
 <p>recipes: <a href="https://cycu.org/recipes">https://cycu.org/recipes</a> (食譜)</p>
@@ -32,6 +36,10 @@
 <p>art: <a href="https://cycu.org/art">https://cycu.org/art</a> (藝術)</p>
 <nav><strong>八宮總覽</strong></nav>
 <h2>卜卦</h2>
+
+
+
+
 
 
 
@@ -364,6 +372,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 })();
 // ]]></script>
 <h2>八宮分類</h2>
+
+
+
+
 
 
 
@@ -2958,6 +2970,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
 <h4>六十四卦 · 單字卦名＋注音</h4>
 <table>
 <thead>
@@ -3673,6 +3689,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
 <p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
 <hr>
 <h4>上經</h4>
@@ -3826,6 +3846,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
 </ol>
 <h2>上經爻辭</h2>
+
+
+
+
 
 
 
@@ -4093,6 +4117,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p><strong>六五</strong>　出涕沱若，戚嗟若，吉。<br> 白話：淚流如雨，憂戚嗟嘆，吉。</p>
 <p><strong>上九</strong>　王用出征，有嘉折首，獲匪其醜，無咎。<br> 白話：王出征，有功斬獲首領，不濫捕從眾，無咎。</p>
 <h2>下經爻辭</h2>
+
+
+
+
 
 
 
@@ -4390,34 +4418,535 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p><strong>上九</strong>　有孚于飲酒，無咎，濡其首，有孚失是。<br> 白話：有誠於飲酒，無咎；若酒濕其頭，有誠也失其正當。</p>
 <hr>
 <p>至此，上下經六十四卦爻辭與白話已齊。若要整理成可下載的表格或只保留原文，可以再說。</p>
+<h2>京氏易傳</h2>
+<h4>《京氏易傳》內容摘要與思想架構</h4>
+<p>《京氏易傳》是漢代易學的重要著作，傳統上歸於西漢易學家 京房（約公元前77年－前37年）。</p>
+<p>它最大的特色，是把《周易》的八卦、六十四卦與陰陽五行、天干地支、十二消息卦、五行生剋及世應等概念結合起來，建立一套用來解釋天地變化、人事吉凶的象數易學系統。</p>
+<p>如果說《周易》原本主要透過卦象、爻辭說明變化的道理，那麼京房易學則進一步嘗試回答：</p>
+<ul>
+<li>一個卦如何對應天地、季節與五行？</li>
+<li>六爻如何代表不同時間、位置與人事關係？</li>
+<li>天干、地支如何進入卦象？</li>
+<li>五行生剋如何用來判斷事物的發展？</li>
+<li>如何從卦象推演吉凶、進退與變化？</li>
+</ul>
+<p>因此，《京氏易傳》不只是解釋卦辭的書，更是漢代象數易學的重要代表。</p>
+<h4>一、《京氏易傳》的主要內容：三卷、八宮、六十四卦</h4>
+<p>現存通行本《京氏易傳》分為上、中、下三卷。其內容不是按照《周易》六十四卦的通常順序逐卦解釋，而是以京房易學的「八宮卦」系統作為組織架構。</p>
+<table>
+<thead>
+<tr>
+<th>卷別</th>
+<th>主要內容</th>
+<th>核心重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>卷上</td>
+<td>乾、震、坎、艮四宮</td>
+<td>四宮各八卦，共三十二卦，說明卦的變化、世應、飛伏及五行配屬</td>
+</tr>
+<tr>
+<td>卷中</td>
+<td>坤、巽、離、兌四宮</td>
+<td>另外四宮的三十二卦，延續八宮變卦系統</td>
+</tr>
+<tr>
+<td>卷下</td>
+<td>易學原理與占筮方法</td>
+<td>蓍法、納甲、節氣、天地人鬼四易、六親、五行生死等</td>
+</tr>
+</tbody>
+</table>
+<p>因此，閱讀這本書時，最好先理解八宮卦，再研究納甲、世應、飛伏，最後才進入占筮與五行推演。</p>
+<p>維基文庫，自由的圖書館+2</p>
+<h4>二、第一個核心：八宮卦如何統攝六十四卦？</h4>
+<p>京房易學最重要的特色，就是將六十四卦分成八個宮，每宮八卦。</p>
+<p>八宮分別以八個純卦為宮主：</p>
+<ol>
+<li>乾宮</li>
+<li>震宮</li>
+<li>坎宮</li>
+<li>艮宮</li>
+<li>坤宮</li>
+<li>巽宮</li>
+<li>離宮</li>
+<li>兌宮</li>
+</ol>
+<p>每宮以一個純卦為本宮，再按照陰陽爻逐步變化，形成其他七卦。</p>
+<p>例如乾宮：</p>
+<p>乾宮八卦</p>
+<h4>䷀</h4>
+<p>乾為天</p>
+<p>本宮卦</p>
+<h4>䷫</h4>
+<p>天風姤</p>
+<p>一世卦</p>
+<h4>䷠</h4>
+<p>天山遯</p>
+<p>二世卦</p>
+<h4>䷋</h4>
+<p>天地否</p>
+<p>三世卦</p>
+<h4>䷓</h4>
+<p>風地觀</p>
+<p>四世卦</p>
+<h4>䷖</h4>
+<p>山地剝</p>
+<p>五世卦</p>
+<h4>䷢</h4>
+<p>火地晉</p>
+<p>遊魂卦</p>
+<h4>䷍</h4>
+<p>火天大有</p>
+<p>歸魂卦</p>
+<p>乾宮的卦序依次為：乾、姤、遯、否、觀、剝、晉、大有。</p>
+<p>這個變化過程有一個很有意思的規則：</p>
+<ul>
+<li>一世卦：從本宮卦的初爻開始變。</li>
+<li>二世卦：再變第二爻。</li>
+<li>三世卦：再變第三爻。</li>
+<li>四世卦：再變第四爻。</li>
+<li>五世卦：再變第五爻。</li>
+<li>遊魂卦：由五世卦再變第四爻。</li>
+<li>歸魂卦：再變內卦，使內卦恢復本宮卦的結構。</li>
+</ul>
+<p>這樣每宮就有八卦，八宮合起來正好是六十四卦。</p>
+<p>這套系統的意義： 六十四卦不再只是六十四個彼此獨立的卦，而是可以依照卦變關係，追溯它們所屬的宮位與變化過程。</p>
+<h4>三、第二個核心：納甲——將天干地支放進卦象</h4>
+<p>納甲是京房易學非常重要的內容。</p>
+<p>「納」就是納入、配入；「甲」代表天干系統。</p>
+<p>納甲的意思，是將天干、地支配入八卦及六爻，讓抽象的卦象可以與時間、方位、五行等系統建立關係。</p>
+<p>例如乾卦：</p>
+<table>
+<thead>
+<tr>
+<th>爻位</th>
+<th>納甲地支</th>
+<th>五行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初爻</td>
+<td>甲子</td>
+<td>水</td>
+</tr>
+<tr>
+<td>二爻</td>
+<td>甲寅</td>
+<td>木</td>
+</tr>
+<tr>
+<td>三爻</td>
+<td>甲辰</td>
+<td>土</td>
+</tr>
+<tr>
+<td>四爻</td>
+<td>壬午</td>
+<td>火</td>
+</tr>
+<tr>
+<td>五爻</td>
+<td>壬申</td>
+<td>金</td>
+</tr>
+<tr>
+<td>上爻</td>
+<td>壬戌</td>
+<td>土</td>
+</tr>
+</tbody>
+</table>
+<p>這表示乾卦六個爻位，不只是六條陰陽線，也分別有地支與五行屬性。</p>
+<p>這就能進一步分析：</p>
+<ul>
+<li>某一爻的五行是什麼？</li>
+<li>某爻與另一爻之間是相生還是相剋？</li>
+<li>某一爻是否受到月令或日辰影響？</li>
+<li>不同爻位之間是否形成五行互動？</li>
+</ul>
+<p>這也是後世六爻占筮系統的重要基礎之一。</p>
+<h4>四、第三個核心：世應——卦中不同爻位的關係</h4>
+<p>京房易學把六爻中的某些位置分別稱為「世」與「應」。</p>
+<ul>
+<li>世爻： 代表卦中主要的主體、當事者或所占之事的中心。</li>
+<li>應爻： 代表與世爻相對應的另一方、外部條件或互動對象。</li>
+</ul>
+<p>六爻的位置如下：</p>
+<p>六爻的位置與世應關係</p>
+<p>由下往上排列</p>
+<p>上爻</p>
+<p>第六爻</p>
+<p>五爻</p>
+<p>第五爻</p>
+<p>四爻</p>
+<p>第四爻</p>
+<p>三爻</p>
+<p>第三爻</p>
+<p>二爻</p>
+<p>第二爻</p>
+<p>初爻</p>
+<p>第一爻</p>
+<p>相對應的爻位：</p>
+<ul>
+<li>初爻 ↔ 四爻</li>
+<li>二爻 ↔ 五爻</li>
+<li>三爻 ↔ 上爻</li>
+</ul>
+<p>例如，乾宮本宮卦「乾為天」，世爻在上爻，應爻在三爻。</p>
+<p>世應的基本關係，是用來觀察主體與對應對象之間的互動。</p>
+<p>在後來的六爻占卜中，世爻常用來代表問卦者或所占主體，應爻常用來代表對方或外部環境。不過實際解卦仍須配合占問事項、六親、旺衰與動變，不能只憑世應兩個位置就決定吉凶。</p>
+<h4>五、第四個核心：飛伏——看見的與隱藏的力量</h4>
+<p>「飛伏」是京房易學另一個重要概念。</p>
+<ul>
+<li>飛神： 卦中目前可以看見、顯示出來的爻及其納甲關係。</li>
+<li>伏神： 隱藏在卦象背後、沒有直接顯現的爻或五行關係。</li>
+</ul>
+<p>可以用一個簡單的比喻理解：</p>
+<p>一棵植物的地上枝葉是看得見的部分，地下根系則是看不見的部分。枝葉與根系共同影響植物的生長。</p>
+<p>飛伏的思想，就是不只觀察卦中顯示的資訊，也要考慮沒有直接出現的因素。</p>
+<p>在占筮中，伏神常被用來觀察：</p>
+<ul>
+<li>某個重要因素是否尚未顯現？</li>
+<li>某種條件是否隱藏？</li>
+<li>某個人或事是否受到其他因素牽制？</li>
+<li>隱藏的力量是否有機會出現？</li>
+</ul>
+<p>需要留意，京房易傳中的飛伏說法與後世六爻占法所使用的飛伏神，有傳承關係，但不同時代的規則與解釋不一定完全相同。</p>
+<h4>六、第五個核心：五行生剋與六親</h4>
+<p>這一部分與你前面研究的八卦五行最有關係。</p>
+<p>京房易學不只把八卦配上五行，也進一步將六爻的地支五行互相比較，形成生、剋、比和等關係。</p>
+<p>五行的基本規則：</p>
+<table>
+<thead>
+<tr>
+<th>關係</th>
+<th>五行作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相生</td>
+<td>木生火、火生土、土生金、金生水、水生木</td>
+</tr>
+<tr>
+<td>相剋</td>
+<td>木剋土、土剋水、水剋火、火剋金、金剋木</td>
+</tr>
+<tr>
+<td>比和</td>
+<td>同一五行彼此相同</td>
+</tr>
+</tbody>
+</table>
+<p>接著，京房易學的傳統系統又以卦宮五行為基準，將其他爻的五行關係分成六親。</p>
+<table>
+<thead>
+<tr>
+<th>六親</th>
+<th>五行關係（以本宮五行為基準）</th>
+<th>傳統象徵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>父母</td>
+<td>生我</td>
+<td>長輩、文件、庇護</td>
+</tr>
+<tr>
+<td>兄弟</td>
+<td>同我</td>
+<td>同輩、朋友、競爭者</td>
+</tr>
+<tr>
+<td>子孫</td>
+<td>我生</td>
+<td>子女、成果、福德</td>
+</tr>
+<tr>
+<td>妻財</td>
+<td>我剋</td>
+<td>財物、資源、妻室</td>
+</tr>
+<tr>
+<td>官鬼</td>
+<td>剋我</td>
+<td>官職、壓力、疾病、約束</td>
+</tr>
+</tbody>
+</table>
+<p>例如，以乾宮為例，乾宮屬金：</p>
+<table>
+<thead>
+<tr>
+<th>六親</th>
+<th>對應五行</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>父母</td>
+<td>土</td>
+<td>土生金</td>
+</tr>
+<tr>
+<td>兄弟</td>
+<td>金</td>
+<td>同屬金</td>
+</tr>
+<tr>
+<td>子孫</td>
+<td>水</td>
+<td>金生水</td>
+</tr>
+<tr>
+<td>妻財</td>
+<td>木</td>
+<td>金剋木</td>
+</tr>
+<tr>
+<td>官鬼</td>
+<td>火</td>
+<td>火剋金</td>
+</tr>
+</tbody>
+</table>
+<p>這套關係後來成為六爻占卜的重要架構。</p>
+<p>要特別注意：六親並不是單純按照爻的陰陽來決定，而是依照卦宮五行與爻的納甲五行之間的生剋關係來判定。</p>
+<h4>七、第六個核心：節氣、十二消息卦與陰陽消長</h4>
+<p>京房易學也把卦象與一年中的時間變化結合。</p>
+<p>其中很重要的觀念是陰陽消長：一年之中，陽氣逐漸增加或減少，陰氣也隨之消長。</p>
+<p>十二消息卦是理解這種變化的代表性系統。</p>
+<table>
+<thead>
+<tr>
+<th>月份（傳統農曆建月）</th>
+<th>消息卦</th>
+<th>陰陽變化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十一月</td>
+<td>復 ☳</td>
+<td>一陽生</td>
+</tr>
+<tr>
+<td>十二月</td>
+<td>臨 ☱</td>
+<td>二陽生</td>
+</tr>
+<tr>
+<td>正月</td>
+<td>泰 ☷</td>
+<td>三陽生</td>
+</tr>
+<tr>
+<td>二月</td>
+<td>大壯 ☳</td>
+<td>四陽生</td>
+</tr>
+<tr>
+<td>三月</td>
+<td>夬 ☱</td>
+<td>五陽生</td>
+</tr>
+<tr>
+<td>四月</td>
+<td>乾 ☰</td>
+<td>六陽全陽</td>
+</tr>
+<tr>
+<td>五月</td>
+<td>姤 ☴</td>
+<td>一陰生</td>
+</tr>
+<tr>
+<td>六月</td>
+<td>遯 ☶</td>
+<td>二陰生</td>
+</tr>
+<tr>
+<td>七月</td>
+<td>否 ☰</td>
+<td>三陰生</td>
+</tr>
+<tr>
+<td>八月</td>
+<td>觀 ☴</td>
+<td>四陰生</td>
+</tr>
+<tr>
+<td>九月</td>
+<td>剝 ☶</td>
+<td>五陰生</td>
+</tr>
+<tr>
+<td>十月</td>
+<td>坤 ☷</td>
+<td>六陰全陰</td>
+</tr>
+</tbody>
+</table>
+<p>這張表呈現的是傳統十二消息卦的月令配法，卦象的變化代表陰陽之氣在一年中的消長。</p>
+<p>例如：</p>
+<ul>
+<li>復卦：冬至前後，一陽開始生長。</li>
+<li>泰卦：陽氣逐漸增長，陰陽交泰。</li>
+<li>乾卦：六陽爻俱全，陽氣達到極盛。</li>
+<li>姤卦：陽極而陰生。</li>
+<li>坤卦：六陰爻俱全，陰氣達到極盛。</li>
+</ul>
+<p>這裡可以看出，京房易學不只是研究一個卦的形狀，而是希望把卦象放進全年氣候、時間與陰陽變化的系統中。</p>
+<h4>八、第七個核心：天地人鬼四易</h4>
+<p>《京氏易傳》傳本中還有天地人鬼四易的說法。</p>
+<p>它將不同世數的卦與天地人鬼的分類相聯繫，大致可整理如下：</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>世數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地易</td>
+<td>一世、二世</td>
+</tr>
+<tr>
+<td>人易</td>
+<td>三世、四世</td>
+</tr>
+<tr>
+<td>天易</td>
+<td>五世及八純卦</td>
+</tr>
+<tr>
+<td>鬼易</td>
+<td>遊魂、歸魂</td>
+</tr>
+</tbody>
+</table>
+<p>這種分類是京房易學傳本中用來解釋卦的世數與變化層次的另一種架構。</p>
+<p>它與八宮卦、世應、飛伏等概念相互關聯，目的在於把卦象變化與天地人事的不同層次聯繫起來。</p>
+<h4>九、《京氏易傳》與後世六爻占卜的關係</h4>
+<p>現在常見的六爻占卜，與京房易學有很深的歷史關係。</p>
+<p>例如，現代常見的六爻排盤通常包含：</p>
+<ol>
+<li>排出本卦與變卦。</li>
+<li>確認卦所屬的八宮。</li>
+<li>標示世爻與應爻。</li>
+<li>配上天干地支（納甲）。</li>
+<li>計算各爻五行。</li>
+<li>標示父母、兄弟、子孫、妻財、官鬼六親。</li>
+<li>判斷動爻、變爻、伏神。</li>
+<li>配合月建、日辰分析旺衰與生剋。</li>
+</ol>
+<p>這些方法與京房易學有重要的歷史淵源，但今天的六爻占法也經過後世長期整理與發展，不能把現代所有排盤規則都直接視為京房原始方法。</p>
+<h4>十、京房易學與《周易》原文有什麼不同？</h4>
+<p>這是閱讀《京氏易傳》時最需要注意的地方。</p>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>《周易》經文</th>
+<th>《京氏易傳》</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要內容</td>
+<td>卦辭、爻辭</td>
+<td>卦變、象數、納甲、世應、飛伏</td>
+</tr>
+<tr>
+<td>研究重點</td>
+<td>卦象所表達的哲理與變化</td>
+<td>卦象與時間、五行、人事的對應</td>
+</tr>
+<tr>
+<td>核心系統</td>
+<td>六十四卦與三百八十四爻</td>
+<td>八宮卦與六爻納甲</td>
+</tr>
+<tr>
+<td>五行應用</td>
+<td>有陰陽五行的思想背景</td>
+<td>將五行生剋具體運用於爻位</td>
+</tr>
+<tr>
+<td>占筮應用</td>
+<td>蓍草占筮及卦爻辭解釋</td>
+<td>建立較完整的象數推演方法</td>
+</tr>
+</tbody>
+</table>
+<p>有一點值得特別說明：《京氏易傳》雖然以京房為作者傳世，但現存版本的形成與傳承相當複雜。學界對現存文本是否全部出自京房本人，以及其中哪些部分屬於後世增補，並沒有簡單一致的答案。因此，閱讀時最好稱為「京房易學傳統」或「京氏易學」，不要把所有現存內容都當成京房親筆原著。</p>
+<h4>十一、建議如何循序學習《京氏易傳》？</h4>
+<p>如果你希望從前面研究的八卦、五行，進一步理解六十四卦的變化及其占筮應用，我建議依照以下順序：</p>
+<ol>
+<li>
+<p>第一階段：八卦與五行</p>
+<p>先熟悉乾、兌、離、震、巽、坎、艮、坤的卦象、陰陽爻、方位及五行。</p>
+</li>
+<li>
+<p>第二階段：六十四卦與八宮</p>
+<p>學習八個宮如何由純卦逐步變化，並理解一世、二世、三世、四世、五世、遊魂、歸魂。</p>
+</li>
+<li>
+<p>第三階段：納甲與地支</p>
+<p>學習六十四卦每一爻如何配入天干、地支及五行。</p>
+</li>
+<li>
+<p>第四階段：世應與飛伏</p>
+<p>學習如何判斷卦的主體、對應關係，以及顯現與隱藏的爻。</p>
+</li>
+<li>
+<p>第五階段：五行生剋與六親</p>
+<p>學習父母、兄弟、子孫、妻財、官鬼的推導方式。</p>
+</li>
+<li>
+<p>第六階段：節氣與時間</p>
+<p>研究十二消息卦、月令、日辰及陰陽消長。</p>
+</li>
+<li>
+<p>第七階段：實際卦例</p>
+<p>從起卦、裝卦、定世應、納甲、六親到分析卦象，完整練習一次。</p>
+</li>
+</ol>
+<h4>十二、原文閱讀參考</h4>
+<p>以下幾個資源可以用來對照原文及不同版本：</p>
+<ul>
+<li><a href="https://zh.wikisource.org/zh-hant/%E4%BA%AC%E6%B0%8F%E6%98%93%E5%82%B3?utm_source=chatgpt.com">《京氏易傳》維基文庫全文</a>：可直接閱讀上、中、下卷。</li>
+<li><a href="https://www.eee-learning.com/article/5685?utm_source=chatgpt.com">易學網：《京氏易傳》</a>：有作者、版本與京房易學的介紹。</li>
+<li><a href="https://libokang.com/zh-hant/classics/yijing/%E4%BA%AC%E6%B0%8F%E6%98%93%E5%82%B3/?utm_source=chatgpt.com">康立波國學：《京氏易傳》</a>：提供原文與白話閱讀參考。</li>
+<li><a href="https://www.taijizhidian.com/book/read/11627.html?utm_source=chatgpt.com">《京氏易傳》八宮卦序及內容提要</a>：適合對照八宮六十四卦的排列。</li>
+</ul>
+<h4>最後：理解《京氏易傳》最重要的觀念</h4>
+<p>我認為可以把京房易學濃縮成一個系統：</p>
+<p>八卦</p>
+<p>八種基本自然象徵</p>
+<p>八宮六十四卦</p>
+<p>卦象的變化與分類</p>
+<p>納甲、地支、五行</p>
+<p>將卦象與時間及五行聯繫</p>
+<p>世應、飛伏、六親</p>
+<p>分析卦內各爻的關係</p>
+<p>卦象推演</p>
+<p>觀察陰陽、五行、時間與人事變化</p>
 <h2>new</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <p>[[乾]]</p>
 <p>[[111011]]</p>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>// <![CDATA[
+<script>
 (function () {
   "use strict";
 
@@ -4543,8 +5072,12 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
     main();
   }
 })();
-// ]]></script>
+</script>
 <h2>Prog</h2>
+
+
+
+
 
 
 
@@ -4824,6 +5357,10 @@ sys.stderr = JsWriter()
 // ]]></script>
 </p>
 <h1>乾金</h1>
+
+
+
+
 
 
 
@@ -5281,9 +5818,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 乾為天</h3>
+
+
+
+
 
 
 
@@ -5458,6 +6003,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 44 卦） · <a href="../gua/44_姤.html">詳頁</a> · 標記 [[ 姤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -5610,9 +6159,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 天山遯</h3>
+
+
+
+
 
 
 
@@ -5787,6 +6344,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 12 卦） · <a href="../gua/12_否.html">詳頁</a> · 標記 [[ 否 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -5939,9 +6500,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 風地觀</h3>
+
+
+
+
 
 
 
@@ -6116,6 +6685,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 23 卦） · <a href="../gua/23_剝.html">詳頁</a> · 標記 [[ 剝 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6268,9 +6841,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 火地晉</h3>
+
+
+
+
 
 
 
@@ -6445,6 +7026,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 14 卦） · <a href="../gua/14_大有.html">詳頁</a> · 標記 [[ 大有 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6575,6 +7160,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>震木</h1>
+
+
+
+
 
 
 
@@ -7026,9 +7615,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 震為雷</h3>
+
+
+
+
 
 
 
@@ -7203,6 +7800,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 16 卦） · <a href="../gua/16_豫.html">詳頁</a> · 標記 [[ 豫 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7355,9 +7956,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 雷水解</h3>
+
+
+
+
 
 
 
@@ -7532,6 +8141,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 32 卦） · <a href="../gua/32_恆.html">詳頁</a> · 標記 [[ 恆 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7662,6 +8275,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h2>四世與五世-1</h2>
+
+
+
+
 
 
 
@@ -7837,6 +8454,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 46 卦） · <a href="../gua/46_升.html">詳頁</a> · 標記 [[ 升 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7967,6 +8588,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>五世 · 水風井</h3>
+
+
+
+
 
 
 
@@ -8141,9 +8766,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 澤風大過</h3>
+
+
+
+
 
 
 
@@ -8318,6 +8951,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 17 卦） · <a href="../gua/17_隨.html">詳頁</a> · 標記 [[ 隨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -8448,6 +9085,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坎水</h1>
+
+
+
+
 
 
 
@@ -8938,9 +9579,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坎為水</h3>
+
+
+
+
 
 
 
@@ -9115,6 +9764,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 60 卦） · <a href="../gua/60_節.html">詳頁</a> · 標記 [[ 節 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9267,9 +9920,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 水雷屯</h3>
+
+
+
+
 
 
 
@@ -9444,6 +10105,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 63 卦） · <a href="../gua/63_既濟.html">詳頁</a> · 標記 [[ 既濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9596,9 +10261,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 澤火革</h3>
+
+
+
+
 
 
 
@@ -9773,6 +10446,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 55 卦） · <a href="../gua/55_豐.html">詳頁</a> · 標記 [[ 豐 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9925,9 +10602,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 地火明夷</h3>
+
+
+
+
 
 
 
@@ -10102,6 +10787,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 7 卦） · <a href="../gua/07_師.html">詳頁</a> · 標記 [[ 師 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -10232,6 +10921,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>艮土</h1>
+
+
+
+
 
 
 
@@ -10749,9 +11442,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 艮為山</h3>
+
+
+
+
 
 
 
@@ -10926,6 +11627,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 22 卦） · <a href="../gua/22_賁.html">詳頁</a> · 標記 [[ 賁 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11078,9 +11783,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 山天大畜</h3>
+
+
+
+
 
 
 
@@ -11255,6 +11968,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 41 卦） · <a href="../gua/41_損.html">詳頁</a> · 標記 [[ 損 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11407,9 +12124,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 火澤睽</h3>
+
+
+
+
 
 
 
@@ -11584,6 +12309,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 10 卦） · <a href="../gua/10_履.html">詳頁</a> · 標記 [[ 履 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11736,9 +12465,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 風澤中孚</h3>
+
+
+
+
 
 
 
@@ -11912,6 +12649,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 53 卦） · <a href="../gua/53_漸.html">詳頁</a> · 標記 [[ 漸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12042,6 +12783,9 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坤土</h1>
+
+
+
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <p class="meta">[[坤]]</p>
 <h4>坤卦（☷）為什麼五行屬土？</h4>
@@ -12074,10 +12818,6 @@ sys.stderr = JsWriter()
 <p>大地不主動創造種子，卻能接受種子；不主動命令植物生長，卻能提供植物生長所需要的土壤。</p>
 <p>這正是坤卦最重要的象徵。</p>
 <h4>二、坤卦為什麼代表大地？</h4>
-<p><a href="https://images.openai.com/static-rsc-4/JjzrjXCZcqAAia433YnGinfxBTRmekgraoXjJyFBjTRxcLJvEjNDCSxkrBTIu4kdLuOZ4Z4ktMqi_wIEr8-ptYMyJrtXpydfkd9JPUIeuuuGNqCnzWkScp7N4mnrNsyo6EF-3CLiMZzeoafAZXJerSNSdW2expoKbrnXPNSXr674_f-BHVGEHqUPuLav5u-s?purpose=inline">beautiful rural landscape</a></p>
-<p><a href="https://images.openai.com/static-rsc-4/j6IObdO9NsN7VsVjTGbzrwD6VXV6JYxDVT1dGfGEaHYt5iOLO_lk-TPIsMdB4P-6NoVw-Rht4-kXq_1E9KwtqvrgbTzycYvjxrTFUhw0y5mBPcckbntqAgTu4dCMtiag5wPo-vuibhAliSA0ozohFuqfajaGqljczkoiZf62_Yo?purpose=inline">5 Tips to Improve Your Garden Soil | Yates</a></p>
-<p><a href="https://images.openai.com/static-rsc-4/-UoIbizq_zuXrANiHWTzgCPv0jHF_oGOIzXBNuUVQLL4-L0JtqFfLhrKLQoKIoTJdPXd77P6gMw-s7bLKurCmjspuMEp_K4xaqT8DR4TEn8Lu4zhY8tUlgKaQovK7G6V333yTaMXl-JCOVrcbrOBRNxek6Q1lryjFIsOuNrhtr8mwEEfzf4tIG0t16PrmlUk?purpose=inline">Picturesque view of a grassy landscape with mountains in the backdrop on a cloudy sky background</a></p>
-<p>6</p>
 <p>《易經・說卦傳》明確記載：</p>
 <blockquote>
 <p>坤為地，為母，為布，為釜，為吝嗇，為均，為子母牛……</p>
@@ -12115,8 +12855,6 @@ sys.stderr = JsWriter()
 <p>地球表面有土壤、山川、平原，土地承載萬物，因此坤卦自然與五行中的土相配。</p>
 <p>不過要注意，坤為地是《說卦傳》的直接取象，而坤屬土則是八卦與五行相配的傳統分類。</p>
 <h4>2. 後天八卦方位：坤在西南方</h4>
-<p><a href="https://images.openai.com/static-rsc-4/NQlLS0nwZ5dt5kZ5LYNFqd9dsyu7alm6psJMKqFBC62dquXnSWCXMwEDx1VECHJ736MPUQVwykWdrszcuky0G3iYkBs1fmjuV5e6eSFmxlFZ2y90a8uqTnrvAMtgJxid8XXd69QoREwd89QcWtvSh8DLpOLtbZLa0kRicMO47uc?purpose=inline">Directional Diagram of Later Heaven Ba-gua and Eight Trigram</a></p>
-<p><a href="https://in.pinterest.com/pin/directional-diagram-of-later-heaven-bagua-and-eight-trigram--43980533854799762/?utm_source=chatgpt.com">in.pinterest.com</a></p>
 <p>後天八卦中，坤卦位於西南方。</p>
 <p>五行方位的傳統對應是：</p>
 <table>
@@ -12168,7 +12906,6 @@ sys.stderr = JsWriter()
 <h4>四、坤卦與艮卦同屬土，有什麼不同？</h4>
 <p>這是八卦五行非常重要的一個比較。</p>
 <p>坤卦與艮卦都屬土，但是兩者的象徵完全不同。</p>
-<p><a href="https://images.openai.com/static-rsc-4/v0EUHitVhMDytRJA63XJ5RskV60CRgQTbupizQhpedZoRqT0_-x5x8hHo0oGdQ-XQAzrgnCUI6ZrwBMGMbAXU8y_fUdOXETKedC6f1faiVrPB-oHPO3PdTmmTgankcLXx2S5YX73CMp7xU0m-ef1_3K_T2IbIVpG7L9pI2D0Qq1hJzzZH1iEnaZZFzncL01Z?purpose=inline">Green and blue non-urban landscape</a></p>
 <p>坤卦 ☷</p>
 <p>土</p>
 <ul>
@@ -12179,7 +12916,6 @@ sys.stderr = JsWriter()
 <li>特性：包容、承載、滋養</li>
 <li>家庭：母親</li>
 </ul>
-<p><a href="https://images.openai.com/static-rsc-4/UMKcp-da5_eJnjTPzuLVNfHUGB2Je79nvfCyo8PiCYUveuCh40iNaykOo1Sm9MeE5rLuaHRtK3vIwElrOhWTAgVuU2xPT9HTzzBm8E-ivmnw85czlLT7te28VS9v3TjSZUmyE6Mc4rYn6sRCY1fWD2tUnWi76AiOJLb8zxPvfr8?purpose=inline">Mount Birdwood | Other Sends</a></p>
 <p>艮卦 ☶</p>
 <p>土</p>
 <ul>
@@ -12371,6 +13107,7 @@ sys.stderr = JsWriter()
 <p>尤其坤卦值得記住的一句話是：</p>
 <p>乾代表天的創始力量，坤代表地的承載力量；天行健，地勢坤。</p>
 <p>這也是《易經》乾坤兩卦作為六十四卦開端，最重要的思想之一。</p>
+<p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>
 (function () {
@@ -12499,7 +13236,12 @@ sys.stderr = JsWriter()
   }
 })();
 </script>
+</p>
 <h2>本宮與一世-1-1-1-1</h2>
+
+
+
+
 
 
 
@@ -12525,6 +13267,10 @@ sys.stderr = JsWriter()
 <ul class="plain">
 <li>
 <h3>本宮 · 坤為地</h3>
+
+
+
+
 
 
 
@@ -12699,6 +13445,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 24 卦） · <a href="../gua/24_復.html">詳頁</a> · 標記 [[ 復 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12851,9 +13601,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 地澤臨</h3>
+
+
+
+
 
 
 
@@ -13028,6 +13786,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 11 卦） · <a href="../gua/11_泰.html">詳頁</a> · 標記 [[ 泰 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13180,9 +13942,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 雷天大壯</h3>
+
+
+
+
 
 
 
@@ -13357,6 +14127,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 43 卦） · <a href="../gua/43_夬.html">詳頁</a> · 標記 [[ 夬 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13509,9 +14283,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 水天需</h3>
+
+
+
+
 
 
 
@@ -13686,6 +14468,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 8 卦） · <a href="../gua/08_比.html">詳頁</a> · 標記 [[ 比 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13816,6 +14602,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>巽木</h1>
+
+
+
+
 
 
 
@@ -14357,9 +15147,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 巽為風</h3>
+
+
+
+
 
 
 
@@ -14534,6 +15332,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 9 卦） · <a href="../gua/09_小畜.html">詳頁</a> · 標記 [[ 小畜 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -14686,9 +15488,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 風火家人</h3>
+
+
+
+
 
 
 
@@ -14863,6 +15673,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 42 卦） · <a href="../gua/42_益.html">詳頁</a> · 標記 [[ 益 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15015,9 +15829,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 天雷無妄</h3>
+
+
+
+
 
 
 
@@ -15192,6 +16014,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 21 卦） · <a href="../gua/21_噬嗑.html">詳頁</a> · 標記 [[ 噬嗑 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15344,9 +16170,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 山雷頤</h3>
+
+
+
+
 
 
 
@@ -15521,6 +16355,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 18 卦） · <a href="../gua/18_蠱.html">詳頁</a> · 標記 [[ 蠱 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15651,6 +16489,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>離火</h1>
+
+
+
+
 
 
 
@@ -16093,9 +16935,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 離為火</h3>
+
+
+
+
 
 
 
@@ -16270,6 +17120,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 56 卦） · <a href="../gua/56_旅.html">詳頁</a> · 標記 [[ 旅 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16422,9 +17276,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 火風鼎</h3>
+
+
+
+
 
 
 
@@ -16599,6 +17461,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 64 卦） · <a href="../gua/64_未濟.html">詳頁</a> · 標記 [[ 未濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16751,9 +17617,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 山水蒙</h3>
+
+
+
+
 
 
 
@@ -16928,6 +17802,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 59 卦） · <a href="../gua/59_渙.html">詳頁</a> · 標記 [[ 渙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17080,9 +17958,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 天水訟</h3>
+
+
+
+
 
 
 
@@ -17257,6 +18143,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 13 卦） · <a href="../gua/13_同人.html">詳頁</a> · 標記 [[ 同人 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17387,6 +18277,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>兌金</h1>
+
+
+
+
 
 <p class="meta">本宮統八卦，依世變為一世至五世，再為游魂、歸魂。下列四組為第二層分類。</p>
 <p class="meta">[[兌]]</p>
@@ -17852,9 +18746,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 兌為澤</h3>
+
+
+
+
 
 
 
@@ -18029,6 +18931,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 47 卦） · <a href="../gua/47_困.html">詳頁</a> · 標記 [[ 困 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18181,9 +19087,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 澤地萃</h3>
+
+
+
+
 
 
 
@@ -18358,6 +19272,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 31 卦） · <a href="../gua/31_咸.html">詳頁</a> · 標記 [[ 咸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18510,9 +19428,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 水山蹇</h3>
+
+
+
+
 
 
 
@@ -18687,6 +19613,10 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <p>（文王第 15 卦） · <a href="../gua/15_謙.html">詳頁</a> · 標記 [[ 謙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18839,9 +19769,17 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 雷山小過</h3>
+
+
+
+
 
 
 
@@ -18994,6 +19932,10 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>歸魂 · 雷澤歸妹</h3>
+
+
+
+
 
 
 
