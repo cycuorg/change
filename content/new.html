@@ -368,12 +368,6 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 </nav>
 
 
-
-
-
-
-
-
 <p>[[乾]]</p>
 <p>[[111011]]</p>
 <p class="gua-status" id="gua_status"><br></p>
@@ -479,8 +473,8 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
     var ok =
       (await installLocalModule(pyodide, "/static/change.py", "change")) ||
       (await installLocalModule(pyodide, "/downloads/change.py", "change")) ||
-      (await installLocalModule(pyodide, "./change.py", "change")) ||
-      (await installLocalModule(pyodide, "change.py", "change"));
+      (await installLocalModule(pyodide, "./../static/change.py", "change")) ||
+      (await installLocalModule(pyodide, "./../downloads/change.py", "change"));
     if (!ok) {
       status("請將 change.py 放到 /static/change.py");
       return;

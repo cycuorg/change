@@ -367,104 +367,6 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 <div class="next"><a href="乾金.html">Next: 乾金</a> &gt;&gt;</div>
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p>此頁面的程式需要 static/robot.py 以及 change.py，robot.py 可用於機器人行走模擬，而 change.py 則用來處理易經卦圖的繪製。</p>
 <p>robot.py 模擬所需的<a href="https://github.com/aroberge/reeborg/tree/master/src/images">圖像</a>取自 reeborg 機器人模擬程式，位於 images/reeborg 目錄中的 images。</p>
 <p>導入 robot.py 並指定繪圖區域的範例: <a href="./../downloads/robot_ex1.txt">robot_ex1.txt</a>，<a href="./../downloads/robot_ex2.txt">robot_ex2.txt</a>，<a href="./../downloads/robot_ex3.txt">robot_ex3.txt</a>，<a href="./../downloads/robot_ex4.txt">robot_ex4.txt</a>。</p>
@@ -498,7 +400,7 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 <div id="mpl_output2"><br></div>
 <div id="brython_div2"><br></div>
 <p>
-<script>// <![CDATA[
+<script>
 function getUrlParam(key) {
   return new URLSearchParams(window.location.search).get(key);
 }
@@ -557,10 +459,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         (await installLocalModule("/static/change.py", "change")) ||
         (await installLocalModule("/downloads/change.py", "change"));
         // 以下針對網頁下有目錄導入程式庫
-        (await installLocalModule("static/robot.py", "robot")) ||
-        (await installLocalModule("downloads/robot.py", "robot"));
-        (await installLocalModule("static/change.py", "change")) ||
-        (await installLocalModule("downloads/change.py", "change"));
+        (await installLocalModule("./../static/robot.py", "robot")) ||
+        (await installLocalModule("./../downloads/robot.py", "robot"));
+        (await installLocalModule("./../static/change.py", "change")) ||
+        (await installLocalModule("./../downloads/change.py", "change"));
       if (!ok) console.warn("robot 模組未安裝（/static 與 /downloads 都失敗）。其餘功能仍可使用。");
     } catch (e) {
       console.warn("install robot 略過:", e);
@@ -719,7 +621,7 @@ sys.stderr = JsWriter()
     }
   });
 }
-// ]]></script>
+</script>
 </p>
 <nav class="page-navigation" aria-label="Page navigation">
 <div class="previous">&lt;&lt; <a href="new.html">Previous: new</a></div>
