@@ -26,6 +26,14 @@
 
 
 
+
+
+
+
+
+
+
+
 <p>all: <a href="https://cycu.org/all">https://cycu.org/all</a> (包羅萬象)</p>
 <p>health: <a href="https://cycu.org/health">https://cycu.org/health</a> (健康)</p>
 <p>recipes: <a href="https://cycu.org/recipes">https://cycu.org/recipes</a> (食譜)</p>
@@ -37,33 +45,6 @@
 <p>art: <a href="https://cycu.org/art">https://cycu.org/art</a> (藝術)</p>
 <nav><strong>八宮總覽</strong></nav>
 <h2>卜卦</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- 放在 body 內。含：[[標記]]自動渲染 + 亂數卜卦 -->
 <div class="gua-cast-box"><strong>亂數卜卦</strong>
 <p style="margin: 6px 0; font-size: 14px; color: #555;">以三枚銅錢法（六次）起卦。陽＝少陽／老陽，陰＝少陰／老陰；老陰老陽為動爻。</p>
@@ -72,7 +53,7 @@
 </div>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>// <![CDATA[
+<script>
 (function () {
   "use strict";
 
@@ -302,7 +283,7 @@ if moving and b2 != b1:
 else:
     parts.append("<p>（無動爻，或動後仍同卦）</p>")
 
-parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考。</p>")
+parts.append("<p style='font-size:13px;color:#666;'>警語：內容僅供參考。</p>")
 "".join(parts)
 `);
       box.innerHTML = resultHtml;
@@ -372,28 +353,398 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
     main();
   }
 })();
-// ]]></script>
+</script>
+<h3>人生智慧</h3>
+
+<div class="gua-cast-box"><button type="button" id="gua_cast_btn">開始卜卦</button> <button type="button" id="gua_wisdom_btn" disabled="disabled">請給建議</button> <button type="button" id="gua_cast_clear">清除結果</button>
+<div id="gua_cast_result"><br></div>
+<div id="gua_wisdom_result" class="gua-wisdom-result" aria-live="polite"><br></div>
+</div>
+<p class="gua-status" id="gua_status"><br></p>
+<p><br></p>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEXTAREA: 1, CODE: 1, PRE: 1 };
+  var pyodide = null;
+  var ready = false;
+  var currentCast = null;
+  var wisdomDB = null;
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch];
+    });
+  }
+
+  async function loadWisdom() {
+    var urls = ["/static/wisdom.json", "/downloads/wisdom.json", "./wisdom.json", "../static/wisdom.json"];
+    for (var i = 0; i < urls.length; i++) {
+      try {
+        var response = await fetch(urls[i], { cache: "no-store" });
+        if (response.ok) {
+          wisdomDB = await response.json();
+          if (wisdomDB && wisdomDB.hexagrams) return true;
+        }
+      } catch (e) {}
+    }
+    return false;
+  }
+
+  function wisdomCard(title, body, cssClass) {
+    return '<section class="gua-wisdom-card ' + (cssClass || '') + '">' +
+      '<h4>' + escapeHtml(title) + '</h4><p>' + escapeHtml(body) + '</p></section>';
+  }
+
+  function showWisdom() {
+    var box = document.getElementById("gua_wisdom_result");
+    if (!box || !currentCast || !wisdomDB) {
+      if (box) box.innerHTML = '<p>人生智慧資料尚未載入，請確認 wisdom.json 路徑。</p>';
+      return;
+    }
+    var primary = wisdomDB.hexagrams[currentCast.primary];
+    var changed = wisdomDB.hexagrams[currentCast.changed];
+    if (!primary) {
+      box.innerHTML = '<p>找不到本卦的人生智慧資料。</p>';
+      return;
+    }
+    var out = '<div class="gua-wisdom-heading"><strong>本卦人生智慧｜第' +
+      primary.number + '卦・' + escapeHtml(primary.name) + '</strong></div>';
+    out += wisdomCard("卦辭智慧", primary.summary, "primary");
+    if (currentCast.moving.length) {
+      out += '<h4>動爻提醒</h4>';
+      currentCast.moving.slice().sort(function(a,b){return a-b;}).forEach(function(pos) {
+        var item = primary.lines[pos - 1];
+        if (item) out += wisdomCard(item.label, item.advice, "moving");
+      });
+    } else {
+      out += '<p class="gua-wisdom-note">本次沒有動爻，以下以本卦整體智慧作為主要參考。</p>';
+    }
+    if (changed && currentCast.changed !== currentCast.primary) {
+      out += '<div class="gua-wisdom-heading"><strong>變卦人生智慧｜第' +
+        changed.number + '卦・' + escapeHtml(changed.name) + '</strong></div>';
+      out += wisdomCard("變化後的提醒", changed.summary, "changed");
+    }
+    out += '<div class="gua-wisdom-conclusion"><strong>綜合思考</strong><p>' +
+      escapeHtml(primary.theme[currentCast.moving.length ? currentCast.moving[0]-1 : 0]) +
+      '。先理解當下，再依情勢調整；卦象提供思考角度，真正的選擇仍在自己。</p></div>';
+    out += '<p class="gua-wisdom-note">警語: 本資料僅供參考。</p>';
+    box.innerHTML = out;
+  }
+
+  function status(msg) {
+    var el = document.getElementById("gua_status");
+    if (el) el.textContent = msg || "";
+  }
+
+  function hasMarkup(text) {
+    return text && text.indexOf("[[") !== -1 && text.indexOf("]]") !== -1;
+  }
+
+  function findMarkupElements(root) {
+    var result = [];
+    var all = (root || document.body).getElementsByTagName("*");
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (SKIP[el.tagName]) continue;
+      if (el.id === "gua_status" || el.id === "gua_cast_result") continue;
+      var text = el.innerText || el.textContent || "";
+      if (!hasMarkup(text)) continue;
+      if (el.classList && el.classList.contains("gua-markup")) {
+        result.push(el);
+        continue;
+      }
+      var childHas = false;
+      for (var j = 0; j < el.children.length; j++) {
+        var ct = el.children[j].innerText || el.children[j].textContent || "";
+        if (hasMarkup(ct)) { childHas = true; break; }
+      }
+      if (!childHas) result.push(el);
+    }
+    return result;
+  }
+
+  async function installLocalModule(url, name) {
+    try {
+      var res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return false;
+      var code = await res.text();
+      if (!code || !code.trim()) return false;
+      pyodide.FS.writeFile(name + ".py", code);
+      return true;
+    } catch (e) {
+      console.warn("change.py 載入失敗", url, e);
+      return false;
+    }
+  }
+
+  async function renderElement(el) {
+    var text = el.innerText || el.textContent || "";
+    if (!hasMarkup(text)) return;
+    pyodide.globals.set("_gua_src", text);
+    var html = await pyodide.runPythonAsync(
+      "import change\n" +
+      "change.render_markup(_gua_src, target_div=None, default_method='html', lang='zh')\n"
+    );
+    if (html) el.innerHTML = html;
+  }
+
+  // ---- 三枚銅錢起卦（JS）----
+  // 每次：三幣，字=3 背=2；和 6=老陰 7=少陽 8=少陰 9=老陽
+  // 本卦：6/8→陰(0)  7/9→陽(1)；由下往上六爻，再轉成「由上到下」binary 給 change.py
+  function castCoins() {
+    var linesBottomUp = []; // {val:0|1, moving:bool, coin:6|7|8|9}
+    for (var i = 0; i < 6; i++) {
+      var s = 0;
+      for (var c = 0; c < 3; c++) s += Math.random() < 0.5 ? 2 : 3;
+      var val = (s === 7 || s === 9) ? 1 : 0;
+      var moving = (s === 6 || s === 9);
+      linesBottomUp.push({ val: val, moving: moving, coin: s });
+    }
+    // binary 上→下
+    var primary = "";
+    var changed = "";
+    var movingIdx = []; // 1=初 … 6=上
+    for (var k = 5; k >= 0; k--) {
+      primary += String(linesBottomUp[k].val);
+      var v = linesBottomUp[k].val;
+      if (linesBottomUp[k].moving) {
+        v = 1 - v;
+        movingIdx.push(k + 1);
+      }
+      changed += String(v);
+    }
+    // movingIdx was bottom-up position; convert: bottom idx0=初爻=1
+    movingIdx = [];
+    for (var m = 0; m < 6; m++) {
+      if (linesBottomUp[m].moving) movingIdx.push(m + 1); // 1=初
+    }
+    return {
+      lines: linesBottomUp,
+      primary: primary,
+      changed: changed,
+      moving: movingIdx
+    };
+  }
+
+  async function doCast() {
+    if (!ready || !pyodide) {
+      status("元件尚未就緒，請稍候…");
+      return;
+    }
+    var box = document.getElementById("gua_cast_result");
+    if (!box) return;
+    box.innerHTML = "起卦中…";
+    var wisdomBox = document.getElementById("gua_wisdom_result");
+    if (wisdomBox) wisdomBox.innerHTML = "";
+
+    var cast = castCoins();
+    currentCast = cast;
+    var wisdomBtn = document.getElementById("gua_wisdom_btn");
+    if (wisdomBtn) wisdomBtn.disabled = !wisdomDB;
+    pyodide.globals.set("_bin1", cast.primary);
+    pyodide.globals.set("_bin2", cast.changed);
+    pyodide.globals.set("_moving", cast.moving.join(","));
+
+    try {
+      var resultHtml = await pyodide.runPythonAsync(`
+import change
+from js import document
+
+b1 = str(_bin1)
+b2 = str(_bin2)
+moving_s = str(_moving)
+moving = [int(x) for x in moving_s.split(",") if x.strip()] if moving_s else []
+
+name1 = change.get_name(b1, lang="zh")
+html1 = change.draw(b1, target_div=None, method="html", lang="zh", width=140)
+
+# 簡要卦辭（內建摘要）
+INFO = {
+"111111": ("乾", "元亨利貞。", "大通而利於守正。剛健中正，自強不息。"),
+"000000": ("坤", "元亨，利牝馬之貞。", "柔順承載，安貞則吉。厚德載物。"),
+"010001": ("屯", "元亨利貞，勿用有攸往，利建侯。", "始生艱難，宜立根基，勿急進。"),
+"100010": ("蒙", "亨。童蒙求我。", "蒙昧待啟，虛心受教則吉。"),
+"010111": ("需", "有孚，光亨，貞吉。利涉大川。", "待時而進，有誠則可涉險。"),
+"111010": ("訟", "有孚，窒。惕中吉。終凶。", "爭訟宜止，見大人、戒終訟。"),
+"000010": ("師", "貞，丈人，吉無咎。", "用眾以正，老成持重則吉。"),
+"010000": ("比", "吉。原筮元永貞，無咎。", "親比依附，後夫凶。"),
+"110111": ("小畜", "亨。密雲不雨，自我西郊。", "小有積蓄，密雲未雨。"),
+"111011": ("履", "履虎尾，不咥人，亨。", "謹慎踐行，可履險而無咎。"),
+"000111": ("泰", "小往大來，吉亨。", "天地交泰，通達和順。"),
+"111000": ("否", "否之匪人，不利君子貞。", "閉塞不通，君子宜斂德。"),
+"111101": ("同人", "同人於野，亨。", "與人和同於公，利涉大川。"),
+"101111": ("大有", "元亨。", "大有得，光明普照。"),
+"000100": ("謙", "亨，君子有終。", "謙虛不矜，終有善果。"),
+"001000": ("豫", "利建侯行師。", "和樂預備，宜立業用眾。"),
+"011001": ("隨", "元亨利貞，無咎。", "適時而隨，無有咎害。"),
+"100110": ("蠱", "元亨，利涉大川。", "整治弊亂，可涉大難。"),
+"000011": ("臨", "元亨利貞。至于八月有凶。", "臨人以正；盛極須戒。"),
+"110000": ("觀", "盥而不薦，有孚顒若。", "觀仰與示範，誠意莊嚴。"),
+"101001": ("噬嗑", "亨。利用獄。", "咬合除梗，宜於明斷。"),
+"100101": ("賁", "亨。小利有攸往。", "文飾之美，小往有利。"),
+"100000": ("剝", "不利有攸往。", "剝落之時，不宜有所往。"),
+"000001": ("復", "亨。反復其道，七日來復。", "一陽來復，利有攸往。"),
+"111001": ("無妄", "元亨利貞。其匪正有眚。", "真實不妄；不正則有災。"),
+"100111": ("大畜", "利貞，不家食吉，利涉大川。", "大積蓄，養賢致用。"),
+"100001": ("頤", "貞吉。觀頤，自求口實。", "頤養守正，慎言語飲食。"),
+"011110": ("大過", "棟橈，利有攸往，亨。", "非常之時，棟梁過重。"),
+"010010": ("坎", "習坎，有孚，維心亨。", "重險之中，誠則心通。"),
+"101101": ("離", "利貞，亨。畜牝牛，吉。", "附麗光明，柔順則吉。"),
+"011100": ("咸", "亨，利貞，取女吉。", "彼此感應，以正則吉。"),
+"001110": ("恆", "亨，無咎，利貞，利有攸往。", "恆久守正，利有所往。"),
+"111100": ("遯", "亨，小利貞。", "及時退避，小有利貞。"),
+"001111": ("大壯", "利貞。", "剛健大壯，宜於守正。"),
+"101000": ("晉", "康侯用錫馬蕃庶，晝日三接。", "進而上升，柔順光明。"),
+"000101": ("明夷", "利艱貞。", "明傷於下，艱中守正。"),
+"110101": ("家人", "利女貞。", "家道以正，女正位乎內。"),
+"101011": ("睽", "小事吉。", "乖離之中，宜小事。"),
+"010100": ("蹇", "利西南，不利東北；利見大人。", "蹇難，利見大人。"),
+"001010": ("解", "利西南，其來復吉。有攸往，夙吉。", "舒解緩難，宜早宜復。"),
+"100011": ("損", "有孚，元吉，無咎，可貞。", "減損有誠，可獲大吉。"),
+"110001": ("益", "利有攸往，利涉大川。", "增益於下，利於進取。"),
+"011111": ("夬", "揚于王庭，孚號，有厲。", "決去陰柔，宜告不宜即戎。"),
+"111110": ("姤", "女壯，勿用取女。", "陰遇陽，相遇當慎。"),
+"011000": ("萃", "亨。王假有廟，利見大人。", "會聚，利見大人。"),
+"000110": ("升", "元亨，用見大人，勿恤，南征吉。", "積小成高，南征吉。"),
+"011010": ("困", "亨，貞，大人吉，無咎。", "困中守正，大人吉。"),
+"010110": ("井", "改邑不改井。", "井養不窮，修德惠人。"),
+"011101": ("革", "己日乃孚。元亨利貞，悔亡。", "變革待時，信而後行。"),
+"101110": ("鼎", "元吉，亨。", "鼎新養賢，大吉亨通。"),
+"001001": ("震", "亨。震來虩虩，笑言啞啞。", "震動警醒，先懼後安。"),
+"100100": ("艮", "艮其背，不獲其身，無咎。", "止於其所，得止無咎。"),
+"110100": ("漸", "女歸吉，利貞。", "循序漸進，女歸吉。"),
+"001011": ("歸妹", "征凶，無攸利。", "歸嫁失正，征則凶。"),
+"001101": ("豐", "亨。王假之，勿憂，宜日中。", "豐盛，宜如日中。"),
+"101100": ("旅", "小亨，旅貞吉。", "羈旅在外，守正則吉。"),
+"110110": ("巽", "小亨，利有攸往，利見大人。", "遜順申命，利見大人。"),
+"011011": ("兌", "亨，利貞。", "喜悅和樂，利於守正。"),
+"110010": ("渙", "亨。王假有廟，利涉大川。", "離散可濟，利涉大川。"),
+"010011": ("節", "亨。苦節不可貞。", "節制有度，苦節不可久。"),
+"110011": ("中孚", "豚魚吉，利涉大川，利貞。", "中心誠信，可感於物。"),
+"001100": ("小過", "亨，利貞，可小事，不可大事。", "小過，宜下不宜上。"),
+"010101": ("既濟", "亨，小利貞，初吉終亂。", "事已成，慎終防亂。"),
+"101010": ("未濟", "亨，小狐汔濟，濡其尾，無攸利。", "未完成，仍有可為之機。"),
+}
+
+def info(b):
+    return INFO.get(b, (change.get_name(b), "", "請依卦象與處境體會。"))
+
+n1, g1, e1 = info(b1)
+parts = []
+parts.append("<p><strong>本卦：" + name1 + "</strong></p>")
+parts.append(html1)
+parts.append("<p><em>卦辭：</em>" + g1 + "</p>")
+parts.append("<p><em>大意：</em>" + e1 + "</p>")
+
+labels = ["初", "二", "三", "四", "五", "上"]
+# lines bottom-up from binary: b1 is top-to-bottom
+line_txt = []
+for i, ch in enumerate(reversed(b1)):
+    lab = labels[i]
+    kind = "陽" if ch == "1" else "陰"
+    mov = "（動）" if (i + 1) in moving else ""
+    line_txt.append(lab + "爻 " + kind + mov)
+parts.append("<p class='lines'>" + "\\n".join(line_txt) + "</p>")
+
+if moving and b2 != b1:
+    name2 = change.get_name(b2, lang="zh")
+    html2 = change.draw(b2, target_div=None, method="html", lang="zh", width=140)
+    n2, g2, e2 = info(b2)
+    parts.append("<hr><p><strong>之卦（變卦）：" + name2 + "</strong></p>")
+    parts.append("<p>動爻：" + "、".join(labels[i-1] for i in moving) + "</p>")
+    parts.append(html2)
+    parts.append("<p><em>卦辭：</em>" + g2 + "</p>")
+    parts.append("<p><em>大意：</em>" + e2 + "</p>")
+else:
+    parts.append("<p>（無動爻，或動後仍同卦）</p>")
+
+parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考。</p>")
+"".join(parts)
+`);
+      box.innerHTML = resultHtml;
+      status("");
+    } catch (e) {
+      box.innerHTML = "卜卦失敗：" + e;
+      console.error(e);
+    }
+  }
+
+  async function main() {
+    if (!document.body) {
+      setTimeout(main, 100);
+      return;
+    }
+
+    if (typeof loadPyodide !== "function") {
+      status("Pyodide 尚未載入…");
+      setTimeout(main, 400);
+      return;
+    }
+
+    status("載入卦象元件與人生智慧資料…");
+    var wisdomReady = await loadWisdom();
+    try {
+      pyodide = await loadPyodide();
+    } catch (e) {
+      status("Pyodide 失敗：" + e);
+      return;
+    }
+
+    var ok =
+      (await installLocalModule("/static/change.py", "change")) ||
+      (await installLocalModule("/downloads/change.py", "change")) ||
+      (await installLocalModule("./../static/change.py", "change")) ||
+      (await installLocalModule("./../downloads/change.py", "change"));
+    if (!ok) {
+      status("請將 change.py 放到 /static/change.py");
+      return;
+    }
+
+    ready = true;
+    status("");
+
+    // 綁定卜卦按鈕
+    var btn = document.getElementById("gua_cast_btn");
+    if (btn) btn.onclick = function () { doCast(); };
+    var wisdomBtn = document.getElementById("gua_wisdom_btn");
+    if (wisdomBtn) {
+      wisdomBtn.disabled = !wisdomReady;
+      wisdomBtn.onclick = function () { showWisdom(); };
+    }
+    if (!wisdomReady) status("卦象已就緒；人生智慧資料未載入，請確認 wisdom.json 已放入 /static/ 或 /downloads/。");
+    var clr = document.getElementById("gua_cast_clear");
+    if (clr) clr.onclick = function () {
+      var box = document.getElementById("gua_cast_result");
+      if (box) box.innerHTML = "";
+      var wb = document.getElementById("gua_wisdom_result");
+      if (wb) wb.innerHTML = "";
+      currentCast = null;
+      var wbtn = document.getElementById("gua_wisdom_btn");
+      if (wbtn) wbtn.disabled = true;
+    };
+
+    // 原有標記渲染
+    try {
+      var targets = findMarkupElements(document.body);
+      for (var i = 0; i < targets.length; i++) {
+        await renderElement(targets[i]);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", main);
+  } else {
+    main();
+  }
+})();
+</script>
 <h2>八宮分類</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2978,6 +3329,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
+
+
+
+
 <h4>六十四卦 · 單字卦名＋注音</h4>
 <table>
 <thead>
@@ -3698,6 +4057,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
+
+
+
+
 <p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
 <hr>
 <h4>上經</h4>
@@ -3851,6 +4218,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
 </ol>
 <h2>上經爻辭</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -4123,6 +4498,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p><strong>六五</strong>　出涕沱若，戚嗟若，吉。<br> 白話：淚流如雨，憂戚嗟嘆，吉。</p>
 <p><strong>上九</strong>　王用出征，有嘉折首，獲匪其醜，無咎。<br> 白話：王出征，有功斬獲首領，不濫捕從眾，無咎。</p>
 <h2>下經爻辭</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -4426,6 +4809,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <hr>
 <p>至此，上下經六十四卦爻辭與白話已齊。若要整理成可下載的表格或只保留原文，可以再說。</p>
 <h2>京氏易傳</h2>
+
+
+
+
+
+
+
+
 <h4>《京氏易傳》內容摘要與思想架構</h4>
 <p>《京氏易傳》是漢代易學的重要著作，傳統上歸於西漢易學家 京房（約公元前77年－前37年）。</p>
 <p>它最大的特色，是把《周易》的八卦、六十四卦與陰陽五行、天干地支、十二消息卦、五行生剋及世應等概念結合起來，建立一套用來解釋天地變化、人事吉凶的象數易學系統。</p>
@@ -5735,6 +6126,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
+
+
+
+
 <p>[[乾]]</p>
 <p>[[111011]]</p>
 <p class="gua-status" id="gua_status"><br></p>
@@ -5867,6 +6266,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 })();
 </script>
 <h2>Prog</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -6151,6 +6558,14 @@ sys.stderr = JsWriter()
 // ]]></script>
 </p>
 <h1>乾金</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -6618,9 +7033,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 乾為天</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -6805,6 +7236,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 44 卦） · <a href="../gua/44_姤.html">詳頁</a> · 標記 [[ 姤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6962,9 +7401,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 天山遯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -7149,6 +7604,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 12 卦） · <a href="../gua/12_否.html">詳頁</a> · 標記 [[ 否 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7306,9 +7769,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 風地觀</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -7493,6 +7972,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 23 卦） · <a href="../gua/23_剝.html">詳頁</a> · 標記 [[ 剝 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7650,9 +8137,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 火地晉</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -7837,6 +8340,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 14 卦） · <a href="../gua/14_大有.html">詳頁</a> · 標記 [[ 大有 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7967,6 +8478,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>震木</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -8428,9 +8947,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 震為雷</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -8615,6 +9150,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 16 卦） · <a href="../gua/16_豫.html">詳頁</a> · 標記 [[ 豫 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -8772,9 +9315,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 雷水解</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -8959,6 +9518,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 32 卦） · <a href="../gua/32_恆.html">詳頁</a> · 標記 [[ 恆 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9089,6 +9656,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h2>四世與五世-1</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -9274,6 +9849,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 46 卦） · <a href="../gua/46_升.html">詳頁</a> · 標記 [[ 升 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9404,6 +9987,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>五世 · 水風井</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -9588,9 +10179,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 澤風大過</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -9775,6 +10382,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 17 卦） · <a href="../gua/17_隨.html">詳頁</a> · 標記 [[ 隨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9905,6 +10520,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坎水</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -10405,9 +11028,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坎為水</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -10592,6 +11231,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 60 卦） · <a href="../gua/60_節.html">詳頁</a> · 標記 [[ 節 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -10749,9 +11396,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 水雷屯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -10936,6 +11599,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 63 卦） · <a href="../gua/63_既濟.html">詳頁</a> · 標記 [[ 既濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11093,9 +11764,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 澤火革</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -11280,6 +11967,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 55 卦） · <a href="../gua/55_豐.html">詳頁</a> · 標記 [[ 豐 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11437,9 +12132,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 地火明夷</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -11624,6 +12335,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 7 卦） · <a href="../gua/07_師.html">詳頁</a> · 標記 [[ 師 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11754,6 +12473,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>艮土</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -12281,9 +13008,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 艮為山</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -12468,6 +13211,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 22 卦） · <a href="../gua/22_賁.html">詳頁</a> · 標記 [[ 賁 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12625,9 +13376,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 山天大畜</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -12812,6 +13579,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 41 卦） · <a href="../gua/41_損.html">詳頁</a> · 標記 [[ 損 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12969,9 +13744,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 火澤睽</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -13156,6 +13947,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 10 卦） · <a href="../gua/10_履.html">詳頁</a> · 標記 [[ 履 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13313,9 +14112,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 風澤中孚</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -13499,6 +14314,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 53 卦） · <a href="../gua/53_漸.html">詳頁</a> · 標記 [[ 漸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13629,6 +14452,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坤土</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -14112,9 +14943,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坤為地</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -14299,6 +15146,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 24 卦） · <a href="../gua/24_復.html">詳頁</a> · 標記 [[ 復 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -14456,9 +15311,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 地澤臨</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -14643,6 +15514,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 11 卦） · <a href="../gua/11_泰.html">詳頁</a> · 標記 [[ 泰 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -14800,9 +15679,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 雷天大壯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -14987,6 +15882,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 43 卦） · <a href="../gua/43_夬.html">詳頁</a> · 標記 [[ 夬 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15144,9 +16047,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 水天需</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -15331,6 +16250,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 8 卦） · <a href="../gua/08_比.html">詳頁</a> · 標記 [[ 比 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15461,6 +16388,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>巽木</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -16012,9 +16947,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 巽為風</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -16199,6 +17150,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 9 卦） · <a href="../gua/09_小畜.html">詳頁</a> · 標記 [[ 小畜 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16356,9 +17315,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 風火家人</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -16543,6 +17518,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 42 卦） · <a href="../gua/42_益.html">詳頁</a> · 標記 [[ 益 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16700,9 +17683,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 天雷無妄</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -16887,6 +17886,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 21 卦） · <a href="../gua/21_噬嗑.html">詳頁</a> · 標記 [[ 噬嗑 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17044,9 +18051,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 山雷頤</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -17231,6 +18254,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 18 卦） · <a href="../gua/18_蠱.html">詳頁</a> · 標記 [[ 蠱 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17361,6 +18392,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>離火</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -17813,9 +18852,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 離為火</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -18000,6 +19055,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 56 卦） · <a href="../gua/56_旅.html">詳頁</a> · 標記 [[ 旅 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18157,9 +19220,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 火風鼎</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -18344,6 +19423,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 64 卦） · <a href="../gua/64_未濟.html">詳頁</a> · 標記 [[ 未濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18501,9 +19588,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 山水蒙</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -18688,6 +19791,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 59 卦） · <a href="../gua/59_渙.html">詳頁</a> · 標記 [[ 渙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18845,9 +19956,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 天水訟</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -19032,6 +20159,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 13 卦） · <a href="../gua/13_同人.html">詳頁</a> · 標記 [[ 同人 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -19162,6 +20297,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>兌金</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -19637,9 +20780,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 兌為澤</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -19824,6 +20983,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 47 卦） · <a href="../gua/47_困.html">詳頁</a> · 標記 [[ 困 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -19981,9 +21148,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 澤地萃</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -20168,6 +21351,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 31 卦） · <a href="../gua/31_咸.html">詳頁</a> · 標記 [[ 咸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -20325,9 +21516,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 水山蹇</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -20512,6 +21719,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 15 卦） · <a href="../gua/15_謙.html">詳頁</a> · 標記 [[ 謙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -20669,9 +21884,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 雷山小過</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -20829,6 +22060,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>歸魂 · 雷澤歸妹</h3>
+
+
+
+
+
+
+
+
 
 
 

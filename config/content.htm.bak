@@ -25,6 +25,14 @@
 
 
 
+
+
+
+
+
+
+
+
 <p>all: <a href="https://cycu.org/all">https://cycu.org/all</a> (包羅萬象)</p>
 <p>health: <a href="https://cycu.org/health">https://cycu.org/health</a> (健康)</p>
 <p>recipes: <a href="https://cycu.org/recipes">https://cycu.org/recipes</a> (食譜)</p>
@@ -36,6 +44,14 @@
 <p>art: <a href="https://cycu.org/art">https://cycu.org/art</a> (藝術)</p>
 <nav><strong>八宮總覽</strong></nav>
 <h2>卜卦</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -371,27 +387,396 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
   }
 })();
 // ]]></script>
+<h3>人生智慧</h3>
+<div class="gua-cast-box"><button type="button" id="gua_cast_btn">開始卜卦</button> <button type="button" id="gua_wisdom_btn" disabled="disabled">請給建議</button> <button type="button" id="gua_cast_clear">清除結果</button>
+<div id="gua_cast_result"><br></div>
+<div id="gua_wisdom_result" class="gua-wisdom-result" aria-live="polite"><br></div>
+</div>
+<p class="gua-status" id="gua_status"><br></p>
+<p><br></p>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEXTAREA: 1, CODE: 1, PRE: 1 };
+  var pyodide = null;
+  var ready = false;
+  var currentCast = null;
+  var wisdomDB = null;
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, function (ch) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch];
+    });
+  }
+
+  async function loadWisdom() {
+    var urls = ["/static/wisdom.json", "/downloads/wisdom.json", "./wisdom.json", "../static/wisdom.json"];
+    for (var i = 0; i < urls.length; i++) {
+      try {
+        var response = await fetch(urls[i], { cache: "no-store" });
+        if (response.ok) {
+          wisdomDB = await response.json();
+          if (wisdomDB && wisdomDB.hexagrams) return true;
+        }
+      } catch (e) {}
+    }
+    return false;
+  }
+
+  function wisdomCard(title, body, cssClass) {
+    return '<section class="gua-wisdom-card ' + (cssClass || '') + '">' +
+      '<h4>' + escapeHtml(title) + '</h4><p>' + escapeHtml(body) + '</p></section>';
+  }
+
+  function showWisdom() {
+    var box = document.getElementById("gua_wisdom_result");
+    if (!box || !currentCast || !wisdomDB) {
+      if (box) box.innerHTML = '<p>人生智慧資料尚未載入，請確認 wisdom.json 路徑。</p>';
+      return;
+    }
+    var primary = wisdomDB.hexagrams[currentCast.primary];
+    var changed = wisdomDB.hexagrams[currentCast.changed];
+    if (!primary) {
+      box.innerHTML = '<p>找不到本卦的人生智慧資料。</p>';
+      return;
+    }
+    var out = '<div class="gua-wisdom-heading"><strong>本卦人生智慧｜第' +
+      primary.number + '卦・' + escapeHtml(primary.name) + '</strong></div>';
+    out += wisdomCard("卦辭智慧", primary.summary, "primary");
+    if (currentCast.moving.length) {
+      out += '<h4>動爻提醒</h4>';
+      currentCast.moving.slice().sort(function(a,b){return a-b;}).forEach(function(pos) {
+        var item = primary.lines[pos - 1];
+        if (item) out += wisdomCard(item.label, item.advice, "moving");
+      });
+    } else {
+      out += '<p class="gua-wisdom-note">本次沒有動爻，以下以本卦整體智慧作為主要參考。</p>';
+    }
+    if (changed && currentCast.changed !== currentCast.primary) {
+      out += '<div class="gua-wisdom-heading"><strong>變卦人生智慧｜第' +
+        changed.number + '卦・' + escapeHtml(changed.name) + '</strong></div>';
+      out += wisdomCard("變化後的提醒", changed.summary, "changed");
+    }
+    out += '<div class="gua-wisdom-conclusion"><strong>綜合思考</strong><p>' +
+      escapeHtml(primary.theme[currentCast.moving.length ? currentCast.moving[0]-1 : 0]) +
+      '。先理解當下，再依情勢調整；卦象提供思考角度，真正的選擇仍在自己。</p></div>';
+    out += '<p class="gua-wisdom-note">警語: 本資料僅供參考。</p>';
+    box.innerHTML = out;
+  }
+
+  function status(msg) {
+    var el = document.getElementById("gua_status");
+    if (el) el.textContent = msg || "";
+  }
+
+  function hasMarkup(text) {
+    return text && text.indexOf("[[") !== -1 && text.indexOf("]]") !== -1;
+  }
+
+  function findMarkupElements(root) {
+    var result = [];
+    var all = (root || document.body).getElementsByTagName("*");
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (SKIP[el.tagName]) continue;
+      if (el.id === "gua_status" || el.id === "gua_cast_result") continue;
+      var text = el.innerText || el.textContent || "";
+      if (!hasMarkup(text)) continue;
+      if (el.classList && el.classList.contains("gua-markup")) {
+        result.push(el);
+        continue;
+      }
+      var childHas = false;
+      for (var j = 0; j < el.children.length; j++) {
+        var ct = el.children[j].innerText || el.children[j].textContent || "";
+        if (hasMarkup(ct)) { childHas = true; break; }
+      }
+      if (!childHas) result.push(el);
+    }
+    return result;
+  }
+
+  async function installLocalModule(url, name) {
+    try {
+      var res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) return false;
+      var code = await res.text();
+      if (!code || !code.trim()) return false;
+      pyodide.FS.writeFile(name + ".py", code);
+      return true;
+    } catch (e) {
+      console.warn("change.py 載入失敗", url, e);
+      return false;
+    }
+  }
+
+  async function renderElement(el) {
+    var text = el.innerText || el.textContent || "";
+    if (!hasMarkup(text)) return;
+    pyodide.globals.set("_gua_src", text);
+    var html = await pyodide.runPythonAsync(
+      "import change\n" +
+      "change.render_markup(_gua_src, target_div=None, default_method='html', lang='zh')\n"
+    );
+    if (html) el.innerHTML = html;
+  }
+
+  // ---- 三枚銅錢起卦（JS）----
+  // 每次：三幣，字=3 背=2；和 6=老陰 7=少陽 8=少陰 9=老陽
+  // 本卦：6/8→陰(0)  7/9→陽(1)；由下往上六爻，再轉成「由上到下」binary 給 change.py
+  function castCoins() {
+    var linesBottomUp = []; // {val:0|1, moving:bool, coin:6|7|8|9}
+    for (var i = 0; i < 6; i++) {
+      var s = 0;
+      for (var c = 0; c < 3; c++) s += Math.random() < 0.5 ? 2 : 3;
+      var val = (s === 7 || s === 9) ? 1 : 0;
+      var moving = (s === 6 || s === 9);
+      linesBottomUp.push({ val: val, moving: moving, coin: s });
+    }
+    // binary 上→下
+    var primary = "";
+    var changed = "";
+    var movingIdx = []; // 1=初 … 6=上
+    for (var k = 5; k >= 0; k--) {
+      primary += String(linesBottomUp[k].val);
+      var v = linesBottomUp[k].val;
+      if (linesBottomUp[k].moving) {
+        v = 1 - v;
+        movingIdx.push(k + 1);
+      }
+      changed += String(v);
+    }
+    // movingIdx was bottom-up position; convert: bottom idx0=初爻=1
+    movingIdx = [];
+    for (var m = 0; m < 6; m++) {
+      if (linesBottomUp[m].moving) movingIdx.push(m + 1); // 1=初
+    }
+    return {
+      lines: linesBottomUp,
+      primary: primary,
+      changed: changed,
+      moving: movingIdx
+    };
+  }
+
+  async function doCast() {
+    if (!ready || !pyodide) {
+      status("元件尚未就緒，請稍候…");
+      return;
+    }
+    var box = document.getElementById("gua_cast_result");
+    if (!box) return;
+    box.innerHTML = "起卦中…";
+    var wisdomBox = document.getElementById("gua_wisdom_result");
+    if (wisdomBox) wisdomBox.innerHTML = "";
+
+    var cast = castCoins();
+    currentCast = cast;
+    var wisdomBtn = document.getElementById("gua_wisdom_btn");
+    if (wisdomBtn) wisdomBtn.disabled = !wisdomDB;
+    pyodide.globals.set("_bin1", cast.primary);
+    pyodide.globals.set("_bin2", cast.changed);
+    pyodide.globals.set("_moving", cast.moving.join(","));
+
+    try {
+      var resultHtml = await pyodide.runPythonAsync(`
+import change
+from js import document
+
+b1 = str(_bin1)
+b2 = str(_bin2)
+moving_s = str(_moving)
+moving = [int(x) for x in moving_s.split(",") if x.strip()] if moving_s else []
+
+name1 = change.get_name(b1, lang="zh")
+html1 = change.draw(b1, target_div=None, method="html", lang="zh", width=140)
+
+# 簡要卦辭（內建摘要）
+INFO = {
+"111111": ("乾", "元亨利貞。", "大通而利於守正。剛健中正，自強不息。"),
+"000000": ("坤", "元亨，利牝馬之貞。", "柔順承載，安貞則吉。厚德載物。"),
+"010001": ("屯", "元亨利貞，勿用有攸往，利建侯。", "始生艱難，宜立根基，勿急進。"),
+"100010": ("蒙", "亨。童蒙求我。", "蒙昧待啟，虛心受教則吉。"),
+"010111": ("需", "有孚，光亨，貞吉。利涉大川。", "待時而進，有誠則可涉險。"),
+"111010": ("訟", "有孚，窒。惕中吉。終凶。", "爭訟宜止，見大人、戒終訟。"),
+"000010": ("師", "貞，丈人，吉無咎。", "用眾以正，老成持重則吉。"),
+"010000": ("比", "吉。原筮元永貞，無咎。", "親比依附，後夫凶。"),
+"110111": ("小畜", "亨。密雲不雨，自我西郊。", "小有積蓄，密雲未雨。"),
+"111011": ("履", "履虎尾，不咥人，亨。", "謹慎踐行，可履險而無咎。"),
+"000111": ("泰", "小往大來，吉亨。", "天地交泰，通達和順。"),
+"111000": ("否", "否之匪人，不利君子貞。", "閉塞不通，君子宜斂德。"),
+"111101": ("同人", "同人於野，亨。", "與人和同於公，利涉大川。"),
+"101111": ("大有", "元亨。", "大有得，光明普照。"),
+"000100": ("謙", "亨，君子有終。", "謙虛不矜，終有善果。"),
+"001000": ("豫", "利建侯行師。", "和樂預備，宜立業用眾。"),
+"011001": ("隨", "元亨利貞，無咎。", "適時而隨，無有咎害。"),
+"100110": ("蠱", "元亨，利涉大川。", "整治弊亂，可涉大難。"),
+"000011": ("臨", "元亨利貞。至于八月有凶。", "臨人以正；盛極須戒。"),
+"110000": ("觀", "盥而不薦，有孚顒若。", "觀仰與示範，誠意莊嚴。"),
+"101001": ("噬嗑", "亨。利用獄。", "咬合除梗，宜於明斷。"),
+"100101": ("賁", "亨。小利有攸往。", "文飾之美，小往有利。"),
+"100000": ("剝", "不利有攸往。", "剝落之時，不宜有所往。"),
+"000001": ("復", "亨。反復其道，七日來復。", "一陽來復，利有攸往。"),
+"111001": ("無妄", "元亨利貞。其匪正有眚。", "真實不妄；不正則有災。"),
+"100111": ("大畜", "利貞，不家食吉，利涉大川。", "大積蓄，養賢致用。"),
+"100001": ("頤", "貞吉。觀頤，自求口實。", "頤養守正，慎言語飲食。"),
+"011110": ("大過", "棟橈，利有攸往，亨。", "非常之時，棟梁過重。"),
+"010010": ("坎", "習坎，有孚，維心亨。", "重險之中，誠則心通。"),
+"101101": ("離", "利貞，亨。畜牝牛，吉。", "附麗光明，柔順則吉。"),
+"011100": ("咸", "亨，利貞，取女吉。", "彼此感應，以正則吉。"),
+"001110": ("恆", "亨，無咎，利貞，利有攸往。", "恆久守正，利有所往。"),
+"111100": ("遯", "亨，小利貞。", "及時退避，小有利貞。"),
+"001111": ("大壯", "利貞。", "剛健大壯，宜於守正。"),
+"101000": ("晉", "康侯用錫馬蕃庶，晝日三接。", "進而上升，柔順光明。"),
+"000101": ("明夷", "利艱貞。", "明傷於下，艱中守正。"),
+"110101": ("家人", "利女貞。", "家道以正，女正位乎內。"),
+"101011": ("睽", "小事吉。", "乖離之中，宜小事。"),
+"010100": ("蹇", "利西南，不利東北；利見大人。", "蹇難，利見大人。"),
+"001010": ("解", "利西南，其來復吉。有攸往，夙吉。", "舒解緩難，宜早宜復。"),
+"100011": ("損", "有孚，元吉，無咎，可貞。", "減損有誠，可獲大吉。"),
+"110001": ("益", "利有攸往，利涉大川。", "增益於下，利於進取。"),
+"011111": ("夬", "揚于王庭，孚號，有厲。", "決去陰柔，宜告不宜即戎。"),
+"111110": ("姤", "女壯，勿用取女。", "陰遇陽，相遇當慎。"),
+"011000": ("萃", "亨。王假有廟，利見大人。", "會聚，利見大人。"),
+"000110": ("升", "元亨，用見大人，勿恤，南征吉。", "積小成高，南征吉。"),
+"011010": ("困", "亨，貞，大人吉，無咎。", "困中守正，大人吉。"),
+"010110": ("井", "改邑不改井。", "井養不窮，修德惠人。"),
+"011101": ("革", "己日乃孚。元亨利貞，悔亡。", "變革待時，信而後行。"),
+"101110": ("鼎", "元吉，亨。", "鼎新養賢，大吉亨通。"),
+"001001": ("震", "亨。震來虩虩，笑言啞啞。", "震動警醒，先懼後安。"),
+"100100": ("艮", "艮其背，不獲其身，無咎。", "止於其所，得止無咎。"),
+"110100": ("漸", "女歸吉，利貞。", "循序漸進，女歸吉。"),
+"001011": ("歸妹", "征凶，無攸利。", "歸嫁失正，征則凶。"),
+"001101": ("豐", "亨。王假之，勿憂，宜日中。", "豐盛，宜如日中。"),
+"101100": ("旅", "小亨，旅貞吉。", "羈旅在外，守正則吉。"),
+"110110": ("巽", "小亨，利有攸往，利見大人。", "遜順申命，利見大人。"),
+"011011": ("兌", "亨，利貞。", "喜悅和樂，利於守正。"),
+"110010": ("渙", "亨。王假有廟，利涉大川。", "離散可濟，利涉大川。"),
+"010011": ("節", "亨。苦節不可貞。", "節制有度，苦節不可久。"),
+"110011": ("中孚", "豚魚吉，利涉大川，利貞。", "中心誠信，可感於物。"),
+"001100": ("小過", "亨，利貞，可小事，不可大事。", "小過，宜下不宜上。"),
+"010101": ("既濟", "亨，小利貞，初吉終亂。", "事已成，慎終防亂。"),
+"101010": ("未濟", "亨，小狐汔濟，濡其尾，無攸利。", "未完成，仍有可為之機。"),
+}
+
+def info(b):
+    return INFO.get(b, (change.get_name(b), "", "請依卦象與處境體會。"))
+
+n1, g1, e1 = info(b1)
+parts = []
+parts.append("<p><strong>本卦：" + name1 + "</strong></p>")
+parts.append(html1)
+parts.append("<p><em>卦辭：</em>" + g1 + "</p>")
+parts.append("<p><em>大意：</em>" + e1 + "</p>")
+
+labels = ["初", "二", "三", "四", "五", "上"]
+# lines bottom-up from binary: b1 is top-to-bottom
+line_txt = []
+for i, ch in enumerate(reversed(b1)):
+    lab = labels[i]
+    kind = "陽" if ch == "1" else "陰"
+    mov = "（動）" if (i + 1) in moving else ""
+    line_txt.append(lab + "爻 " + kind + mov)
+parts.append("<p class='lines'>" + "\\n".join(line_txt) + "</p>")
+
+if moving and b2 != b1:
+    name2 = change.get_name(b2, lang="zh")
+    html2 = change.draw(b2, target_div=None, method="html", lang="zh", width=140)
+    n2, g2, e2 = info(b2)
+    parts.append("<hr><p><strong>之卦（變卦）：" + name2 + "</strong></p>")
+    parts.append("<p>動爻：" + "、".join(labels[i-1] for i in moving) + "</p>")
+    parts.append(html2)
+    parts.append("<p><em>卦辭：</em>" + g2 + "</p>")
+    parts.append("<p><em>大意：</em>" + e2 + "</p>")
+else:
+    parts.append("<p>（無動爻，或動後仍同卦）</p>")
+
+parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考。</p>")
+"".join(parts)
+`);
+      box.innerHTML = resultHtml;
+      status("");
+    } catch (e) {
+      box.innerHTML = "卜卦失敗：" + e;
+      console.error(e);
+    }
+  }
+
+  async function main() {
+    if (!document.body) {
+      setTimeout(main, 100);
+      return;
+    }
+
+    if (typeof loadPyodide !== "function") {
+      status("Pyodide 尚未載入…");
+      setTimeout(main, 400);
+      return;
+    }
+
+    status("載入卦象元件與人生智慧資料…");
+    var wisdomReady = await loadWisdom();
+    try {
+      pyodide = await loadPyodide();
+    } catch (e) {
+      status("Pyodide 失敗：" + e);
+      return;
+    }
+
+    var ok =
+      (await installLocalModule("/static/change.py", "change")) ||
+      (await installLocalModule("/downloads/change.py", "change")) ||
+      (await installLocalModule("./../static/change.py", "change")) ||
+      (await installLocalModule("./../downloads/change.py", "change"));
+    if (!ok) {
+      status("請將 change.py 放到 /static/change.py");
+      return;
+    }
+
+    ready = true;
+    status("");
+
+    // 綁定卜卦按鈕
+    var btn = document.getElementById("gua_cast_btn");
+    if (btn) btn.onclick = function () { doCast(); };
+    var wisdomBtn = document.getElementById("gua_wisdom_btn");
+    if (wisdomBtn) {
+      wisdomBtn.disabled = !wisdomReady;
+      wisdomBtn.onclick = function () { showWisdom(); };
+    }
+    if (!wisdomReady) status("卦象已就緒；人生智慧資料未載入，請確認 wisdom.json 已放入 /static/ 或 /downloads/。");
+    var clr = document.getElementById("gua_cast_clear");
+    if (clr) clr.onclick = function () {
+      var box = document.getElementById("gua_cast_result");
+      if (box) box.innerHTML = "";
+      var wb = document.getElementById("gua_wisdom_result");
+      if (wb) wb.innerHTML = "";
+      currentCast = null;
+      var wbtn = document.getElementById("gua_wisdom_btn");
+      if (wbtn) wbtn.disabled = true;
+    };
+
+    // 原有標記渲染
+    try {
+      var targets = findMarkupElements(document.body);
+      for (var i = 0; i < targets.length; i++) {
+        await renderElement(targets[i]);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", main);
+  } else {
+    main();
+  }
+})();
+</script>
 <h2>八宮分類</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2974,6 +3359,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
+
+
+
+
 <h4>六十四卦 · 單字卦名＋注音</h4>
 <table>
 <thead>
@@ -3693,6 +4086,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 
 
 
+
+
+
+
+
+
+
+
 <p>以下為《周易》各卦<strong>卦辭</strong>（經文）與簡明<strong>白話</strong>。僅列卦辭，不含六爻爻辭；白話為大意疏通，非逐字直譯。</p>
 <hr>
 <h4>上經</h4>
@@ -3846,6 +4247,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <li><strong>連卦辭</strong>：象是畫面，辭是斷語；兩者合看較完整。</li>
 </ol>
 <h2>上經爻辭</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -4117,6 +4526,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p><strong>六五</strong>　出涕沱若，戚嗟若，吉。<br> 白話：淚流如雨，憂戚嗟嘆，吉。</p>
 <p><strong>上九</strong>　王用出征，有嘉折首，獲匪其醜，無咎。<br> 白話：王出征，有功斬獲首領，不濫捕從眾，無咎。</p>
 <h2>下經爻辭</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -4419,6 +4836,13 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <hr>
 <p>至此，上下經六十四卦爻辭與白話已齊。若要整理成可下載的表格或只保留原文，可以再說。</p>
 <h2>京氏易傳</h2>
+
+
+
+
+
+
+
 <h4>《京氏易傳》內容摘要與思想架構</h4>
 <p>《京氏易傳》是漢代易學的重要著作，傳統上歸於西漢易學家 京房（約公元前77年－前37年）。</p>
 <p>它最大的特色，是把《周易》的八卦、六十四卦與陰陽五行、天干地支、十二消息卦、五行生剋及世應等概念結合起來，建立一套用來解釋天地變化、人事吉凶的象數易學系統。</p>
@@ -4939,7 +5363,800 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 <p>分析卦內各爻的關係</p>
 <p>卦象推演</p>
 <p>觀察陰陽、五行、時間與人事變化</p>
+<h4>《京氏易傳》八宮卦的形成與六十四卦變化</h4>
+<p>八宮卦是京房易學最重要的基礎之一。它的核心思想是：把六十四卦分成八個家族，每一個家族以一個純卦為起點，再依照陰陽爻的變化，形成另外七個卦。</p>
+<p>八個家族各有八卦，合計：</p>
+<p>64</p>
+<p>這套方法的價值，在於讓六十四卦不再是互不相關的六十四個符號，而是具有「本宮、變爻、世爻、遊魂、歸魂」等關係的完整系統。</p>
+<p>以下先用乾宮作為範例，逐爻說明八宮卦如何形成，再整理全部八宮六十四卦。</p>
+<h4>一、什麼是八宮卦？</h4>
+<p>八宮，就是以八個純卦作為八個宮的核心。</p>
+<p>八個純卦都是上下卦相同的六爻卦：</p>
+<table>
+<thead>
+<tr>
+<th>宮名</th>
+<th>本宮純卦</th>
+<th>五行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乾宮</td>
+<td>乾為天 ☰☰</td>
+<td>金</td>
+</tr>
+<tr>
+<td>震宮</td>
+<td>震為雷 ☳☳</td>
+<td>木</td>
+</tr>
+<tr>
+<td>坎宮</td>
+<td>坎為水 ☵☵</td>
+<td>水</td>
+</tr>
+<tr>
+<td>艮宮</td>
+<td>艮為山 ☶☶</td>
+<td>土</td>
+</tr>
+<tr>
+<td>坤宮</td>
+<td>坤為地 ☷☷</td>
+<td>土</td>
+</tr>
+<tr>
+<td>巽宮</td>
+<td>巽為風 ☴☴</td>
+<td>木</td>
+</tr>
+<tr>
+<td>離宮</td>
+<td>離為火 ☲☲</td>
+<td>火</td>
+</tr>
+<tr>
+<td>兌宮</td>
+<td>兌為澤 ☱☱</td>
+<td>金</td>
+</tr>
+</tbody>
+</table>
+<p>這裡的五行是各宮的宮五行。後面在計算六親時，會以這個宮五行作為基準。</p>
+<p>重要觀念： 六十四卦中的每一卦，都會被歸入其中一個宮；它所屬的宮，決定了它在京房易學系統中的宮五行。</p>
+<h4>二、八宮卦形成的基本規則</h4>
+<p>每一宮有八個位置，依序是：</p>
+<ol>
+<li>本宮卦（純卦）</li>
+<li>一世卦</li>
+<li>二世卦</li>
+<li>三世卦</li>
+<li>四世卦</li>
+<li>五世卦</li>
+<li>遊魂卦</li>
+<li>歸魂卦</li>
+</ol>
+<p>其中前六個卦的變化規則相當直觀：從下往上，依次改變爻的陰陽。</p>
+<p>例如：</p>
+<ul>
+<li>陽爻變陰爻。</li>
+<li>陰爻變陽爻。</li>
+</ul>
+<p>但到了五世卦之後，便不是繼續向上變第六爻，而是使用遊魂、歸魂的特殊規則。</p>
+<p>先記住這個順序：</p>
+<h4>一宮八卦的變化順序</h4>
+<p>本宮卦</p>
+<p>六爻皆依本宮純卦</p>
+<p>一世 → 二世 → 三世</p>
+<p>初爻、二爻、三爻依次變化</p>
+<p>四世 → 五世</p>
+<p>第四爻、第五爻繼續變化</p>
+<p>遊魂 → 歸魂</p>
+<p>第四爻回變，再使內卦恢復本宮形態</p>
+<h4>三、以乾宮為例：逐步看六爻如何變化</h4>
+<p>這是理解八宮卦最重要的實作。先把六爻由下往上編號：</p>
+<ul>
+<li>初爻：第一爻，最下面。</li>
+<li>二爻：第二爻。</li>
+<li>三爻：第三爻。</li>
+<li>四爻：第四爻。</li>
+<li>五爻：第五爻。</li>
+<li>上爻：第六爻，最上面。</li>
+</ul>
+<p>乾卦六爻全部是陽爻：</p>
+<p>乾宮的八個卦</p>
+<p>每一行的爻象都由下往上閱讀；⚊為陽爻，⚋為陰爻。</p>
+<p>本宮</p>
+<p>乾為天</p>
+<p>⚊　⚊　⚊　⚊　⚊　⚊</p>
+<p>一世</p>
+<p>天風姤</p>
+<p>⚋　⚊　⚊　⚊　⚊　⚊</p>
+<p>二世</p>
+<p>天山遯</p>
+<p>⚋　⚋　⚊　⚊　⚊　⚊</p>
+<p>三世</p>
+<p>天地否</p>
+<p>⚋　⚋　⚋　⚊　⚊　⚊</p>
+<p>四世</p>
+<p>風地觀</p>
+<p>⚋　⚋　⚋　⚋　⚊　⚊</p>
+<p>五世</p>
+<p>山地剝</p>
+<p>⚋　⚋　⚋　⚋　⚋　⚊</p>
+<p>遊魂</p>
+<p>火地晉</p>
+<p>⚋　⚋　⚋　⚊　⚋　⚊</p>
+<p>歸魂</p>
+<p>火天大有</p>
+<p>⚊　⚊　⚊　⚊　⚋　⚊</p>
+<p>爻象排列採由下而上順序，方便觀察每一步改變哪一爻。</p>
+<h4>1. 本宮卦：乾為天</h4>
+<h4>䷀</h4>
+<p>乾為天</p>
+<p>六爻皆陽，作為乾宮的根本卦。</p>
+<h4>2. 一世卦：天風姤</h4>
+<h4>䷫</h4>
+<p>乾卦初爻變陰，形成天風姤。</p>
+<p>只改變最下面的初爻。</p>
+<p>乾卦原本初爻是陽爻，現在變成陰爻；上面五爻仍然保持陽爻。</p>
+<h4>3. 二世卦：天山遯</h4>
+<h4>䷠</h4>
+<p>接著將第二爻也變成陰爻，形成天山遯。</p>
+<p>初爻、二爻為陰，上面四爻為陽。</p>
+<h4>4. 三世卦：天地否</h4>
+<h4>䷋</h4>
+<p>再將第三爻變成陰爻，形成天地否。</p>
+<p>下面三爻為陰，上面三爻為陽。</p>
+<h4>5. 四世卦：風地觀</h4>
+<h4>䷓</h4>
+<p>再將第四爻變成陰爻，形成風地觀。</p>
+<p>下面四爻為陰，上面兩爻為陽。</p>
+<h4>6. 五世卦：山地剝</h4>
+<h4>䷖</h4>
+<p>再將第五爻變成陰爻，形成山地剝。</p>
+<p>下面五爻為陰，只有最上面的上爻仍是陽爻。</p>
+<p>到這裡，已經依次改變初爻至五爻。</p>
+<p>但為什麼不再改變第六爻？</p>
+<p>因為如果繼續將上爻變成陰爻，乾宮的六爻就會全部變成陰爻，成為坤卦。這樣便離開了乾宮原本的卦體特徵。</p>
+<p>所以京房八宮卦在五世卦之後，採用另一種變化方式。</p>
+<h4>7. 遊魂卦：火地晉</h4>
+<h4>䷢</h4>
+<p>從五世卦山地剝出發，將第四爻由陰變回陽，形成火地晉。</p>
+<p>上爻仍保持陽爻。</p>
+<p>這個步驟很重要：</p>
+<ul>
+<li>山地剝：第四爻為陰。</li>
+<li>火地晉：第四爻恢復為陽。</li>
+</ul>
+<p>因此，遊魂卦不是繼續向上變第六爻，而是從第五爻的變化結果，返回第四爻作特殊變化。</p>
+<h4>8. 歸魂卦：火天大有</h4>
+<h4>䷍</h4>
+<p>從遊魂卦火地晉出發，將下卦三爻全部變回乾卦的陽爻，形成火天大有。</p>
+<p>火地晉的下卦是坤 ☷，三爻全陰；將這三爻全部變回陽爻，便成為乾 ☰。</p>
+<p>因此：</p>
+<ul>
+<li>遊魂卦：火地晉。</li>
+<li>歸魂卦：火天大有。</li>
+</ul>
+<p>歸魂的意思，可以理解為下卦回到本宮卦的形態。這就是乾宮八卦形成的完整過程。</p>
+<h4>四、為什麼稱為一世、二世、三世、四世、五世？</h4>
+<p>這些名稱主要表示卦從本宮純卦出發，經過幾次爻位變化。</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>變化位置</th>
+<th>乾宮例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮卦</td>
+<td>六爻原始形態</td>
+<td>乾為天</td>
+</tr>
+<tr>
+<td>一世卦</td>
+<td>初爻變</td>
+<td>天風姤</td>
+</tr>
+<tr>
+<td>二世卦</td>
+<td>初、二爻變</td>
+<td>天山遯</td>
+</tr>
+<tr>
+<td>三世卦</td>
+<td>初、二、三爻變</td>
+<td>天地否</td>
+</tr>
+<tr>
+<td>四世卦</td>
+<td>初至四爻變</td>
+<td>風地觀</td>
+</tr>
+<tr>
+<td>五世卦</td>
+<td>初至五爻變</td>
+<td>山地剝</td>
+</tr>
+<tr>
+<td>遊魂卦</td>
+<td>五世卦第四爻復變</td>
+<td>火地晉</td>
+</tr>
+<tr>
+<td>歸魂卦</td>
+<td>遊魂卦下卦復成本宮下卦</td>
+<td>火天大有</td>
+</tr>
+</tbody>
+</table>
+<p>要注意：這裡的「變」是八宮卦的分類與推演規則，不等同於實際占筮時，因老陰、老陽而產生的動爻變卦。兩者雖然都會改變陰陽爻，但用途不同。</p>
+<h4>五、全部八宮的六十四卦排列</h4>
+<p>了解乾宮之後，就可以將同樣的規則套用到其他七宮。</p>
+<p>以下是京房八宮卦的完整排列。每一宮的第一卦是純卦，其後依序為一世、二世、三世、四世、五世、遊魂、歸魂。</p>
+<h4>八宮六十四卦總表</h4>
+<p>1. 乾宮（金）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>乾為天</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>天風姤</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>天山遯</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>天地否</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>風地觀</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>山地剝</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>火地晉</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>火天大有</td>
+</tr>
+</tbody>
+</table>
+<p>2. 震宮（木）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>震為雷</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>雷地豫</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>雷水解</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>雷風恆</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>地風升</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>水風井</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>澤風大過</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>澤雷隨</td>
+</tr>
+</tbody>
+</table>
+<p>3. 坎宮（水）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>坎為水</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>水澤節</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>水雷屯</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>水火既濟</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>澤火革</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>雷火豐</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>地火明夷</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>地水師</td>
+</tr>
+</tbody>
+</table>
+<p>4. 艮宮（土）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>艮為山</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>山火賁</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>山天大畜</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>山澤損</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>火澤睽</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>天澤履</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>風澤中孚</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>風山漸</td>
+</tr>
+</tbody>
+</table>
+<p>5. 坤宮（土）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>坤為地</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>地雷復</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>地澤臨</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>地天泰</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>雷天大壯</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>澤天夬</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>水天需</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>水地比</td>
+</tr>
+</tbody>
+</table>
+<p>6. 巽宮（木）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>巽為風</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>風天小畜</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>風火家人</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>風雷益</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>天雷無妄</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>火雷噬嗑</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>山雷頤</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>山風蠱</td>
+</tr>
+</tbody>
+</table>
+<p>7. 離宮（火）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>離為火</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>火山旅</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>火風鼎</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>火水未濟</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>山水蒙</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>風水渙</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>天水訟</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>天火同人</td>
+</tr>
+</tbody>
+</table>
+<p>8. 兌宮（金）</p>
+<table>
+<thead>
+<tr>
+<th>世次</th>
+<th>卦名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮</td>
+<td>兌為澤</td>
+</tr>
+<tr>
+<td>一世</td>
+<td>澤水困</td>
+</tr>
+<tr>
+<td>二世</td>
+<td>澤地萃</td>
+</tr>
+<tr>
+<td>三世</td>
+<td>澤山咸</td>
+</tr>
+<tr>
+<td>四世</td>
+<td>水山蹇</td>
+</tr>
+<tr>
+<td>五世</td>
+<td>地山謙</td>
+</tr>
+<tr>
+<td>遊魂</td>
+<td>雷山小過</td>
+</tr>
+<tr>
+<td>歸魂</td>
+<td>雷澤歸妹</td>
+</tr>
+</tbody>
+</table>
+<p>八宮卦序參考京房易學傳統及相關易學研究整理。</p>
+<h4>六、世爻與應爻如何從八宮卦中找出來？</h4>
+<p>八宮卦的變化，不只是為了排列六十四卦，還有一個重要目的：確定每一卦的世爻與應爻。</p>
+<p>這是後來六爻排盤的核心步驟。</p>
+<h4>1. 世爻的判定</h4>
+<p>世爻所在位置，依照八宮卦的世次決定：</p>
+<table>
+<thead>
+<tr>
+<th>卦的類別</th>
+<th>世爻位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本宮純卦</td>
+<td>上爻（第六爻）</td>
+</tr>
+<tr>
+<td>一世卦</td>
+<td>初爻（第一爻）</td>
+</tr>
+<tr>
+<td>二世卦</td>
+<td>二爻</td>
+</tr>
+<tr>
+<td>三世卦</td>
+<td>三爻</td>
+</tr>
+<tr>
+<td>四世卦</td>
+<td>四爻</td>
+</tr>
+<tr>
+<td>五世卦</td>
+<td>五爻</td>
+</tr>
+<tr>
+<td>遊魂卦</td>
+<td>四爻</td>
+</tr>
+<tr>
+<td>歸魂卦</td>
+<td>三爻</td>
+</tr>
+</tbody>
+</table>
+<p>例如乾宮：</p>
+<ul>
+<li>乾為天：上爻持世。</li>
+<li>天風姤：初爻持世。</li>
+<li>天山遯：二爻持世。</li>
+<li>天地否：三爻持世。</li>
+<li>風地觀：四爻持世。</li>
+<li>山地剝：五爻持世。</li>
+<li>火地晉：四爻持世。</li>
+<li>火天大有：三爻持世。</li>
+</ul>
+<h4>2. 應爻的判定</h4>
+<p>應爻是與世爻相隔三個爻位、上下相對的位置：</p>
+<table>
+<thead>
+<tr>
+<th>世爻</th>
+<th>應爻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初爻</td>
+<td>四爻</td>
+</tr>
+<tr>
+<td>二爻</td>
+<td>五爻</td>
+</tr>
+<tr>
+<td>三爻</td>
+<td>上爻</td>
+</tr>
+<tr>
+<td>四爻</td>
+<td>初爻</td>
+</tr>
+<tr>
+<td>五爻</td>
+<td>二爻</td>
+</tr>
+<tr>
+<td>上爻</td>
+<td>三爻</td>
+</tr>
+</tbody>
+</table>
+<p>例如乾為天：</p>
+<ul>
+<li>世爻在上爻。</li>
+<li>應爻在三爻。</li>
+</ul>
+<p>天風姤：</p>
+<ul>
+<li>世爻在初爻。</li>
+<li>應爻在四爻。</li>
+</ul>
+<p>這種世應關係使每一卦都具有一個主體位置及一個相應位置。</p>
+<h4>七、八宮卦與五行的關係：為什麼同一宮的卦具有相同宮五行？</h4>
+<p>這是接下來學習納甲與六親時非常重要的觀念。</p>
+<p>八宮的五行由本宮純卦決定，宮內其他七卦都繼承本宮五行。</p>
+<p>例如：</p>
+<table>
+<thead>
+<tr>
+<th>宮別</th>
+<th>本宮五行</th>
+<th>宮內其他卦</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乾宮</td>
+<td>金</td>
+<td>姤、遯、否、觀、剝、晉、大有</td>
+</tr>
+<tr>
+<td>震宮</td>
+<td>木</td>
+<td>豫、解、恆、升、井、大過、隨</td>
+</tr>
+<tr>
+<td>坎宮</td>
+<td>水</td>
+<td>節、屯、既濟、革、豐、明夷、師</td>
+</tr>
+<tr>
+<td>艮宮</td>
+<td>土</td>
+<td>賁、大畜、損、睽、履、中孚、漸</td>
+</tr>
+<tr>
+<td>坤宮</td>
+<td>土</td>
+<td>復、臨、泰、大壯、夬、需、比</td>
+</tr>
+<tr>
+<td>巽宮</td>
+<td>木</td>
+<td>小畜、家人、益、無妄、噬嗑、頤、蠱</td>
+</tr>
+<tr>
+<td>離宮</td>
+<td>火</td>
+<td>旅、鼎、未濟、蒙、渙、訟、同人</td>
+</tr>
+<tr>
+<td>兌宮</td>
+<td>金</td>
+<td>困、萃、咸、蹇、謙、小過、歸妹</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<p>火地晉雖然上卦是離火、下卦是坤土，但它屬於乾宮，因此宮五行仍然是金。</p>
+<p>這個觀念非常重要：</p>
+<ul>
+<li>卦本身的上下卦，具有各自的五行。</li>
+<li>卦所屬的宮，也有一個宮五行。</li>
+<li>在六爻納甲系統中，判斷六親時，使用的是宮五行作為基準。</li>
+</ul>
+<p>因此，不能看到火地晉有火，就直接認定它屬火宮。</p>
+<h4>八、用一個互動練習檢查是否理解</h4>
+<p>八宮卦小測驗</p>
+<p>0 / 5 已作答</p>
+<p>1. 乾宮的第一個變卦是什麼？</p>
+<p>天山遯</p>
+<p>天風姤</p>
+<p>天地否</p>
+<p>2. 乾宮的五世卦是哪一卦？</p>
+<p>風地觀</p>
+<p>山地剝</p>
+<p>火地晉</p>
+<p>3. 乾宮的遊魂卦如何形成？</p>
+<p>將上爻變陰</p>
+<p>將第四爻變回陽</p>
+<p>將下三爻變回陽</p>
+<p>4. 乾宮歸魂卦的名稱是什麼？</p>
+<p>火天大有</p>
+<p>天地否</p>
+<p>天風姤</p>
+<p>5. 乾宮的遊魂卦火地晉，宮五行屬什麼？</p>
+<p>火</p>
+<p>土</p>
+<p>金</p>
+<p>檢查答案</p>
+<h4>九、學會八宮卦之後，下一步應該學什麼？</h4>
+<p>八宮卦主要解決「一個卦屬於哪一宮、是哪一世」的問題。接下來就可以進入京房易學更具體的推演系統。</p>
+<p>建議依照以下順序：</p>
+<ol>
+<li>納甲： 六十四卦的每一爻如何配上天干、地支？</li>
+<li>六親： 如何利用宮五行與各爻五行的生剋，推導父母、兄弟、子孫、妻財、官鬼？</li>
+<li>飛伏： 如何找出卦中沒有顯現的伏神？</li>
+<li>月建、日辰： 如何把卦象與起卦時間結合？</li>
+<li>動爻與變卦： 如何將實際占筮得到的本卦、變卦放入八宮系統分析？</li>
+</ol>
+<p>最值得先學的是「納甲」： 因為八宮卦提供了宮五行與世爻位置，納甲則把天干地支放進六個爻位。兩者結合後，才真正形成後世六爻占筮的完整排盤架構。</p>
 <h2>new</h2>
+
+
+
+
+
+
+
+
 
 
 <p>[[乾]]</p>
@@ -5074,6 +6291,14 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
 })();
 </script>
 <h2>Prog</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -5357,6 +6582,14 @@ sys.stderr = JsWriter()
 // ]]></script>
 </p>
 <h1>乾金</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -5822,9 +7055,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 乾為天</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -6007,6 +7256,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 44 卦） · <a href="../gua/44_姤.html">詳頁</a> · 標記 [[ 姤 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6163,9 +7420,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 天山遯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -6348,6 +7621,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 12 卦） · <a href="../gua/12_否.html">詳頁</a> · 標記 [[ 否 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6504,9 +7785,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 風地觀</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -6689,6 +7986,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 23 卦） · <a href="../gua/23_剝.html">詳頁</a> · 標記 [[ 剝 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -6845,9 +8150,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 火地晉</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -7030,6 +8351,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 14 卦） · <a href="../gua/14_大有.html">詳頁</a> · 標記 [[ 大有 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7160,6 +8489,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>震木</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -7619,9 +8956,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 震為雷</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -7804,6 +9157,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 16 卦） · <a href="../gua/16_豫.html">詳頁</a> · 標記 [[ 豫 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -7960,9 +9321,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 雷水解</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -8145,6 +9522,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 32 卦） · <a href="../gua/32_恆.html">詳頁</a> · 標記 [[ 恆 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -8275,6 +9660,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h2>四世與五世-1</h2>
+
+
+
+
+
+
+
+
 
 
 
@@ -8458,6 +9851,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 46 卦） · <a href="../gua/46_升.html">詳頁</a> · 標記 [[ 升 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -8588,6 +9989,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>五世 · 水風井</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -8770,9 +10179,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 澤風大過</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -8955,6 +10380,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 17 卦） · <a href="../gua/17_隨.html">詳頁</a> · 標記 [[ 隨 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9085,6 +10518,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坎水</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -9583,9 +11024,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坎為水</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -9768,6 +11225,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 60 卦） · <a href="../gua/60_節.html">詳頁</a> · 標記 [[ 節 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -9924,9 +11389,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 水雷屯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -10109,6 +11590,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 63 卦） · <a href="../gua/63_既濟.html">詳頁</a> · 標記 [[ 既濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -10265,9 +11754,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 澤火革</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -10450,6 +11955,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 55 卦） · <a href="../gua/55_豐.html">詳頁</a> · 標記 [[ 豐 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -10606,9 +12119,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 地火明夷</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -10791,6 +12320,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 7 卦） · <a href="../gua/07_師.html">詳頁</a> · 標記 [[ 師 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -10921,6 +12458,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>艮土</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -11446,9 +12991,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 艮為山</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -11631,6 +13192,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 22 卦） · <a href="../gua/22_賁.html">詳頁</a> · 標記 [[ 賁 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -11787,9 +13356,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 山天大畜</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -11972,6 +13557,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 41 卦） · <a href="../gua/41_損.html">詳頁</a> · 標記 [[ 損 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12128,9 +13721,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 火澤睽</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -12313,6 +13922,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 10 卦） · <a href="../gua/10_履.html">詳頁</a> · 標記 [[ 履 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12469,9 +14086,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 風澤中孚</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -12653,6 +14286,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 53 卦） · <a href="../gua/53_漸.html">詳頁</a> · 標記 [[ 漸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -12783,6 +14424,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>坤土</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -13264,9 +14913,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 坤為地</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -13449,6 +15114,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 24 卦） · <a href="../gua/24_復.html">詳頁</a> · 標記 [[ 復 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13605,9 +15278,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 地澤臨</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -13790,6 +15479,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 11 卦） · <a href="../gua/11_泰.html">詳頁</a> · 標記 [[ 泰 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -13946,9 +15643,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 雷天大壯</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -14131,6 +15844,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 43 卦） · <a href="../gua/43_夬.html">詳頁</a> · 標記 [[ 夬 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -14287,9 +16008,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 水天需</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -14472,6 +16209,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 8 卦） · <a href="../gua/08_比.html">詳頁</a> · 標記 [[ 比 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -14602,6 +16347,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>巽木</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -15151,9 +16904,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 巽為風</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -15336,6 +17105,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 9 卦） · <a href="../gua/09_小畜.html">詳頁</a> · 標記 [[ 小畜 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15492,9 +17269,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 風火家人</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -15677,6 +17470,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 42 卦） · <a href="../gua/42_益.html">詳頁</a> · 標記 [[ 益 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -15833,9 +17634,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 天雷無妄</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -16018,6 +17835,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 21 卦） · <a href="../gua/21_噬嗑.html">詳頁</a> · 標記 [[ 噬嗑 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16174,9 +17999,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 山雷頤</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -16359,6 +18200,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 18 卦） · <a href="../gua/18_蠱.html">詳頁</a> · 標記 [[ 蠱 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -16489,6 +18338,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>離火</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -16939,9 +18796,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 離為火</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -17124,6 +18997,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 56 卦） · <a href="../gua/56_旅.html">詳頁</a> · 標記 [[ 旅 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17280,9 +19161,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 火風鼎</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -17465,6 +19362,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 64 卦） · <a href="../gua/64_未濟.html">詳頁</a> · 標記 [[ 未濟 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17621,9 +19526,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 山水蒙</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -17806,6 +19727,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 59 卦） · <a href="../gua/59_渙.html">詳頁</a> · 標記 [[ 渙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -17962,9 +19891,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 天水訟</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -18147,6 +20092,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 13 卦） · <a href="../gua/13_同人.html">詳頁</a> · 標記 [[ 同人 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -18277,6 +20230,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h1>兌金</h1>
+
+
+
+
+
+
+
+
 
 
 
@@ -18750,9 +20711,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>本宮 · 兌為澤</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -18935,6 +20912,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 47 卦） · <a href="../gua/47_困.html">詳頁</a> · 標記 [[ 困 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -19091,9 +21076,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>二世 · 澤地萃</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -19276,6 +21277,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 31 卦） · <a href="../gua/31_咸.html">詳頁</a> · 標記 [[ 咸 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -19432,9 +21441,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>四世 · 水山蹇</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -19617,6 +21642,14 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <p>（文王第 15 卦） · <a href="../gua/15_謙.html">詳頁</a> · 標記 [[ 謙 ]]</p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
 <script>// <![CDATA[
@@ -19773,9 +21806,25 @@ sys.stderr = JsWriter()
 
 
 
+
+
+
+
+
+
+
+
 <ul class="plain">
 <li>
 <h3>游魂 · 雷山小過</h3>
+
+
+
+
+
+
+
+
 
 
 
@@ -19932,6 +21981,14 @@ sys.stderr = JsWriter()
 })();
 // ]]></script>
 <h3>歸魂 · 雷澤歸妹</h3>
+
+
+
+
+
+
+
+
 
 
 

@@ -151,7 +151,10 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 </ul>
 </li>
 <li class="has-children"><a href="About.html">About</a><ul class="dropdown">
-<li><a href="卜卦.html">卜卦</a></li>
+<li class="has-children"><a href="卜卦.html">卜卦</a><ul class="dropdown">
+<li><a href="人生智慧.html">人生智慧</a></li>
+</ul>
+</li>
 <li><a href="八宮分類.html">八宮分類</a></li>
 <li><a href="卦名.html">卦名</a></li>
 <li><a href="卦辭.html">卦辭</a></li>
@@ -365,35 +368,8 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 <h1>卜卦</h1>
 <nav class="page-navigation" aria-label="Page navigation">
 <div class="previous">&lt;&lt; <a href="About.html">Previous: About</a></div>
-<div class="next"><a href="八宮分類.html">Next: 八宮分類</a> &gt;&gt;</div>
+<div class="next"><a href="人生智慧.html">Next: 人生智慧</a> &gt;&gt;</div>
 </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- 放在 body 內。含：[[標記]]自動渲染 + 亂數卜卦 -->
 <div class="gua-cast-box"><strong>亂數卜卦</strong>
@@ -403,7 +379,7 @@ pre, pre code, .syntaxhighlighter .line, .syntaxhighlighter table td.code .line 
 </div>
 <p class="gua-status" id="gua_status"><br></p>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
-<script>// <![CDATA[
+<script>
 (function () {
   "use strict";
 
@@ -633,7 +609,7 @@ if moving and b2 != b1:
 else:
     parts.append("<p>（無動爻，或動後仍同卦）</p>")
 
-parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考。</p>")
+parts.append("<p style='font-size:13px;color:#666;'>警語：內容僅供參考。</p>")
 "".join(parts)
 `);
       box.innerHTML = resultHtml;
@@ -703,10 +679,10 @@ parts.append("<p style='font-size:13px;color:#666;'>說明：內容僅供參考�
     main();
   }
 })();
-// ]]></script>
+</script>
 <nav class="page-navigation" aria-label="Page navigation">
 <div class="previous">&lt;&lt; <a href="About.html">Previous: About</a></div>
-<div class="next"><a href="八宮分類.html">Next: 八宮分類</a> &gt;&gt;</div>
+<div class="next"><a href="人生智慧.html">Next: 人生智慧</a> &gt;&gt;</div>
 </nav>
 <script>
 (function(){
